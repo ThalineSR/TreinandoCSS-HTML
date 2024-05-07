@@ -161,7 +161,31 @@
         #break-keep-all{
             word-break: keep-all;
         }
-       
+       #horizontal-tb{
+            writing-mode: horizontal-tb;
+       }
+       #vertical-rl{
+            writing-mode: vertical-rl;
+       }
+       #vertical-lr{
+            writing-mode: vertical-lr;
+       }
+       #clip{
+           text-overflow: clip;
+       }
+       #ellipsis{
+          text-overflow: ellipsis;
+       }
+       #string{
+          text-overflow: 'ver mais';
+       }
+       #text-overflow p{
+        white-space: nowrap;
+        overflow: hidden;
+        background-color: yellowgreen;
+
+       }
+
     </style>
 </head>
 <body>
@@ -326,7 +350,7 @@
             </div>
             
         </section>
-        <section id="word-space word-break">
+        <section id="word-space">
             <h1>Propriedade: <code>word-wrap</code></h1>
             <p>Define, caso uma palavra seja muito grande para caber em uma linha, se ela será quebrada em qualquer caractere para que uma parte fique na linha e o restante na próxima, ou se não, toda palavra deve ficar na mesma linha e ultrapassar os limites que definimos para o elemento.
             </p>
@@ -335,6 +359,9 @@
             <h1>Propriedade: <code></code></h1>
             <div class="exemplo">word-wrap: break-word;<p id="wrap-break">hipopotomonstrosesquipedaliofobia hipopotomonstrosesquipedaliofobia hipopotomonstrosesquipedaliofobia</p>
             </div>
+            
+        </section>
+        <section id="word-break">
             <h1>Propriedade: <code>word-break</code></h1>
             <p>Define quando nosso texto deve ter uma quebra de linha.</p>
             <div class="exemplo">word-break: normal;<p> O comportamento padrão, onde as quebras de palavras são permitidas apenas em pontos de quebra de palavras permitidos.</p><br><p id="break-normal">hipopotomonstrosesquipedaliofobia hipopotomonstrosesquipedaliofobia hipopotomonstrosesquipedaliofobia</p>
@@ -345,14 +372,32 @@
             </div>
             
         </section>
-        <section id="">
-            <h1>Propriedade: <code></code></h1>
-            <div class="exemplo"><p id=""></p>
+        <section id="writing-mode">
+            <h1>Propriedade: <code>writing-mode</code></h1>
+            <p> Ela define se o texto deve ser escrito horizontalmente (da esquerda para a direita) ou verticalmente (de cima para baixo).</p>
+            
+            <div class="exemplo">writing-mode: horizontal-tb;<p>Texto é escrito horizontalmente da esquerda para a direita. Este é o valor padrão.</p><br>
+                <p id="horizontal-tb">Chega de saudade 
+                a realidade é que sem ela não há paz.</p>
             </div>
-            <h1>Propriedade: <code></code></h1>
-            <div class="exemplo"><p id=""></p>
+            <div class="exemplo">word-break: vertical-rl;<p>Texto é escrito verticalmente da direita para a esquerda.</p><br><p id="vertical-rl">Chega de saudade 
+                a realidade é que sem ela não há paz.</p>
             </div>
+            <div class="exemplo">word-break: vertical-lr;<p> Texto é escrito verticalmente da esquerda para a direita.</p><br><p id="vertical-lr">Chega de saudade 
+                a realidade é que sem ela não há paz.</p>
             </div>
+            
+        </section>
+        <section id="text-overflow">
+            <h1>Propriedade: <code>text-overflow</code></h1>
+            <p>Define a orientação do texto (vertival ou horizontal)</p>
+            <div class="exemplo"><code>text-overflow: clip;</code>O texto que não cabe no contêiner é simplesmente cortado, sem sinal de truncamento.<p id="clip">Chega de saudade 
+                a realidade é que sem ela não há paz.</p></div>
+            <div class="exemplo"><code>text-overflow: ellipsis;</code> Um marcador de elipse (...) é adicionado ao final do texto cortado, indicando que o texto foi truncado.<p id="ellipsis">Chega de saudade 
+                a realidade é que sem ela não há paz.</p></div>
+            <div class="exemplo"><code>text-overflow: string;</code>Define um caractere específico ou uma sequência de caracteres que será usada como marcador de truncamento.<p id="string">Chega de saudade 
+                a realidade é que sem ela não há paz.</p>Não disponivel para todos os navegadores.</div>
+
         </section>
 </body>
 </html>
