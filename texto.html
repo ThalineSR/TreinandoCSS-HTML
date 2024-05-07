@@ -152,6 +152,15 @@
         #wrap-break{
             word-wrap: break-word;
         }
+        #break-normal{
+            word-break: normal;
+        }
+        #break-break-all{
+            word-break: break-all;
+        }
+        #break-keep-all{
+            word-break: keep-all;
+        }
        
     </style>
 </head>
@@ -317,7 +326,7 @@
             </div>
             
         </section>
-        <section id="word-space">
+        <section id="word-space word-break">
             <h1>Propriedade: <code>word-wrap</code></h1>
             <p>Define, caso uma palavra seja muito grande para caber em uma linha, se ela será quebrada em qualquer caractere para que uma parte fique na linha e o restante na próxima, ou se não, toda palavra deve ficar na mesma linha e ultrapassar os limites que definimos para o elemento.
             </p>
@@ -326,7 +335,15 @@
             <h1>Propriedade: <code></code></h1>
             <div class="exemplo">word-wrap: break-word;<p id="wrap-break">hipopotomonstrosesquipedaliofobia hipopotomonstrosesquipedaliofobia hipopotomonstrosesquipedaliofobia</p>
             </div>
+            <h1>Propriedade: <code>word-break</code></h1>
+            <p>Define quando nosso texto deve ter uma quebra de linha.</p>
+            <div class="exemplo">word-break: normal;<p> O comportamento padrão, onde as quebras de palavras são permitidas apenas em pontos de quebra de palavras permitidos.</p><br><p id="break-normal">hipopotomonstrosesquipedaliofobia hipopotomonstrosesquipedaliofobia hipopotomonstrosesquipedaliofobia</p>
             </div>
+            <div class="exemplo">word-break: break-all;<p>Força a quebra de palavras em qualquer caractere, mesmo em posições que normalmente não permitiriam quebras de palavras.</p><br><p id="break-break-all">hipopotomonstrosesquipedaliofobia hipopotomonstrosesquipedaliofobia hipopotomonstrosesquipedaliofobia</p>
+            </div>
+            <div class="exemplo">word-break: keep-all;<p>Evita que as palavras sejam quebradas por caracteres de quebra, mantendo-as intactas o máximo possível.</p><br><p id="break-keep-all">hipopotomonstrosesquipedaliofobia hipopotomonstrosesquipedaliofobia hipopotomonstrosesquipedaliofobia</p>
+            </div>
+            
         </section>
         <section id="">
             <h1>Propriedade: <code></code></h1>
