@@ -5,10 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fontes</title>
     <style>
-         @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
-       
+        @font-face{
+            font-family: "Mono-space";
+            src: url(../TreinandoCSS-HTML/assets/fonts/LeagueMono-2.300/variable/WOFF/LeagueMono-VF.woff), url(../TreinandoCSS-HTML/assets/fonts/LeagueMono-2.300/variable/WOFF2/LeagueMono-VF.woff2);
+            
+        }
         body{
-            font-family: "Roboto", sans-serif;
+            font-family: "Mono-space";
             font-weight: 400;
             font-style: normal;
             background-color: rgb(24, 104, 131);
@@ -28,8 +31,8 @@
             border-radius: 10px 10px;
             background-color: rgb(24, 104, 131);
             margin: 10px;
-            width: 100px;
-            height: 100px;
+            width: 200px;
+            height: 70px;
             display: inline-block;
             flex-wrap: wrap; 
         }
@@ -47,7 +50,7 @@
             height: 150px;
             
         }
-        #font-face  .Exemplo{
+        #font-face .Exemplo{
             
             width: 100%;
             height: 100%;
@@ -97,6 +100,43 @@
         #weight-lighter{
             font-weight: lighter;
         }
+        #font-normal{
+            font-variant: normal;
+        }
+        #small-caps{
+            font-variant: small-caps;
+        }
+        #all-small-caps{
+            font-variant: all-small-caps;
+        }
+        #stretch-normal{
+            font-stretch: normal;
+        }
+        #ultra-condensed{
+            font-stretch: ultra-condensed;
+        }
+        #extra-condensed{
+            font-stretch: extra-condensed;
+        }
+        #condensed{
+            font-stretch: condensed;
+        }
+        #semi-condensed{
+            font-stretch: semi-condensed;
+        }
+        #semi-expanded{
+            font-stretch: semi-expanded;
+        }
+        #expanded{
+            font-stretch: expanded;
+        }
+        #extra-expanded{
+            font-stretch: extra-expanded;
+        }
+        #ultra-expanded{
+            font-stretch: ultra-expanded;
+        }
+
     </style>
 </head>
 <body>
@@ -434,7 +474,76 @@
                <p>Aceita valores de 100 a 900: Define pesos específicos da fonte, onde 100 é o mais leve e 900 é o mais pesado. Nem todas as fontes suportam todos esses pesos.</p>
             </div>
         </section>
-       
+        <section id="font-variant">
+           
+            <h1>font-variant</h1>
+            <p> É usada para especificar se o texto deve ser exibido em maiúsculas ou minúsculas e se ele deve usar letras pequenas ("small-caps") para as letras maiúsculas.<br>
+                Existem três valores principais para essa propriedade:</p>
+            <div class="container">
+               
+                <div class="Exemplo">
+                    <code>font-variant:normal;</code>
+                    <p id="font-normal">normal</p>
+                </div>
+                <div class="Exemplo">
+                    <code>font-variant:small-caps;code>
+                    <p id="small-caps">small-caps</p>
+                </div>
+                <div class="Exemplo">
+                    <code>font-variant:all-small-caps;</code>
+                    <p id="all-small-caps">all-small-caps</p>
+                </div>
+                <p>Essa propriedade pode ser útil para adicionar estilo e variedade ao texto, especialmente em títulos e cabeçalhos.</p>
+               
+            </div>
+        </section>
+        <section id="font-strech">
+           
+            <h1>font-strech</h1>
+            <p> É usada para definir a largura relativa de um tipo de letra. Ela permite que você estreite ou alargue a largura dos caracteres em uma fonte, oferecendo um controle adicional sobre o estilo do texto.<br>
+                Existem vários valores que podem ser atribuídos à propriedade font-stretch:</p>
+            <div class="container">
+               
+                <div class="Exemplo">
+                    <code>font-strech:normal;</code>
+                    <p id="strech-normal">normal</p>
+                </div>
+                <div class="Exemplo">
+                    <code>font-strech:ultra-condensed;</code>
+                    <p id="ultra-condensed">ultra-condensed</p>
+                </div>
+                <div class="Exemplo">
+                    <code>font-strech:extra-condensed;</code>
+                    <p id="extra-condensed">extra-condensed</p>
+                </div>
+                <div class="Exemplo">
+                    <code>font-strech:condensed ;</code>
+                    <p id="condensed">condensed</p>
+                </div>
+                <div class="Exemplo">
+                    <code>font-strech:semi-condensed;</code>
+                    <p id="semi-condensed">semi-condensed</p>
+                </div>
+                <div class="Exemplo">
+                    <code>font-strech:semi-expanded;</code>
+                    <p id="semi-expanded">semi-expanded</p>
+                </div>
+                <div class="Exemplo">
+                    <code>font-strech:expanded;</code>
+                    <p id="expanded">expanded</p>
+                </div>
+                <div class="Exemplo">
+                    <code>font-strech:extra-expanded;</code>
+                    <p id="extra-expanded">extra-expanded</p>
+                </div>
+                <div class="Exemplo">
+                    <code>font-strech:ultra-expanded</code>
+                    <p id="ultra-expanded">ultra-expanded</p>
+                </div>
+                <p>Essa propriedade pode ser útil quando você precisa ajustar a largura dos caracteres de uma fonte para atender a requisitos específicos de design. No entanto, nem todas as fontes suportam todos os valores de font-stretch, e o efeito pode variar dependendo da fonte e do navegador.</p>
+               
+            </div>
+        </section>
   
 </body>
 </html>
