@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Texto</title>
+    <style>
+        body{
+            background-color: rgb(200, 240, 240);
+            padding: 10%;
+            font-size: x-large;
+           
+        }
+       
+        .exemplo{
+            display: inline-block;
+            background-color: blueviolet;
+            color:bisque;
+            width: 300px;
+            margin: 1%;
+            padding: 2%;
+            text-align: center;
+            border-radius: 20px;
+        }
+        #text-none{
+            text-transform: none;
+        }
+        #text-capitalize{
+            text-transform: capitalize;
+        }
+        #text-uppercase{
+            text-transform: uppercase;
+        }
+        #text-lowercase{
+            text-transform: lowercase;
+        }
+        #text-initial{
+            text-transform: initial;
+        }
+        #text-inherit{
+            text-transform: inherit;
+        }
+        #aling-left{
+            text-align: left;
+        }
+        #aling-right{
+            text-align: right;
+        }
+        #aling-center{
+            text-align: center;
+        }
+        #aling-justify{
+            text-align: justify;
+        }
+        #aling-initial{
+            text-align: initial;
+        }
+        #aling-inherit{
+            text-align: inherit;
+        }
+        #decoration-none{
+            text-decoration:none;
+        }
+        #decoration-underline{
+            text-decoration:underline;
+        }
+        #decoration-overline{
+            text-decoration: overline;
+        }
+        #decoration-line-through{
+            text-decoration: line-through;
+        }
+        #decoration-underline-overline{
+            text-decoration: underline overline;
+        }
+        #decoration-underline-line-through{
+            text-decoration: underline line-through;
+        }
+        #decoration-blink{
+            text-decoration: blink;
+        }
+        #style-solid{
+            text-decoration-line: underline;
+            text-decoration-style: solid;
+        }
+        #style-double{
+            text-decoration-line: underline;
+            text-decoration-style: double;
+        }
+        #style-dotted{
+            text-decoration-line: underline;
+            text-decoration-style: dotted;
+        }
+        #style-dashed{
+            text-decoration-line: underline;
+            text-decoration-style: dashed
+        }
+        #style-wavy{
+            text-decoration-line: underline;
+            text-decoration-style: wavy;
+        }
+        #exemplo-color{
+            text-decoration-line: underline; 
+            text-decoration-color: red; 
+        }
+        #exemplo-thickness{
+            text-decoration-line: underline;
+            text-decoration-thickness: 5px;
+        }
+         
+
+    </style>
+</head>
+<body>
+        <section id="text-transform">
+            <h1>Propriedade <code>text-transform</code></h1>
+            <p>É RESPONSÁVEL por definir quais caracteres vão estar em Maiusculo, minusculo etc.</p>
+           
+            <div class="exemplo">
+                <code>text-transform: none;</code>
+                <p id="text-none">none</p>
+            </div>
+            <div class="exemplo">
+                <code>text-transform: capitalize;</code>
+                <p id="text-capitalize">capitalize</p>
+            </div>
+            <div class="exemplo">
+                <code>text-transform: uppercase;</code>
+                <p id="text-uppercase"> uppercase</p>
+            </div>
+            <div class="exemplo">
+                <code>text-transform: lowercase;</code>
+                <p id="text-lowercase">lowercase</p>
+            </div>
+            <div class="exemplo">
+                <code>text-transform: initial;</code>
+                <p id="text-initial">initial</p>
+            </div>
+            <div class="exemplo">
+                <code>text-transform: inherit;</code>
+                <p id="text-inherit">inherit</p>
+            </div>
+        </section>
+        <section id="text-aling">
+            <h1>Alinhamento de Texto (<code>text-aling</code>)</h1>
+            <p>Essa propriedade é responsavel por alinhar nosso texto no nosso elemento.</p>
+            <div class="exemplo">
+                <code> text-align: left;</code>
+                <p id="aling-left">left: Alinha o texto à esquerda.</p>
+            </div>
+            <div class="exemplo">
+                <code> text-align: right;</code>
+                <p id="aling-right">right: Alinha o texto à direita.</p>
+            </div>
+            <div class="exemplo">
+                <code> text-align: center;</code>
+                <p id="aling-center">center: Alinha o texto no centro.</p>
+            </div>
+            <div class="exemplo">
+                <code> text-align: justify;</code>
+                <p id="aling-justify">justify: Distribui o texto uniformemente entre as margens esquerda e direita, criando espaços adicionais entre as palavras, exceto a última linha.</p>
+            </div>
+            <div class="exemplo">
+                <code> text-align: initial;</code>
+                <p id="aling-initial">initial: Define a propriedade para o seu valor inicial.</p>
+            </div>
+            <div class="exemplo">
+                <code> text-align: inherit;</code>
+                <p id="aling-inherit">inherit: Herda o valor da propriedade de seu pai.</p>
+            </div>
+        </section>
+        <section id="text-decoration">
+            <h1>Decoração de texto (<code>text-decoration</code>)</h1>
+            <p>Adiciona ou remove linhas do nosso texto</p>
+            
+            <div class="exemplo">
+                <code> text-decoration: none</code>
+                <p id="decoration-none">Remove qualquer decoração de texto.</p>
+            </div>
+            <div class="exemplo">
+                <code> text-decoration: underline</code>
+                <p id="decoration-underline">Adiciona um sublinhado ao texto.</p>
+            </div>
+            <div class="exemplo">
+                <code> text-decoration: overline</code>
+                <p id="decoration-overline">Adiciona uma linha sobre o texto.</p>
+            </div>
+            <div class="exemplo">
+                <code> text-decoration: line-through</code>
+                <p id="decoration-line-through"> Adiciona uma linha através do texto.</p>
+            </div>
+            <div class="exemplo">
+                <code> text-decoration: underline overline</code>
+                <p id="decoration-underline-overline">Adiciona um sublinhado e uma linha sobre o texto.
+                </p>
+            </div>
+            <div class="exemplo">
+                <code> text-decoration: underline line-through</code>
+                <p id="decoration-underline-line-through">Adiciona um sublinhado e uma linha através do texto.</p>
+            </div>
+            <div class="exemplo">
+                <code> text-decoration: blink</code>
+                <p id="decoration-blink">Faz com que o texto pisque ou alterne entre aparecer e desaparecer. Este valor é menos comum e pode não ser suportado em todos os navegadores.</p>
+            </div>
+            <p>É uma propriedade abreviada de:</p>
+            <ul>
+                <li>text-decoration-line <p>Ela permite especificar diretamente qual tipo de decoração de linha deseja-se aplicar.</p>
+                    <ul>
+                        <ol><code>text-decoration-line: none;</code></ol>
+                        <ol><code>text-decoration-line: underline;</code></ol>
+                        <ol><code>text-decoration-line: overline;</code></ol>
+                        <ol><code>text-decoration-line: line-through;</code></ol>
+                        <ol><code>text-decoration-line: underline overline;</code></ol>
+                        <ol><code>text-decoration-line: underline line-through;</code></ol>
+                    </ul>
+                </li><br>
+                <li>text-decoration-style <p>É usada para definir o estilo da linha de decoração de texto.</p>
+                    <ul class="lista">
+                        <ol><code>text-decoration-style: solid;</code></ol>
+                        <div class="exemplo"><p id="style-solid">Define uma linha de decoração sólida.</p></div>
+                        <ol><code>text-decoration-style: double;</code></ol>
+                        <div class="exemplo"><p id="style-double">Define uma linha de decoração dupla.</p></div>
+                        <ol><code>text-decoration-style: dotted;</code></ol>
+                        <div class="exemplo"><p id="style-dotted">Define uma linha de decoração pontilhada.</p></div>
+                        <ol><code>text-decoration-style: dashed;</code></ol>
+                        <div class="exemplo"><p id="style-dashed">Define uma linha de decoração tracejada</p></div>
+                        <ol><code>text-decoration-style: wavy;</code></ol>
+                        <div class="exemplo"><p id="style-wavy">Define uma linha de decoração ondulada.</p></div>
+                        
+                    </ul>
+                </li><br>
+                <li>text-decoration-color <p>É usada para definir a cor da linha de decoração de texto.</p>
+                    <code> text-decoration-line: underline; /* Define o tipo de decoração */<br>
+                           text-decoration-color: red; /* Define a cor da decoração */</code><br><div class="exemplo"><p id="exemplo-color" >Exemplo</p></div>
+                    
+                </li><br>
+                <li>text-decoration-thickness <p>Define a espessura da linha de decoração de texto.</p>
+                    <code> text-decoration-line: underline; /* Define o tipo de decoração */<br>
+                        text-decoration-thickness: 5px; /* Define a espessura da decoração */</code><br><div class="exemplo"><p id="exemplo-thickness" >Exemplo</p></div>
+                </li><br>
+            </ul>
+        </section>
+        <section id="">
+            <div class="exemplo">
+                
+            </div>
+        </section>
+</body>
+</html>
