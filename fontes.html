@@ -16,6 +16,7 @@
             font-style: normal;
             background-color: rgb(24, 104, 131);
             text-align: justify;
+            
         }
        
         section, article {
@@ -51,11 +52,14 @@
             
         }
         #font-face .Exemplo{
-            
-            width: 100%;
+          
+            width: 70%;
             height: 100%;
-            
-            
+        }
+        #line-heigth > .Exemplo{
+            display: block;
+            width: 400px;
+            height: 400px;
         }
         
         #xx-small{
@@ -135,6 +139,21 @@
         }
         #ultra-expanded{
             font-stretch: ultra-expanded;
+        }
+        #line-normal{
+            line-height: normal;
+        }
+        #line-valor01{
+            line-height: 1.5;
+        }
+        #line-valor02{
+            line-height: 24px;
+        }
+        #line-valor03{
+            line-height: 1.2em;
+        }
+        #line-valor04{
+            line-height: 150%;
         }
 
     </style>
@@ -543,6 +562,108 @@
                 <p>Essa propriedade pode ser útil quando você precisa ajustar a largura dos caracteres de uma fonte para atender a requisitos específicos de design. No entanto, nem todas as fontes suportam todos os valores de font-stretch, e o efeito pode variar dependendo da fonte e do navegador.</p>
                
             </div>
+        </section>
+        <section id="line-heigth">
+            <h1>line-heigth</h1>
+            <p>
+                é usada para definir a altura da linha em um elemento de texto. Ela controla o espaço entre as linhas de texto dentro do elemento.<br>
+                Existem várias maneiras de definir o valor para line-height:
+            </p>
+            <p>Valor normal: Isso define a altura da linha como normal, o que geralmente é cerca de 1.2 a 1.4 vezes a altura da fonte.</p>
+            <div class="Exemplo">
+                <strong><code>line-height: normal;</code></strong>
+                <p id="line-normal">Texto de Exemplo:<br>
+                    No vento suave, dançam as folhas,<br>
+                    Sob o sol dourado, brilham as flores.<br>
+                    O rio murmura seu eterno cântico,<br>
+                    Enquanto a montanha ergue-se em grandiosidade.<br>
+                    
+                    No céu infinito, as estrelas cintilam,<br>
+                    E a lua, serena, ilumina a noite.<br>
+                    Na vastidão do mar, ondas dançam em harmonia,<br>
+                    E na quietude da floresta, a vida floresce.<br>
+                    
+                    Oh, que espetáculo sublime é a natureza,<br>
+                    Em cada detalhe, há uma obra de arte.<br>
+                    É um poema sem palavras, uma canção sem fim,<br>
+                    Que nos leva a sonhar, nos faz sentir enfim.</p> </p>
+            </div>
+            <p>Valor específico: Você pode definir um valor específico em pixels, emems, ou como um múltiplo da altura da fonte.</p>
+            <div class="Exemplo">
+                <strong><code>line-height: 1.5; (Valor específico);</code></strong>
+                <p id="line-valor01">Texto de Exemplo:<br>
+                    No vento suave, dançam as folhas,<br>
+                    Sob o sol dourado, brilham as flores.<br>
+                    O rio murmura seu eterno cântico,<br>
+                    Enquanto a montanha ergue-se em grandiosidade.<br>
+                    
+                    No céu infinito, as estrelas cintilam,<br>
+                    E a lua, serena, ilumina a noite.<br>
+                    Na vastidão do mar, ondas dançam em harmonia,<br>
+                    E na quietude da floresta, a vida floresce.<br>
+                    
+                    Oh, que espetáculo sublime é a natureza,<br>
+                    Em cada detalhe, há uma obra de arte.<br>
+                    É um poema sem palavras, uma canção sem fim,<br>
+                    Que nos leva a sonhar, nos faz sentir enfim.</p>
+            </div>
+            <div class="Exemplo">
+                <strong><code>line-height: 24px;</code></strong>
+                <p id="line-valor02">Texto de Exemplo:<br>
+                    No vento suave, dançam as folhas,<br>
+                    Sob o sol dourado, brilham as flores.<br>
+                    O rio murmura seu eterno cântico,<br>
+                    Enquanto a montanha ergue-se em grandiosidade.<br>
+                    
+                    No céu infinito, as estrelas cintilam,<br>
+                    E a lua, serena, ilumina a noite.<br>
+                    Na vastidão do mar, ondas dançam em harmonia,<br>
+                    E na quietude da floresta, a vida floresce.<br>
+                    
+                    Oh, que espetáculo sublime é a natureza,<br>
+                    Em cada detalhe, há uma obra de arte.<br>
+                    É um poema sem palavras, uma canção sem fim,<br>
+                    Que nos leva a sonhar, nos faz sentir enfim.</p></p>
+            </div>
+            <div class="Exemplo">
+                <strong><code>line-height: 1.2em;</code></strong> 
+                <p id="line-valor03">Texto de Exemplo:<br>
+                    No vento suave, dançam as folhas,<br>
+                    Sob o sol dourado, brilham as flores.<br>
+                    O rio murmura seu eterno cântico,<br>
+                    Enquanto a montanha ergue-se em grandiosidade.<br>
+                    
+                    No céu infinito, as estrelas cintilam,<br>
+                    E a lua, serena, ilumina a noite.<br>
+                    Na vastidão do mar, ondas dançam em harmonia,<br>
+                    E na quietude da floresta, a vida floresce.<br>
+                    
+                    Oh, que espetáculo sublime é a natureza,<br>
+                    Em cada detalhe, há uma obra de arte.<br>
+                    É um poema sem palavras, uma canção sem fim,<br>
+                    Que nos leva a sonhar, nos faz sentir enfim.</p></p>
+            </div>
+            <div class="Exemplo">
+                <strong><code>line-height: 150%;</code></strong>
+                <p id="line-valor04">Texto de Exemplo:<br>
+                    No vento suave, dançam as folhas,<br>
+                    Sob o sol dourado, brilham as flores.<br>
+                    O rio murmura seu eterno cântico,<br>
+                    Enquanto a montanha ergue-se em grandiosidade.<br>
+                    
+                    No céu infinito, as estrelas cintilam,<br>
+                    E a lua, serena, ilumina a noite.<br>
+                    Na vastidão do mar, ondas dançam em harmonia,<br>
+                    E na quietude da floresta, a vida floresce.<br>
+                    
+                    Oh, que espetáculo sublime é a natureza,<br>
+                    Em cada detalhe, há uma obra de arte.<br>
+                    É um poema sem palavras, uma canção sem fim,<br>
+                    Que nos leva a sonhar, nos faz sentir enfim.</p></p>
+            </div>
+            <p>Um line-height maior resultará em mais espaço entre as linhas de texto, enquanto um line-height menor resultará em menos espaço entre as linhas. O valor que você escolhe depende do estilo de design que você está buscando e da legibilidade do texto em seu contexto.</p>
+            
+            
         </section>
   
 </body>
