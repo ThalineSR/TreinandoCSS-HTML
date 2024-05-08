@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sombrast</title>
+    <style>
+        body{
+            margin: 5%;
+            font-size: 18px;
+            background-color: bisque;
+        }
+        img{
+            
+            margin: 20px auto;
+            object-fit: cover;
+            width: 500px;
+            height: 200px;
+            object-fit: cover;
+            
+        }
+       .exemplo {
+            display: inline-block;
+            background-color: blueviolet;
+            width: 200px;
+            height: 200px;
+            border: 10px solid rgb(65, 19, 107);
+            margin: 30px;
+            padding: 40px;
+            text-align: center;
+         
+        }
+        .display{
+            display: inline-block;
+            margin: 30px;
+            padding: 40px;
+            text-align: center;
+        }
+        #h-shadow{
+            box-shadow: 20px 10px; /*primeiro valor horizontal e segundo valor na vertical*/
+        }   
+        #v-shado{
+            box-shadow: -10px -10px;
+        }   
+        #blur{
+            box-shadow: 30px 30px 10px; /*o terçeiro valor define o desfoque*/
+        }
+        #spread{
+            box-shadow: 30px 30px 20px -5px; /*o quarto valor define a propagação da sombra, tanto com valores negativos como com positivos*/
+        }
+        #color{
+            box-shadow: 20px 30px rgb(56, 2, 40); /*ultimo valor define cor a sombra*/
+        }
+        #inset{
+            box-shadow: inset 30px 30px 20px -5px rgb(226, 36, 169) ; /*o primeiro valor define que a sombra seja na parte interna do conteiner*/
+        }
+        #duplo{
+            box-shadow: inset 30px 30px 20px -5px rgb(36, 64, 226), 20px 30px rgb(10, 2, 56); /*primeiro valor esta definindo a sombra interna, separado por uma virgula, o segundo valor determina uma sombra externa*/ 
+
+        }
+        #filter-drop-shadow{
+            
+            filter: drop-shadow(20px 20px 10px rgb(48, 3, 48));
+
+        }  
+        #filter-blur{
+            filter: blur(5px);
+        }
+        #filter-brightness{
+            filter: brightness(150%);
+        }
+        #filter-contrast{
+            filter: contrast(150%);
+        }
+        #filter-grayscale{
+            filter: grayscale(100%);
+
+        }
+        #filter-hue-rotate{
+            filter: hue-rotate(90deg);
+        }
+        #filter-invert{
+            filter: invert(100%);
+        }
+        #filter-saturate{
+            filter: saturate(200%);
+        }
+        #filter-sepia{
+            filter: sepia(100%);
+        }
+        #text-h-shadow{
+            text-shadow: 10px 5px;
+        }
+        #text-v-shadow{
+            text-shadow: 20px -20px;
+        }
+        #text-blur{
+            text-shadow: 20px 10px 5px;
+        }
+        #text-color{
+            text-shadow: 10px 20px 5px violet;
+        }
+        strong{
+           
+            font-size: 40px;
+        }
+
+    </style>
+</head>
+<body>
+    <section id="box-shadow">
+        <h1>Propriedade <code> box-shadow</code></h1>
+        <p>Permite adicionar sombras a elementos HTML.</p>
+        <div class="exemplo" id="h-shadow"><p><b>h-shadow:</b><br>Posição horizontal da sombra. Um valor positivo a move para a direita, enquanto um valor negativo a move para a esquerda.</p></div>
+        <div class="exemplo" id="v-shado"><p><b>v-shado:</b><br>Posição vertical da sombra. Um valor positivo a move para baixo, enquanto um valor negativo a move para cima.</p></div>
+        <div class="exemplo" id="blur"><p><b>blur:</b><br>Define o desfoque da sombra. Quanto maior o valor, mais difusa será a sombra.</p></div>
+        <div class="exemplo" id="spread"><p><b>spread:</b><br>Define o alargamento da sombra. Um valor positivo a faz crescer, enquanto um valor negativo a faz contrair.</p></div>
+        <div class="exemplo" id="color"><p><b>color:</b><br>Define a cor da sombra</p></div>
+        <div class="exemplo" id="inset"><p><b>inset:</b><br>Opcional. Se presente, a sombra será desenhada dentro do elemento, em vez de fora.</p></div>
+        <div class="exemplo" id="duplo"><p><b>dois valores:</b><br>Pode ser aplicado tipos de sombra, interna e externa, basta dividir com virgula os dois.</p></div>
+
+        <h1>Propriedade resumida: </h1><code>box-shadow: h-shadow v-shadow blur spread color inset;</code>
+        <p></p>
+    </section>
+    <section id="filter">
+        <h1>Propriedade <code> filter</code></h1>
+        <p>É uma propriedade poderosa que permite aplicar uma variedade de efeitos de imagem aos elementos HTML, como ajustes de cor, nitidez, desfoque, entre outros. </p><br>
+        <ul>
+            <li>drop-shadow(): Permite adicionar uma sombra a um elemento.</li>
+            <li>blur(): Aplica um desfoque à imagem. Quanto maior o valor, mais desfocada a imagem aparecerá.</li>
+            <li>brightness(): Ajusta o brilho da imagem. Um valor de 100% deixa a imagem inalterada. Um valor maior aumenta o brilho e um valor menor diminui.</li>
+            <li>contrast(): Ajusta o contraste da imagem. Um valor de 100% deixa o contraste inalterado. Um valor maior aumenta o contraste e um valor menor diminui.</li>
+            <li>grayscale(): Converte a imagem para escala de cinza. Um valor de 0% deixa a imagem inalterada e um valor de 100% converte a imagem completamente para escala de cinza.</li>
+            <li>hue-rotate(): Rotaciona os tons da imagem. Os valores são em graus.</li>
+            <li>invert(): Inverte as cores da imagem. Um valor de 0% deixa a imagem inalterada e um valor de 100% inverte completamente as cores.</li>
+            <li>saturate(): Ajusta a saturação da imagem. Um valor de 100% deixa a saturação inalterada. Um valor maior aumenta a saturação e um valor menor diminui.</li>
+            <li>sepia(): Aplica um efeito de sépia à imagem. Um valor de 0% deixa a imagem inalterada e um valor de 100% aplica o efeito de sépia total.</li>
+        </ul>
+        <div class="display">
+            <p>Exemplo de aplicação de drop-shadow em uma imagem png na parte iterna.</p>
+            <img src="https://hermes.dio.me/assets/diome/logo.png" id="filter-drop-shadow"><br>
+            <p>Aplicação</p>
+            <code>filter: drop-shadow(h-shadow v-shadow blur spread color);</code>
+
+        </div>
+        <div class="display">
+            <p>Exemplo de aplicação de blur em uma imagem png na parte iterna.</p>
+            <img src="https://hermes.dio.me/assets/diome/logo.png" id="filter-blur"><br>
+            <p>Aplicação</p>
+            <code>filter: blur(5px);</code>
+        </div>
+        <div class="display">
+            <p>Exemplo de aplicação de brightness em uma imagem png na parte iterna.</p>
+            <img src="https://hermes.dio.me/assets/diome/logo.png" id="filter-brightness"><br>
+            <p>Aplicação</p>
+            <code>filter: brightness(150%);</code>
+    
+
+        </div>
+        <div class="display">
+            <p>Exemplo de aplicação de contrast em uma imagem png na parte iterna.</p>
+            <img src="https://hermes.dio.me/assets/diome/logo.png" id="filter-contrast"><br>
+            <p>Aplicação</p>
+            <code>filter: contrast(150%);</code>
+
+        </div>
+        <div class="display">
+            <p>Exemplo de aplicação de grayscale em uma imagem png na parte iterna.</p>
+            <img src="https://hermes.dio.me/assets/diome/logo.png" id="filter-grayscale"><br>
+            <p>Aplicação</p>
+            <code>filter: grayscale(100%);</code>
+
+        </div>
+        <div class="display">
+            <p>Exemplo de aplicação de hue-rotate em uma imagem png na parte iterna.</p>
+            <img src="https://hermes.dio.me/assets/diome/logo.png" id="filter-hue-rotate"><br>
+            <p>Aplicação</p>
+            <code>filter: hue-rotate(90deg);</code>
+
+        </div>
+        <div class="display">
+            <p>Exemplo de aplicação de invert em uma imagem png na parte iterna.</p>
+            <img src="https://hermes.dio.me/assets/diome/logo.png" id="filter-invert"><br>
+            <p>Aplicação</p>
+            <code>filter: invert(100%);</code>
+
+        </div>
+        <div class="display">
+            <p>Exemplo de aplicação de saturate em uma imagem png na parte iterna.</p>
+            <img src="https://hermes.dio.me/assets/diome/logo.png" id="filter-saturate"><br>
+            <p>Aplicação</p>
+            <code>filter: saturate(200%);</code>
+
+        </div>
+        <div class="display">
+            <p>Exemplo de aplicação de sepia em uma imagem png na parte iterna.</p>
+            <img src="https://hermes.dio.me/assets/diome/logo.png" id="filter-sepia"><br>
+            <p>Aplicação</p>
+            <code>filter: sepia(100%);</code>
+
+        </div>
+    </section>
+    <section id="text-shadow">
+        <h1>Propriedade <code> text-shadow</code></h1>
+        <p>Permite adicionar sombras ao texto dentro de um elemento HTML.</p><br>
+        <div class="display" ><p><b>h-shadow: Define a posição horizontal da sombra. Um valor positivo a move para a direita, enquanto um valor negativo a move para a esquerda.</b><br><strong id="text-h-shadow">Bem vindo(a) à trilha de CSS na DIO!</strong></p></div><br>
+        <div class="display" ><p><b>v-shadow: Define a posição vertical da sombra. Um valor positivo a move para baixo, enquanto um valor negativo a move para cima.</b><br><strong id="text-v-shadow">Bem vindo(a) à trilha de CSS na DIO!</strong></p></div><br>
+        <div class="display" ><p><b>blur: Define o desfoque da sombra. Quanto maior o valor, mais difusa será a sombra.</b><br><strong id="text-blur">Bem vindo(a) à trilha de CSS na DIO!</strong></p></div><br>
+        <div class="display" ><p><b>color: Define a cor da sombra.</b><br><strong id="text-color">Bem vindo(a) à trilha de CSS na DIO!</strong></p></div>
+       
+    </section>
+    <section>
+        <h1>Propriedade <code> </code></h1>
+        <div class="exemplo" id=""><p><b></b></p></div>
+       
+    </section>
+</body>
+</html>
