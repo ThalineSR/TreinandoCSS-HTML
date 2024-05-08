@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unidades-de-Medidas-Absolutas</title>
+    <style>
+       body{
+        background-color: black;
+        font-size: x-large;
+        font-family: Arial, Helvetica, sans-serif;
+        padding: 5%;
+
+       }
+       .titulo{
+         text-align: center;
+         color: wheat;
+       }
+       .container{
+         color: wheat;
+        }
+        section{
+            padding: 2%;
+            margin: 2%;
+            border: wheat 2px solid;
+            border-radius: 5%;
+        }
+        .exemplo {
+        display: inline-block;
+        padding: 2%;
+        width: 40%;
+        height: 25%;
+        margin: 20px;
+        background-color: wheat;
+        color: hsl(0, 17%, 8%);
+        border-radius: 15%;
+       }
+       strong{
+        
+        text-decoration:underline brown;
+       }
+
+    </style>
+</head>
+<body>
+    <section id="unidades-de-medida">
+        
+        <div class="titulo">
+            <h1>Unidades de medidas</h1>
+            <p>No CSS, existem diferentes unidades de medidas absolutas ou relativas que você pode usar para definir propriedades como largura, altura, margens, preenchimentos, tamanhos de fonte, etc. Aqui estão algumas das unidades de medida mais comuns:</p>
+        </div>
+        
+        <div class="container">
+            
+            <h1>Unidades de Medida Absolutas:</h1>
+            <div class="exemplo"><p><strong>Pixels (px): </strong>É uma unidade de medida fixa. Um pixel corresponde a um ponto na tela. É uma unidade absoluta e não é afetada pelo tamanho da tela ou do dispositivo.</p></div>
+            <div class="exemplo"><p><strong>Centímetros (cm), Polegadas (in), Milímetros (mm): </strong>Unidades de medida absolutas baseadas em medidas físicas.</p></div>
+            <div class="exemplo"><p><strong>Picas (pc): </strong>Uma pica é uma unidade de medida tipográfica que é aproximadamente igual a 12 pontos ou cerca de 1/6 de polegada.</p></div>
+            <div class="exemplo"><p><strong>Pontos (pt): </strong>É uma unidade de medida tipográfica usada principalmente para tamanho de fonte. Um ponto é aproximadamente igual a 1/72 de polegada.</p></div>
+            <br>
+            <h1>Unidades de Medida Relativas:</h1>
+            <div class="exemplo"><p><strong>Porcentagem (%): </strong>Representa uma porção do tamanho do elemento pai. Por exemplo, width: 50%; fará com que o elemento tenha metade da largura de seu elemento pai.</p></div>
+            <div class="exemplo"><p><strong>Rem (rem): </strong>Semelhante ao em, mas representa o tamanho da fonte do elemento raiz (<html>), não do elemento pai. Isso faz com que seja mais previsível em layouts complexos.</p></div>
+            <div class="exemplo"><p><strong>Em (em): </strong>Representa o tamanho da fonte do elemento. Por exemplo, font-size: 1.2em; aumentará a fonte em 20% em relação à fonte padrão do elemento pai.</p></div>
+            <div class="exemplo"><p><strong>Viewport Width (vw): </strong> Representa uma porcentagem da largura da viewport (a área visível do navegador). Por exemplo, width: 50vw; fará com que o elemento ocupe metade da largura da viewport.</p></div>
+            <div class="exemplo"><p><strong>Viewport Height (vh): </strong> Similar ao vw, mas representa uma porcentagem da altura da viewport.</p></div>
+            <div class="exemplo"><p><strong>Unidades de raiz quadrada (fr): </strong>Uma unidade flexível que distribui o espaço disponível de forma proporcional entre os itens dentro de um contêiner flexível.</p></div>
+      </div>
+   </section>
+    <section id="tipos-numericos">
+        <div class="container">
+            <h1>Tipos numéricos</h1>
+            <p>Os tipos numéricos podem ser classificados de várias maneiras, dependendo do contexto em que estão sendo considerados. Aqui estão algumas classificações comuns:</p>
+           
+            <div class="exemplo"><strong>integer</strong><p> Valores inteiros, positivos e negativos (1024; -78)</p></div>
+            <div class="exemplo"><strong>number</strong><p> Valores decimais (0.255; 128; -1.2)</p></div>
+            <div class="exemplo"><strong>percentage</strong><p> Valores que representam uma fração de algum outro valor (50%)</p></div>
+            <div class="exemplo"><strong>dimension</strong><p>Valores numeros com unidade de medida atrelada</p></div>
+       
+        </div>
+        <div class="container">
+            <h1>Tipos numéricos que contemplam o dimension</h1>
+            <p>Os tipos numéricos podem ser classificados de várias maneiras, dependendo do contexto em que estão sendo considerados. Aqui estão algumas classificações comuns:</p>
+           
+            <div class="exemplo"><strong>lenght</strong><p> Representam distancia (px; em; vw;in)</p></div>
+            <div class="exemplo"><strong>angle</strong><p> Representam angulos (deg; rad; grad; turn)</p></div>
+            <div class="exemplo"><strong>time</strong><p> Expressam o tempo (s; ms)</p></div>
+            <div class="exemplo"><strong>resolutions</strong><p> Descreve resoluções para dispositivos (dpi; dpcm; dppx)</p></div>
+       
+        </div>
+    </section>
+</body>
+</html>
