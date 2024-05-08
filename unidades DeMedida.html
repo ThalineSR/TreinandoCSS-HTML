@@ -6,11 +6,11 @@
     <title>Unidades-de-Medidas-Absolutas</title>
     <style>
        body{
+        margin: 10px;
         background-color: black;
         font-size: x-large;
         font-family: Arial, Helvetica, sans-serif;
-        padding: 5%;
-
+        
        }
        .titulo{
          text-align: center;
@@ -18,22 +18,25 @@
        }
        .container{
          color: wheat;
-        }
+       }
+       .elemento-pai div{
+        padding: 2%;
+        border-radius: 5%;
+       }
         section{
             padding: 2%;
             margin: 2%;
             border: wheat 2px solid;
             border-radius: 5%;
-        }
+       }
         .exemplo {
         display: inline-block;
         padding: 2%;
         width: 40%;
-        height: 25%;
         margin: 20px;
         background-color: wheat;
         color: hsl(0, 17%, 8%);
-        border-radius: 15%;
+        border-radius: 5%;
        }
        strong{
         
@@ -43,7 +46,53 @@
         border-radius: 50%;
         text-decoration:underline rgb(187, 90, 90) ;
        }
-
+       .elemento-pai{
+         width: 100%;
+         font-size: 40px;
+         border: 5px solid black;
+         border-radius: 5%;
+       }
+       .exemplo-px{
+        background-color: pink;
+        width: 300px;
+       }
+       .exemplo-porcentagem{
+        background-color: aquamarine;
+        width: 50%;
+       }
+       .font-size-px{
+        background-color: pink;
+        font-size: 20px;
+        
+       }
+       .exemplo-em{
+        background-color:  aquamarine;
+        font-size: .5em;
+       }
+       .exemplo-em2{
+        background-color: rgb(190, 255, 85);
+        font-size: 2em;
+       }
+       .exemplo-rem{
+        background-color:  aquamarine;
+        font-size: 1rem;
+       }
+       .exemplo-rem2{
+        background-color: rgb(190, 255, 85);
+        font-size: 2rem;
+       }
+       .exemplo-vw{
+        background-color: rgb(190, 255, 85);
+        width: 50vw;
+       }
+       .exemplo-vh{
+        background-color: rgb(190, 255, 85);
+        width: 50vh;
+       }
+       .exemplo-fr{
+        background-color: rgb(190, 255, 85);
+        width: 50fr;
+       }
     </style>
 </head>
 <body>
@@ -54,8 +103,7 @@
             <p>No CSS, existem diferentes unidades de medidas absolutas ou relativas que você pode usar para definir propriedades como largura, altura, margens, preenchimentos, tamanhos de fonte, etc. Aqui estão algumas das unidades de medida mais comuns:</p>
         </div>
         
-        <div class="container">
-            
+        <div class="container">            
             <h1>Unidades de Medida Absolutas:</h1>
             <div class="exemplo"><p><strong>Pixels (px): </strong>É uma unidade de medida fixa. Um pixel corresponde a um ponto na tela. É uma unidade absoluta e não é afetada pelo tamanho da tela ou do dispositivo.</p></div>
             <div class="exemplo"><p><strong>Centímetros (cm), Polegadas (in), Milímetros (mm): </strong>Unidades de medida absolutas baseadas em medidas físicas.</p></div>
@@ -63,12 +111,66 @@
             <div class="exemplo"><p><strong>Pontos (pt): </strong>É uma unidade de medida tipográfica usada principalmente para tamanho de fonte. Um ponto é aproximadamente igual a 1/72 de polegada.</p></div>
             <br>
             <h1>Unidades de Medida Relativas:</h1>
-            <div class="exemplo"><p><strong>Porcentagem (%): </strong>Representa uma porção do tamanho do elemento pai. Por exemplo, width: 50%; fará com que o elemento tenha metade da largura de seu elemento pai.</p></div>
-            <div class="exemplo"><p><strong>Rem (rem): </strong>Semelhante ao em, mas representa o tamanho da fonte do elemento raiz (<html>), não do elemento pai. Isso faz com que seja mais previsível em layouts complexos.</p></div>
-            <div class="exemplo"><p><strong>Em (em): </strong>Representa o tamanho da fonte do elemento. Por exemplo, font-size: 1.2em; aumentará a fonte em 20% em relação à fonte padrão do elemento pai.</p></div>
-            <div class="exemplo"><p><strong>Viewport Width (vw): </strong> Representa uma porcentagem da largura da viewport (a área visível do navegador). Por exemplo, width: 50vw; fará com que o elemento ocupe metade da largura da viewport.</p></div>
-            <div class="exemplo"><p><strong>Viewport Height (vh): </strong> Similar ao vw, mas representa uma porcentagem da altura da viewport.</p></div>
-            <div class="exemplo"><p><strong>Unidades de raiz quadrada (fr): </strong>Uma unidade flexível que distribui o espaço disponível de forma proporcional entre os itens dentro de um contêiner flexível.</p></div>
+            <div class="exemplo" id="unidade-medida-porcentagem">
+                <p><strong>Porcentagem (%): </strong>Representa uma porção do tamanho do elemento pai. Por exemplo, width: 50%; fará com que o elemento tenha metade da largura de seu elemento pai.</p>
+                <p><i>Exemplo:</i></p>
+                <div class="elemento-pai">
+                    <div class="exemplo-px"><p>width: 300px;</p></div>
+                    <div class="exemplo-porcentagem"><p>width: 50%;</p></div>
+                </div>
+            </div>
+            <div class="exemplo" id="unidade-medida-rem">
+                <p><strong>Rem (rem): </strong>Semelhante ao em, mas representa o tamanho da fonte do elemento raiz (html), não do elemento pai. Isso faz com que seja mais previsível em layouts complexos.</p>
+                <div class="elemento-pai">
+                    <div class="font-size-px">
+                        <p>font-size: 20px;</p>
+                        <div class="exemplo-rem">
+                            <p>font-size: 1rem;</p>
+                            <div class="exemplo-rem2">
+                                <p>font-size: 2em;</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            
+            </div>
+            <div class="exemplo" id="unidade-medida-em">
+                <p><strong>Em (em): </strong>Representa o tamanho da fonte do elemento. Por exemplo, font-size: 1.2em; aumentará a fonte em 20% em relação à fonte padrão do elemento pai.</p>
+                <div class="elemento-pai">
+                    <div class="font-size-px">
+                        <p>font-size: 20px;</p>
+                        <div class="exemplo-em">
+                            <p>font-size: 1rem;</p>
+                            <div class="exemplo-em2">
+                                <p>font-size: 2rem;</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+            <div class="exemplo" id="unidade-medida-Viewport-Width">
+                <p><strong>Viewport Width (vw): </strong> Representa uma porcentagem da largura da viewport (a área visível do navegador). Por exemplo, width: 50vw; fará com que o elemento ocupe metade da largura da viewport.</p>
+                <div class="elemento-pai">
+                    <div class="exemplo-porcentagem"><p>width: 50%</p></div>
+                    <div class="exemplo-vw"><p>width: 50vw;</p></div>
+                </div>
+            </div>
+            <div class="exemplo" id="unidade-medida-Viewport-Height ">
+                <p><strong>Viewport Height (vh): </strong> Similar ao vw, mas representa uma porcentagem da altura da viewport.</p>
+                <div class="elemento-pai">
+                    <div class="exemplo-porcentagem"><p>width: 50%</p></div>
+                    <div class="exemplo-vh"><p>width: 50vh;</p></div>
+                </div>
+            </div>
+            <div class="exemplo" id="unidade-medida-raiz-quadrada">
+                <p><strong>Unidades de raiz quadrada (fr): </strong>Uma unidade flexível que distribui o espaço disponível de forma proporcional entre os itens dentro de um contêiner flexível.</p>
+                <div class="elemento-pai">
+                    <div class="exemplo-porcentagem"><p>width: 50%</p></div>
+                    <div class="exemplo-fr"><p>width: 50fr;</p></div>
+                </div>
+            
+            </div>
       </div>
    </section>
     <section id="tipos-numericos">
