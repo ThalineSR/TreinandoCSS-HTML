@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redefinindo propriedades</title>
+    <style>
+        body{
+            padding: 5%;
+            font-size: x-large;
+            text-align: justify;
+            background-color: bisque;
+        }
+        div{
+            background-color: turquoise;
+            padding: 2%;
+            width: 500px;
+            
+        }
+    </style>
+</head>
+<body>
+   
+    <section id="redefinindo-propriedades">
+        <h1>Reset CSS</h1>
+        <p>Um "reset CSS" é um conjunto de regras CSS que normaliza os estilos padrão fornecidos pelos navegadores da web. O objetivo é garantir uma consistência na apresentação de elementos HTML em diferentes navegadores, removendo as discrepâncias de estilo que podem ocorrer devido às configurações padrão dos navegadores.
+
+            Um reset CSS típico zera ou redefine várias propriedades CSS para valores consistentes. Aqui está um exemplo simples de um reset CSS básico:
+        </p>
+        <div>
+            <p> /* Reset CSS básico */</p>
+            <code>* { <br>
+                     margin: 0;<br>
+                     padding: 0;<br>
+                     box-sizing: border-box;<br>
+                 }<br>
+                 body {<br>
+                     font-family: Arial, sans-serif;<br> /* Define uma fonte padrão para o corpo do documento */<br>
+                 
+                    }<br>
+            </code>
+        </div><br>
+
+        <p>Neste Exemplo: redefine as margens e preenchimentos de todos os elementos para zero e define box-sizing: border-box;, que faz com que a largura e altura de um elemento incluam o preenchimento e a borda, em vez de apenas o conteúdo.</p>
+        <div>
+            <code>
+                * { <br>
+                    margin: 0; padding: 0;<br>
+                    box-sizing: border-box;<br>
+                }            
+            </code>
+        </div><br>
+
+        <p>Neste Exemplo: define uma fonte padrão para o corpo do documento. Isso garante que, se o navegador não encontrar a fonte especificada, ele usará uma fonte sans-serif genérica como backup.</p>
+        <div>
+            <code>
+            body { <br>
+                font-family: Arial, sans-serif; <br>
+            }<br>
+            </code> 
+        </div><br>
+        <p>Existem outros resets mais abrangentes disponíveis, como o Normalize.css, que não apenas zera estilos padrão, mas também normaliza estilos entre diferentes navegadores.
+
+           Ao usar um reset CSS, é importante lembrar que ele pode afetar a aparência de elementos em sua página da web. Você pode precisar adicionar estilos personalizados para restaurar estilos específicos de que você precisa para o design da sua página.
+        </p>
+
+ </section>
+</body>
+</html>

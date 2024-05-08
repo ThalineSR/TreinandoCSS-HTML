@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Outros</title>
+    <style>
+        body{
+            padding: 1%;
+            font-size: 20px;
+            background-color: bisque;
+        }
+        section{
+            padding: 5%;
+            margin: 20px;
+            border: #b400b4 solid;
+        }
+        .exemplo {
+            display: inline-block;
+            background-color: #b400b4;
+            border: 5px solid orange;
+            border-radius: 10px 20px;
+            margin: 30px;
+            padding: 40px;
+            text-align: center;
+            color: orange;
+            width: 150px;
+            height: 250px;
+         
+        }
+        img{
+            width: 200px;
+            height: 200px;
+        }
+        #valor03{
+            opacity: .3;
+
+        }
+        #valor10{
+            opacity: .10;
+
+        }
+        #valor0{
+            opacity: .0;
+
+        }
+        #over-visible{
+            overflow: visible;
+        }
+        #over-hidden{
+            overflow:hidden;
+        }
+        #over-scroll{
+            overflow: scroll;
+        }
+        #over-auto{
+            overflow: auto;
+        }
+    </style>
+</head>
+<body>
+    <section id="opacity">
+        <h1>Propriedade <code>opacity</code></h1>
+        <p>Define o nivel de opacidade (transparência) de um elemento.<br><br>Exemplo:</p>
+        
+        <div class="exemplo"><p><code>opacity: .3;</code></p><img src="https://png.pngtree.com/png-clipart/20230126/original/pngtree-composition-of-color-burst-splash-explosion-smoke-effect-png-image_8930104.png" id="valor03" alt="explosao colorida"></div>
+        
+        <div class="exemplo"><p><code>opacity: .10;</code></p><img src="https://png.pngtree.com/png-clipart/20230126/original/pngtree-composition-of-color-burst-splash-explosion-smoke-effect-png-image_8930104.png" id="valor10" alt="explosao colorida"></div>
+        
+        <div class="exemplo"><p><code>opacity: .0;</code></p><img src="https://png.pngtree.com/png-clipart/20230126/original/pngtree-composition-of-color-burst-splash-explosion-smoke-effect-png-image_8930104.png" id="valor0" alt="explosao colorida"></div>
+    </section>
+    <section id="overflow">
+        <h1>Propriedade <code>overflow</code></h1>
+        <p>Controla como o conteudo deve ser exibido caso ultrapasse os limites do container<br><br>Exemplo:<br></p>
+        <ul>
+           <li><strong>visible:</strong> Este é o valor padrão. Ele faz com que o conteúdo que excede as dimensões do elemento seja exibido fora das bordas do elemento, sem ser recortado ou oculto.</li>
+           <li><strong>hidden: </strong> Conteúdo que excede as dimensões do elemento será simplesmente ocultado. Isso significa que ele não será exibido e não estará acessível visualmente para o usuário.</li>
+           <li><strong>scroll:</strong> Uma barra de rolagem será adicionada ao elemento, permitindo que o usuário role para ver o conteúdo oculto.</li> 
+           <li><strong>auto: </strong>Similar ao scroll, mas uma barra de rolagem só é adicionada quando o conteúdo excede as dimensões do elemento. Se o conteúdo não ultrapassar as dimensões, nenhuma barra de rolagem será adicionada.</li>
+        </ul>
+        <div class="exemplo" id="over-visible">visible:<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste sapiente fugiat quos iusto dignissimos sint commodi, a quas dolores ducimus. Maiores iusto, ullam blanditiis sequi iure hic dolorem architecto mollitia! Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam blanditiis sequi nulla consequuntur modi quod sapiente id animi aperiam delectus. Alias, error quisquam ea ullam sapiente ab tempora. Odio, illum. Lorem ipsum dolor sit amet consectetur adipisicing elit. </p></div>
+        <div class="exemplo" id="over-hidden">hidden<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste sapiente fugiat quos iusto dignissimos sint commodi, a quas dolores ducimus. Maiores iusto, ullam blanditiis sequi iure hic dolorem architecto mollitia! Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam blanditiis sequi nulla consequuntur modi quod sapiente id animi aperiam delectus. Alias, error quisquam ea ullam sapiente ab tempora. Odio, illum. Lorem ipsum dolor sit amet consectetur adipisicing elit. </p></div>
+        <div class="exemplo" id="over-scroll">scroll<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste sapiente fugiat quos iusto dignissimos sint commodi, a quas dolores ducimus. Maiores iusto, ullam blanditiis sequi iure hic dolorem architecto mollitia! Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam blanditiis sequi nulla consequuntur modi quod sapiente id animi aperiam delectus. Alias, error quisquam ea ullam sapiente ab tempora. Odio, illum. Lorem ipsum dolor sit amet consectetur adipisicing elit. </p></div>
+        <div class="exemplo" id="over-auto">lorem<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste sapiente fugiat quos iusto dignissimos sint commodi, a quas dolores ducimus. Maiores iusto, ullam blanditiis sequi iure hic dolorem architecto mollitia! Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam blanditiis sequi nulla consequuntur modi quod sapiente id animi aperiam delectus. Alias, error quisquam ea ullam sapiente ab tempora. Odio, illum. Lorem ipsum dolor sit amet consectetur adipisicing elit. </p></div>
+       
+        <p>tambem pode ser determinando se a barra de rolagem aparecera no eixo <b><i>X</i></b> com o (<code> overflow-x</code>) ou no <b><i>Y</i></b> com o (<code>overflow-y</code>).</p>
+    </section>
+    
+</body>
+</html>
