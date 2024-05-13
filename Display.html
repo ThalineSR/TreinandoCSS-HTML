@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display</title>
+    <style>
+        body{
+           padding: 1%;
+           color: bisque;
+           background-image: linear-gradient(black, darkviolet, black);     
+           background-repeat: no-repeat;
+           font-family: sans-serif;
+           font-size: x-large;
+        }
+        section{
+            border: 5px solid bisque;
+            padding: 3%;
+            margin: 1%;
+        }
+        .Exemplo{
+            background-color: bisque;     
+            color: black;
+            padding: 2%;
+            margin: 5px;
+        }
+        .inline-block{
+            width: 180px;
+            height: 150px;
+            display: inline-block;
+        }
+        .menu{
+            background-color: bisque;
+        }
+        .menu ul li{
+            margin: 1%;
+            padding: 20px 40px;
+            display: inline-block;
+        }
+        .menu ul li a{
+            text-decoration: none;
+            color: blueviolet;
+        }
+        .esconder-elemento{
+            display: none;
+        }
+        #item-02{
+            visibility: hidden;
+        }
+        .container{
+            border: 5px solid cadetblue;
+            text-align: center;
+            background-color: white;
+        }
+        #exemplo-1{
+            width: 100px;
+        }
+        #exemplo-1{
+            vertical-align: middle;
+
+        }
+        #exemplo-1{
+        }
+       
+    
+    </style>
+</head>
+<body>
+    <section id="display-block">
+        <h1>Propriedade <code>display: block;</code></h1>
+        <p>A propriedade display vai determinar como essas caixinhas retangulares irão se comportar na hora de serem exibidas na tela.</p>
+        <ul>
+            <li>border-width</li>
+            <li>border-style</li>
+            <li>border-color</li>
+
+        </ul>
+        <h2>Exemplos:</h2>
+        <code>display: block;</code>
+        <div class="Exemplo"> O elemento deve ser exibido como um bloco, ocupando toda a largura disponível e começando em uma nova linha. Isso é útil para elementos como <code>div</code>,<code>p</code>,<code>h1</code><code></code>, etc., que naturalmente começam em uma nova linha e se estendem até a largura total do seu contêiner.</div>
+        <br>
+        <p class="Exemplo">Lorem ipsum dolor sit amet consectetur, adipisicing elit. In doloribus nihil unde ea quam! Quia officia repellendus nisi ea laudantium ducimus, aliquam minima, tenetur omnis soluta ad officiis sapiente itaque.</p>
+        <br><br>
+        <p>pode ser alterado para display-iline</p>
+
+    
+    </section>
+    <section id="display-iline">
+        <h1>Pripriedade <code>display: inline;</code></h1>
+
+        <p> faz com que um elemento seja exibido em linha, ou seja, ele <strong><i>não</i></strong> começa em uma nova linha e ocupa apenas o espaço necessário ao redor do seu conteúdo, permitindo que outros elementos fiquem ao lado dele na mesma linha, se houver espaço suficiente. Isso é útil para elementos como <code>span</code>, <code>a</code>, <code>strong </code>etc.</p>
+        <br>
+        <span class="Exemplo">Exemplo inline 01: span;</span>
+        <span class="Exemplo">Exemplo inline 02: span;</span>
+        <b class="Exemplo">Exemplo inline 03: b;</b>
+        <br><br>
+        <p>pode ser alterado para display-block.</p>
+
+    </section>
+    <section id="display-iline-block">
+        <h1>Pripriedade <code>display: inline-block;</code></h1>
+        <p>Trata o elemento como um elemento em linha, mas com a capacidade de definir largura, altura, margens e preenchimento como um elemento em bloco. Isso significa que ele ocupa apenas o espaço necessário na linha, mas você pode definir dimensões e espaçamento para ele como faria com um elemento de bloco normal. Isso é útil quando você deseja elementos que fluam na mesma linha, mas com mais controle sobre seu layout em comparação com elementos puramente em linha.</p>
+        <br>
+        <h2>Exemplo 01</h2>
+        <div class="Exemplo inline-block">Exemplo 01: div;</div>
+        <div class="Exemplo inline-block">Exemplo 02: div;</div>
+        <div class="Exemplo inline-block">Exemplo 03: div;</div>
+        <div class="Exemplo inline-block">Exemplo 04: div;</div>
+        <div class="Exemplo inline-block">Exemplo 05: div;</div>
+        <div class="Exemplo inline-block">Exemplo 06: div;</div>
+        <div class="Exemplo inline-block">Exemplo 07: div;</div>
+        <div class="Exemplo inline-block">Exemplo 08: div;</div>
+        <div class="Exemplo inline-block">Exemplo 09: div;</div>
+        <div class="Exemplo inline-block">Exemplo 10: div;</div>
+        <br>
+        <h2>Exemplo 02</h2>
+        <br><br><br>
+        <h3>Menu de navegação.</h3>
+        <nav class="menu">
+            <ul>
+                <li><a href="#">Meu Link</a></li>
+                <li><a href="#">Meu Link</a></li>
+                <li><a href="#">Meu Link</a></li>
+                <li><a href="#">Meu Link</a></li>
+
+            </ul>
+        </nav>
+    </section>
+    <section id="display-none">
+        <h1>Pripriedade <code>display: none;</code></h1>
+        <p>
+            Quando você define display: none; em CSS, está basicamente dizendo ao navegador para não exibir o elemento na página. Ele não ocupará espaço no layout e não será renderizado visualmente na página. Isso pode ser útil para ocultar temporariamente elementos que não são necessários para a visualização atual ou para ocultar elementos em certas condições usando JavaScript.
+        </p>
+        <br>
+        <span class="Exemplo">Exemplo 01</span>
+        <span class="Exemplo esconder-elemento">Exemplo 02</span>
+        <span class="Exemplo">Exemplo 03</span>
+        <br><br><br>
+        <h1>display: none vs visibility: hidden</h1>
+        <p>Quando você usa visibility: hidden; em CSS, você está tornando o elemento invisível, mas ele ainda ocupa espaço na página, ou seja, o espaço que o elemento ocuparia ainda está reservado, mesmo que não seja visível. Isso pode ser útil quando você quer esconder um elemento sem alterar o layout da página. Por exemplo, você pode querer esconder um submenu que será revelado quando o usuário interagir com um elemento específico.</p>
+        <br>
+        <h2>Exemplo</h2>
+        <div>
+            <span id="item-01" class="Exemplo">Item 01</span>
+            <span id="item-02" class="Exemplo">Item 02</span>
+            <span id="item-03" class="Exemplo">Item 03</span>
+
+        </div>
+  </section>
+  <section id="alinhamento-elementos">
+    <h1>Alinhamento de elementos <i>inline</i></h1>
+    <h2>text-aling</h2>
+    <p>
+        A propriedade CSS text-align é usada para alinhar o texto dentro de um elemento. Ela define o alinhamento horizontal do conteúdo de texto dentro do elemento, como um <div> ou um <p>. Você pode usar essa propriedade para alinhar o texto à esquerda, à direita, no centro ou justificado dentro do elemento.</p>
+            <ol>
+                <ul>text-align: left; alinha o texto à esquerda.</ul>
+                <ul>text-align: right; alinha o texto à direita.</ul>
+                <ul>text-align: center; centraliza o texto.</ul>
+                <ul>text-align: justify; justifica o texto, preenchendo o espaço disponível no elemento, exceto a última linha, que é alinhada à esquerda.</ul>
+            </ol>
+    
+    <div class="container">
+        <img id="exemplo-1" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSswPyLUS4KHyTCo3s2sPQq63afGqO9QtOfvoTygsfXHD_B-3-BvHMVNOaMboCFpWjo31Y&usqp=CAU">
+        <span id="exemplo-2" class="Exemplo">Item 02</span>
+        <span id="exemplo-3" class="Exemplo">Item 03</span>
+        
+    </div>
+    <br>
+    <br>
+    <h2>vertical-align</h2>
+    <p>A propriedade vertical-align em CSS controla a forma como um elemento inline ou um elemento de tabela é alinhado verticalmente em relação ao elemento pai ou a outros elementos em torno dele. Essa propriedade é mais comumente usada em elementos de texto inline ou em células de tabela.</p>
+    <ol>
+        <ul>vertical-align: top; alinha o elemento ao topo do elemento pai.</ul>
+        <ul>vertical-align: middle; o alinha verticalmente ao meio do elemento pai.</ul>
+        <ul>vertical-align: bottom; o alinha verticalmente à base do elemento pai.</ul>
+        <ul>vertical-align: baseline; o alinha verticalmente à linha de base do elemento pai.</ul>
+        </ol>
+    <br>
+    <div class="container">
+        <img id="exemplo-1" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSswPyLUS4KHyTCo3s2sPQq63afGqO9QtOfvoTygsfXHD_B-3-BvHMVNOaMboCFpWjo31Y&usqp=CAU">
+        <span id="exemplo-2" class="Exemplo">Item 02</span>
+        <span id="exemplo-3" class="Exemplo">Item 03</span>
+
+    </div>
+  </section>
+</body>
+</html>
