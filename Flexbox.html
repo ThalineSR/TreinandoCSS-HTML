@@ -1,0 +1,1214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trabalhando com flebox no CSS</title>
+    <style>
+       body{
+        background-image: radial-gradient(bisque, rgb(75, 6, 75));
+        font-family: sans-serif;
+        font-size: x-large; 
+        color: white;
+        padding: 3%;
+        
+       }
+       section{
+        background-color: black;
+        opacity: .5;
+        padding: 1%;
+        border: 1px solid;
+        border-radius: 10px;
+        text-align: center;
+        margin: 1%;
+       }
+       .container{
+        
+        margin: 1%;
+        display: flex;
+        padding: 20px;
+        background-color: blueviolet;
+        text-align: center;
+        border: 1px solid;
+        border-radius: 10px;
+     
+        }
+       .itens{
+        padding: 1%;
+        margin: 10px;
+        background-color: orange;
+        border: 1px solid;
+        border-radius: 10px;
+        width: 100px;
+        height: 100px;
+       
+             
+       }
+       .inline-flex{
+        display: inline-flex;
+       }
+       .container01{
+         flex-direction: row;
+       }
+       .container02{
+         flex-direction: column;
+       }
+       ol, ul, li {
+        text-align: justify;
+       }
+       .container10{
+          flex-direction: row-reverse;
+       }
+       .container20{
+          flex-direction: column-reverse;
+       }
+       #nowrap{
+            display: flex;
+            flex-wrap: nowrap;
+       }
+       #wrap{
+            display: flex;
+            flex-wrap: wrap;
+       }
+       #wrap-reverse{
+            display: flex;
+            flex-wrap: wrap-reverse;
+       }
+       #flex-flow-01{
+        display: flex;
+        flex-flow: row nowrap;
+       }
+       #flex-flow-02{
+        display: flex;
+        flex-flow: column-reverse wrap;
+       }
+       .flex-start{
+          display: flex;
+          justify-content: flex-start;
+
+       }
+       .flex-end{
+          display: flex;
+          justify-content: flex-end;
+
+       }
+       .center{
+          display: flex;
+          justify-content: center;
+
+       }
+       .space-between{
+          display: flex;
+          justify-content: space-between;
+
+       }
+       .space-around{
+          display: flex;
+          justify-content: space-around;
+
+       }
+       .space-evenly{
+          display: flex;
+          justify-content: space-evenly;
+
+       }
+       #justify-content .container02 {
+           width: 94.6%;
+           height: 400px;
+       }
+       .iten-1{
+          width: 50px;
+          height: 50px;
+          
+       }
+       .iten-2{
+          width: 80px;
+          height: 80px;
+       }
+       .iten-3{
+          width: 40px;
+          height: 40px;
+       }
+       .aling-flex-start{
+           display: flex;
+           justify-content: space-evenly;
+           align-items: flex-start;
+       }
+       .aling-flex-end{
+           display: flex;
+           justify-content: space-evenly;
+           align-items: flex-end;
+       }
+       .aling-center{
+           display: flex;
+           justify-content: space-evenly;
+           align-items: center;
+       }
+       .aling-baseline{
+           display: flex;
+           justify-content: space-evenly;
+           align-items: baseline;
+       }
+       .aling-stretch{
+           display: flex;
+           justify-content: space-evenly;
+           align-items: baseline;
+       }
+       #aling-itens .container01 #aling-content .container01 {
+           
+           height: 300px;
+          
+       }
+       #aling-itens .container02, #aling-content .container02 {
+           width: 94.6%;
+           height: 500px;
+          
+       }
+       .aling-content{
+          display: flex;
+          flex-wrap: wrap;
+       }
+       .aling-flex-start{
+          align-content: flex-start;
+       }
+       .aling-flex-end{
+          align-content: flex-end;
+       }
+       .aling-center{
+          align-content: center;
+       }
+       .aling-space-between{
+          align-content: space-between;
+       }
+       .aling-space-around{
+          align-content: space-around;
+       }
+       .aling-stretch{
+          align-content: stretch;
+       }
+       .space-evenly{
+          align-content: space-evenly;
+       }
+       .gap-container{
+       
+        background-color: blueviolet;
+        margin: 20px;
+        width: 300px;
+        height: 250px;
+        padding: 10px;
+  
+       }
+       .iten{
+        background-color: orange;
+       }
+
+       .gap-row{
+     
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        row-gap: 10px;
+   
+       }
+       .gap-column{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        column-gap: 20px;
+       
+       }
+       .gap-dois-valores{
+          gap: 10px 20px;
+       }
+       .it-9{
+        order: -1;
+       }
+       .it-4{
+        order: -2;
+       }
+       .container-flex-grow{
+        background-color: blueviolet;
+        padding: 10px;
+        margin-bottom: 20px;
+        height: 200px;
+
+        display: flex;
+        align-items: flex-start;
+        gap: 10px;
+       }
+       .iten-grow{
+        background-color: orange;
+       }
+       .ITEM-G{
+        flex-grow: 1;
+       }
+       .container-flex-2 .IT-2{
+          flex-grow: 2;
+       }
+
+    </style>
+</head>
+<body>
+    <section id="conceitos-flexbox">
+            <h1>Conceitos do flexbox</h1>
+            <p>Permite posicionar os elementos dentro de outro elemento (container);</p>
+            <p>Os elementos dentro do container são conhecidos como itens.</p>
+            <div class="container" id="container-itens"><i>container</i>
+
+                <div class="itens">itens</div>
+                <div class="itens">itens</div>
+                <div class="itens">itens</div>
+                <div class="itens">itens</div>
+                <div class="itens">itens</div>
+                <div class="itens">itens</div>
+              
+            </div>
+            <hr>
+           
+            <h1>Propriedade<code> display: flex;</code></h1>
+            <p>ajusta os itens para que caibam no container</p>
+            <div class="container" id="display-flex">
+                
+                <div class="itens">itens 01</div>
+                <div class="itens">itens 02</div>
+                <div class="itens">itens 03</div>
+                <div class="itens">itens 04</div>
+                <div class="itens">itens 05</div>
+                <div class="itens">itens 06</div>
+                <div class="itens">itens 07</div>
+                <div class="itens">itens 08</div>
+                <div class="itens">itens 09</div>
+                <div class="itens">itens 10</div>
+                <div class="itens">itens 11</div>
+                <div class="itens">itens 12</div>
+            </div>
+            <hr>
+            <h1>Propriedade<code> display: inline-flex;</code></h1>
+            <p>se ouver espaço, vai colocar um conteiner ao lado do outro</p>
+            <div class="container inline-flex" id="display-inline-flex">
+                
+                <div class="itens">itens 01</div>
+                <div class="itens">itens 02</div>
+                <div class="itens">itens 03</div>
+          
+              
+            </div>
+            <div class="container inline-flex">
+                
+                <div class="itens">itens 01</div>
+                <div class="itens">itens 02</div>
+                <div class="itens">itens 03</div>
+        
+               
+            </div>
+            
+    </section>
+    <section id="eixos-flexbox"> 
+        <h1>Os Eixos do flexbox</h1>
+        <p>No Flexbox, trabalhamos com dois eixos principais: o eixo principal (main axis) e o eixo transversal (cross axis). Esses eixos determinam como os itens flexíveis são dispostos dentro do contêiner flexível. Aqui está uma visão geral dos eixos do Flexbox:
+        </p>
+        <h2> Eixo Principal (Main Axis):</h2>
+        <ul>
+            <li>O eixo principal é determinado pela propriedade flex-direction.</li>
+            <li>Se flex-direction for definido como row ou row-reverse, o eixo principal será horizontal, indo da esquerda para a direita.</li>
+            <li>Se flex-direction for definido como column ou column-reverse, o eixo principal será vertical, indo de cima para baixo.</li>
+        </ul>
+        <h2>Eixo Transversal (Cross Axis):</h2>
+        <ul>
+            <li>O eixo transversal é perpendicular ao eixo principal.</li>
+            <li>Se flex-direction for row ou row-reverse, o eixo transversal será vertical, indo de cima para baixo.</li>
+            <li>Se flex-direction for column ou column-reverse, o eixo transversal será horizontal, indo da esquerda para a direita.</li>
+        </ul>
+        <p>Esses eixos são fundamentais para entender como os itens flexíveis são posicionados e alinhados dentro do contêiner flexível. As propriedades justify-content e align-items controlam o alinhamento dos itens ao longo do eixo principal e do eixo transversal, respectivamente. Entender e manipular esses eixos é essencial para criar layouts flexíveis e responsivos com Flexbox.</p>
+
+        <div class="container" id="container01">
+           <p> Eixo Principal (Main Axis):</p>
+            <div class="itens">itens 01</div>
+            <div class="itens">itens 02</div>
+            <div class="itens">itens 03</div>
+            <div class="itens">itens 04</div>
+            <div class="itens">itens 05</div>
+           
+        </div>
+        <div class="container" id="container02">
+            <p>Eixo Transversal (Cross Axis):</p>
+            <div class="itens">itens 01</div>
+            <div class="itens">itens 02</div>
+            <div class="itens">itens 03</div>
+            <div class="itens">itens 04</div>
+            <div class="itens">itens 05</div>
+           
+        </div>
+    </section>
+    <section id="flex-direction">
+        <H1>Propriedades flex-direction</H1>
+        <p>A propriedade flex-direction em Flexbox determina a direção principal em que os itens são colocados dentro do contêiner flexível. Ela define se os itens flexíveis são dispostos horizontalmente (ao longo do eixo x) ou verticalmente (ao longo do eixo y). Aqui estão os valores que a propriedade flex-direction pode ter e o que eles fazem:</p>
+        <ol>
+            <li>row (padrão):
+                <ul>
+                    <li>Os itens são dispostos horizontalmente, começando da esquerda para a direita.</li>
+                    <li>O eixo principal é horizontal (x) e o eixo transversal é vertical (y).</li>
+                    <div class="container container01">
+                        <code>flex-direction: row;</code>
+                        <div class="itens">itens 01</div>
+                        <div class="itens">itens 02</div>
+                        <div class="itens">itens 03</div>
+                        <div class="itens">itens 04</div>
+                        <div class="itens">itens 05</div>
+                       
+                    </div>
+                </ul>
+            </li>
+            <li>row-reverse:
+                <ul>
+                    <li>Os itens são dispostos horizontalmente, mas na ordem inversa, começando da direita para a esquerda.</li>
+                    <li>O eixo principal é horizontal (x) e o eixo transversal é vertical (y).</li>
+                    <div class="container container10">
+                        <code>flex-direction: row-reverse;</code>
+                        <div class="itens">itens 01</div>
+                        <div class="itens">itens 02</div>
+                        <div class="itens">itens 03</div>
+                        <div class="itens">itens 04</div>
+                        <div class="itens">itens 05</div>
+                       
+                    </div>
+                </ul>
+            </li>
+            <li>column:
+                <ul>
+                    <li>Os itens são dispostos verticalmente, começando de cima para baixo.</li>
+                    <li>O eixo principal é vertical (y) e o eixo transversal é horizontal (x).</li>
+                    <div class="container container02">
+                        <code>flex-direction: column;</code>
+                        <div class="itens">itens 01</div>
+                        <div class="itens">itens 02</div>
+                        <div class="itens">itens 03</div>
+                        <div class="itens">itens 04</div>
+                        <div class="itens">itens 05</div>
+                       
+                    </div>
+                </ul>
+            </li>
+            <li>column-reverse:
+                <ul>
+                    <li>Os itens são dispostos verticalmente, mas na ordem inversa, começando de baixo para cima.</li>
+                    <li>O eixo principal é vertical (y) e o eixo transversal é horizontal (x).</li>
+                    <div class="container container20">
+                        <code>flex-direction: column-reverse;</code>
+                        <div class="itens">itens 01</div>
+                        <div class="itens">itens 02</div>
+                        <div class="itens">itens 03</div>
+                        <div class="itens">itens 04</div>
+                        <div class="itens">itens 05</div>
+                       
+                    </div>
+                </ul>
+            </li>
+        </ol>
+
+    </section>
+    <section id="flex-wrap">
+        <h1>Quebra de linhas e colunas com flex-wrap</h1>
+        <p>A propriedade flex-wrap em Flexbox controla se os itens flexíveis devem ser dispostos em uma única linha ou em várias linhas dentro do contêiner flexível quando não há espaço suficiente para todos eles na mesma linha. Aqui estão os valores que a propriedade flex-wrap pode ter e o que eles fazem:</p>
+        
+        <ol>
+            <li>nowrap (padrão):
+                <ul>
+                    <li>Todos os itens são forçados a permanecerem em uma única linha, mesmo que isso cause estouro do contêiner flexível.</li>
+                    <li>Os itens podem ser redimensionados para caber na linha.</li>
+                    <h2>Exemplo:</h2>
+
+                    <code>display: flex;<br>
+                        flex-wrap: nowrap;</code>
+                    <div class="container" id="nowrap">
+                        
+                        <div class="itens">itens 01</div>
+                        <div class="itens">itens 02</div>
+                        <div class="itens">itens 03</div>
+                        <div class="itens">itens 04</div>
+                        <div class="itens">itens 05</div>
+                        <div class="itens">itens 06</div>
+                        <div class="itens">itens 07</div>
+                        <div class="itens">itens 08</div>
+                        <div class="itens">itens 09</div>
+                        <div class="itens">itens 10</div>
+                        <div class="itens">itens 11</div>
+                        <div class="itens">itens 12</div>
+                       
+                    </div>
+                </ul>
+            </li>
+            <li>wrap:
+                <ul>
+                    <li>Os itens são dispostos em várias linhas, se necessário, para evitar o estouro do contêiner flexível.</li>
+                    <li>Se houver espaço suficiente na linha atual, os itens serão exibidos na mesma linha.</li>
+                    <li>Caso contrário, os itens serão movidos para a próxima linha.</li>
+                    <h2>Exemplo:</h2>
+
+                    <code>display: flex;<br>
+                        flex-wrap: wrap;</code>
+                    <div class="container" id="wrap">
+                        
+                        <div class="itens">itens 01</div>
+                        <div class="itens">itens 02</div>
+                        <div class="itens">itens 03</div>
+                        <div class="itens">itens 04</div>
+                        <div class="itens">itens 05</div>
+                        <div class="itens">itens 06</div>
+                        <div class="itens">itens 07</div>
+                        <div class="itens">itens 08</div>
+                        <div class="itens">itens 09</div>
+                        <div class="itens">itens 10</div>
+                        <div class="itens">itens 11</div>
+                        <div class="itens">itens 12</div>
+                       
+                    </div>
+                </ul>
+            </li>
+            <li>wrap-reverse
+                <ul>
+                    <li>Os itens são dispostos em várias linhas, mas na ordem inversa.</li>
+                    <li>O primeiro item será movido para a última linha, o segundo para a penúltima linha, e assim por diante.</li>
+                    <h2>Exemplo:</h2>
+
+                    <code>display: flex;<br>
+                        flex-wrap: wrap-reverse;</code>
+                    <div class="container" id="wrap-reverse">
+                       
+                        <div class="itens">itens 01</div>
+                        <div class="itens">itens 02</div>
+                        <div class="itens">itens 03</div>
+                        <div class="itens">itens 04</div>
+                        <div class="itens">itens 05</div>
+                        <div class="itens">itens 06</div>
+                        <div class="itens">itens 07</div>
+                        <div class="itens">itens 08</div>
+                        <div class="itens">itens 09</div>
+                        <div class="itens">itens 10</div>
+                        <div class="itens">itens 11</div>
+                        <div class="itens">itens 12</div>
+                       
+                    </div>
+                </ul>
+            </li>
+        </ol>
+        
+    </section>
+    <section id="flex-direction-e-flex-wrap flex-flow">
+        <h1>Juntando as propriedades Flex-direction e flex-wrap</h1>
+        <h2>flex-flow</h2>
+        <p>A propriedade flex-flow é uma abreviação que combina as propriedades flex-direction e flex-wrap em uma única declaração. Isso permite definir a direção dos itens flexíveis e se eles devem ou não serem dispostos em uma única linha ou várias linhas em um contêiner flexível em uma única linha de código.</p>
+        <h3>A sintaxe da propriedade flex-flow é a seguinte:</h3>
+        <code>flex-flow: < flex-direction > < flex-wrap >;</code>
+        <ul>Onde:
+            <li><code>< flex-direction ></code> é a direção principal dos itens flexíveis (como row, row-reverse, column ou column-reverse).</li>
+            <li><code>< flex-wrap ></ flex-wrap ></code> é a configuração de embrulho dos itens flexíveis (como nowrap, wrap ou wrap-reverse).</li>
+        </ul>
+        <h2>Exemplo:</h2>
+        <code>display: flex;<br>
+            flex-flow: row nowrap</code>
+        <div class="container" id="flex-flow-01">
+            
+            <div class="itens">itens 01</div>
+            <div class="itens">itens 02</div>
+            <div class="itens">itens 03</div>
+            <div class="itens">itens 04</div>
+            <div class="itens">itens 05</div>
+            <div class="itens">itens 06</div>
+            <div class="itens">itens 07</div>
+            <div class="itens">itens 08</div>
+            <div class="itens">itens 09</div>
+            <div class="itens">itens 10</div>
+            <div class="itens">itens 11</div>
+            <div class="itens">itens 12</div>
+           
+        </div>
+        <h2>Exemplo:</h2>
+        <code>display: flex;<br>
+            flex-flow: column-reverse wrap</code>
+        <div class="container" id="flex-flow-02">
+            
+            <div class="itens">itens 01</div>
+            <div class="itens">itens 02</div>
+            <div class="itens">itens 03</div>
+            <div class="itens">itens 04</div>
+            <div class="itens">itens 05</div>
+            <div class="itens">itens 06</div>
+            <div class="itens">itens 07</div>
+            <div class="itens">itens 08</div>
+            <div class="itens">itens 09</div>
+            <div class="itens">itens 10</div>
+            <div class="itens">itens 11</div>
+            <div class="itens">itens 12</div>
+           
+        </div>
+
+    </section>
+    <section id="justify-content">
+         <h1>Alinhando os elementos com justify-content</h1>
+         <p>A propriedade justify-content é uma propriedade CSS do modelo de layout Flexbox que controla o alinhamento horizontal dos itens flexíveis dentro de um contêiner flexível. Ela define como o espaço disponível ao longo do eixo principal (main axis) é distribuído entre os itens flexíveis. Aqui está uma explicação detalhada sobre justify-content:</p>
+         <ol>
+            <li>flex-start: <br>Este é o valor padrão. Os itens flexíveis são alinhados ao início do contêiner flexível. Eles começam do lado esquerdo (no caso de row) ou do topo (no caso de column) e se estendem para a direita (ou para baixo).
+                <h2>Exemplo:</h2>
+                <code>display: flex;<br>
+                    justify-content: flex-start;</code>
+                <div class="container flex-start">
+            
+                    <div class="itens">itens 01</div>
+                    <div class="itens">itens 02</div>
+                    <div class="itens">itens 03</div>
+                    <div class="itens">itens 04</div>
+       
+                </div>
+                <div class="container container02 flex-start">
+                   
+                    <div class="itens">itens 01</div>
+                    <div class="itens">itens 02</div>
+                    <div class="itens">itens 03</div>
+                   
+                </div>            
+            </li>
+
+            <li>flex-end: <br>Os itens flexíveis são alinhados ao final do contêiner flexível. Eles terminam no lado direito (no caso de row) ou na parte inferior (no caso de column) e se estendem para a esquerda (ou para cima).
+                <h2>Exemplo:</h2>
+                <code>display: flex;<br>
+                    justify-content: flex-end;</code>
+                <div class="container flex-end">
+            
+                    <div class="itens">itens 01</div>
+                    <div class="itens">itens 02</div>
+                    <div class="itens">itens 03</div>
+                    <div class="itens">itens 04</div>
+       
+                </div>   
+                <div class="container container02 flex-end">
+                   
+                    <div class="itens">itens 01</div>
+                    <div class="itens">itens 02</div>
+                    <div class="itens">itens 03</div>
+                                 
+                </div>               
+            </li>
+                 
+            <li>center: <br>Os itens flexíveis são centralizados ao longo do eixo principal do contêiner flexível. Eles estão igualmente espaçados dos lados esquerdo e direito (ou do topo e da base).
+                <h2>Exemplo:</h2>
+                <code>display: flex;<br>
+                    justify-content: center;</code> 
+                <div class="container center">
+            
+                    <div class="itens">itens 01</div>
+                    <div class="itens">itens 02</div>
+                    <div class="itens">itens 03</div>
+                    <div class="itens">itens 04</div>
+       
+                </div>          
+                <div class="container container02 center">
+                   
+                    <div class="itens">itens 01</div>
+                    <div class="itens">itens 02</div>
+                    <div class="itens">itens 03</div>
+                                    
+                </div>            
+            </li>
+
+            <li>space-between: <br>Os itens flexíveis são distribuídos uniformemente ao longo do eixo principal do contêiner flexível. O primeiro item é alinhado ao início e o último item é alinhado ao final, enquanto o espaço restante é distribuído igualmente entre os itens.
+                <h2>Exemplo:</h2>
+                <code>display: flex;<br>
+                    justify-content: space-between;</code> 
+                <div class="container space-between">
+            
+                    <div class="itens">itens 01</div>
+                    <div class="itens">itens 02</div>
+                    <div class="itens">itens 03</div>
+                    <div class="itens">itens 04</div>
+       
+                </div> 
+                <div class="container container02 space-between">
+                   
+                    <div class="itens">itens 01</div>
+                    <div class="itens">itens 02</div>
+                    <div class="itens">itens 03</div>
+                                     
+                </div>                     
+            </li>
+
+            <li>space-around: <br>Os itens flexíveis são distribuídos uniformemente ao longo do eixo principal do contêiner flexível, com espaços iguais entre eles e nas extremidades. Isso significa que há metade do espaço entre os itens e nas extremidades.
+                <h2>Exemplo:</h2>
+                <code>display: flex;<br>
+                    justify-content: space-around;</code> 
+                <div class="container space-around">
+            
+                    <div class="itens">itens 01</div>
+                    <div class="itens">itens 02</div>
+                    <div class="itens">itens 03</div>
+                    <div class="itens">itens 04</div>
+       
+                </div>   
+                <div class="container container02 space-around">
+                   
+                    <div class="itens">itens 01</div>
+                    <div class="itens">itens 02</div>
+                    <div class="itens">itens 03</div>
+                                      
+                </div>                   
+            </li>
+
+            <li>space-evenly: <br>Os itens flexíveis são distribuídos uniformemente ao longo do eixo principal do contêiner flexível, com espaços iguais entre eles, incluindo nas extremidades. Isso garante que haja a mesma quantidade de espaço entre cada par de itens e entre os itens e as extremidades.
+                <h2>Exemplo:</h2>
+                <code>display: flex;<br>
+                    justify-content: space-evenly;</code> 
+                <div class="container space-evenly">
+            
+                    <div class="itens">itens 01</div>
+                    <div class="itens">itens 02</div>
+                    <div class="itens">itens 03</div>
+                    <div class="itens">itens 04</div>
+       
+                </div> 
+                <div class="container container02 space-evenly">
+                   
+                    <div class="itens">itens 01</div>
+                    <div class="itens">itens 02</div>
+                    <div class="itens">itens 03</div>
+                  
+                   
+                </div>                     
+            </li>
+         </ol>
+
+    </section>
+    <section id="aling-itens">
+        <h1>Propriedade aling-itens</h1>
+        <p>A propriedade align-items é uma propriedade CSS do modelo de layout Flexbox que controla o alinhamento vertical dos itens flexíveis dentro de um contêiner flexível. Ela define como os itens são posicionados ao longo do eixo transversal (cross axis) do contêiner. Aqui está uma explicação detalhada sobre align-items:</p>
+        
+        <ol>flex-start:
+           <li>Os itens flexíveis são alinhados ao início do eixo transversal do contêiner flexível. Eles começam no topo (no caso de row) ou na extremidade esquerda (no caso de column) e se estendem para baixo (ou para a direita).
+            <h2>Exemplo:</h2>
+            <code>display: flex;<br>
+               align-items: flex-start;</code>
+            <div class="container  container01 aling-flex-start">
+        
+                <div class="itens iten-1">itens 01</div>
+                <div class="itens iten-2">itens 02</div>
+                <div class="itens iten-3">itens 03</div>
+                
+    
+            </div>
+            <div class="container container02 aling-flex-start">
+               
+                <div class="itens iten-1">itens 01</div>
+                <div class="itens iten-2">itens 02</div>
+                <div class="itens iten-3">itens 03</div>
+               
+            </div>      
+           </li>
+        </ol>
+        <ol>flex-end
+            <li>Os itens flexíveis são alinhados ao final do eixo transversal do contêiner flexível. Eles terminam na base (no caso de row) ou na extremidade direita (no caso de column) e se estendem para cima (ou para a esquerda).
+                <h2>Exemplo:</h2>
+                <code>display: flex;<br>
+                   align-items: flex-end;</code>
+                <div class="container container01 aling-flex-end">
+            
+                    <div class="itens iten-1">itens 01</div>
+                    <div class="itens iten-2">itens 02</div>
+                    <div class="itens iten-3">itens 03</div>
+                    
+        
+                </div>
+                <div class="container container02 aling-flex-end">
+                   
+                    <div class="itens iten-1">itens 01</div>
+                    <div class="itens iten-2">itens 02</div>
+                    <div class="itens iten-3">itens 03</div>
+                   
+                </div>      
+            </li>
+        </ol>
+        <ol>center:
+            <li>Os itens flexíveis são centralizados ao longo do eixo transversal do contêiner flexível. Eles estão igualmente espaçados da parte superior e inferior (ou da esquerda e da direita).
+                <h2>Exemplo:</h2>
+                <code>display: flex;<br>
+                   align-items: center;</code>
+                <div class="container container01 aling-center">
+            
+                    <div class="itens iten-1">itens 01</div>
+                    <div class="itens iten-2">itens 02</div>
+                    <div class="itens iten-3">itens 03</div>
+                    
+        
+                </div>
+                <div class="container container02 aling-center">
+                   
+                    <div class="itens iten-1">itens 01</div>
+                    <div class="itens iten-2">itens 02</div>
+                    <div class="itens iten-3">itens 03</div>
+                   
+                </div>      
+            </li>
+        </ol>
+        <ol>baseline:
+            <li>Os itens flexíveis são alinhados com base na linha de base de seu conteúdo. Isso significa que os itens são alinhados pelas suas linhas de texto básicas.
+                <h2>Exemplo:</h2>
+                <code>display: flex;<br>
+                   align-items: baseline;</code>
+                <div class="container container01 aling-baseline">
+            
+                    <div class="itens iten-1">itens 01</div>
+                    <div class="itens iten-2">itens 02</div>
+                    <div class="itens iten-3">itens 03</div>
+                    
+        
+                </div>
+                <div class="container container02 aling-baseline">
+                   
+                    <div class="itens iten-1">itens 01</div>
+                    <div class="itens iten-2">itens 02</div>
+                    <div class="itens iten-3">itens 03</div>
+                   
+                </div>      
+            </li>
+        </ol>
+        <ol>stretch:
+            <li>Os itens flexíveis são esticados para preencher o contêiner flexível ao longo do eixo transversal. Isso é útil para garantir que os itens tenham a mesma altura (ou largura) dentro do contêiner.
+                <h2>Exemplo:</h2>
+                <code>display: flex;<br>
+                   align-items: stretch;</code>
+                <div class="container container01 aling-stretch">
+            
+                    <div class="itens iten-1">itens 01</div>
+                    <div class="itens iten-2">itens 02</div>
+                    <div class="itens iten-3">itens 03</div>
+                    
+        
+                </div>
+                <div class="container container02 aling-stretch">
+                   
+                    <div class="itens iten-1">itens 01</div>
+                    <div class="itens iten-2">itens 02</div>
+                    <div class="itens iten-3">itens 03</div>
+                   
+                </div>      
+            </li>
+        </ol>
+
+    </section>
+    <section id="aling-content">
+        <h1>Propriedade aling-content</h1>
+        <p>align-content é uma propriedade CSS usada em layouts de caixas flexíveis (Flexbox). Ela controla o alinhamento do espaço entre as linhas flexíveis dentro do contêiner flexível quando há espaço extra na direção do eixo do bloco. Em outras palavras, ela define como o espaço extra é distribuído entre as linhas dentro do contêiner flexível.</p>
+        <p><strong>propriedade tem efeito somente quando há múltiplas linhas de itens flexíveis no contêiner.</strong></p>
+         <ol>
+            <li>flex-start: Os itens flexíveis são agrupados no início do contêiner.
+                <h2>Exemplo:</h2>
+                <code>display: flex;<br>
+                    aling-content: flex-start;</code>
+                <div class="container container01 aling-content aling-flex-start">
+            
+                    <div class="itens">itens 01</div>
+                    <div class="itens">itens 02</div>
+                    <div class="itens">itens 03</div>
+                    <div class="itens">itens 04</div>
+                    <div class="itens">itens 05</div>
+                    <div class="itens">itens 06</div>
+                    <div class="itens">itens 07</div>
+                    <div class="itens">itens 08</div>
+                    <div class="itens">itens 09</div>
+                    <div class="itens">itens 10</div>
+                    <div class="itens">itens 11</div>
+                    <div class="itens">itens 12</div>
+                </div>
+        
+                <div class="container container02 aling-content aling-flex-start">
+            
+                    <div class="itens">itens 01</div>
+                    <div class="itens">itens 02</div>
+                    <div class="itens">itens 03</div>
+                    <div class="itens">itens 04</div>
+                    <div class="itens">itens 05</div>
+                    <div class="itens">itens 06</div>
+                    <div class="itens">itens 07</div>
+                    <div class="itens">itens 08</div>
+                    <div class="itens">itens 09</div>
+                    <div class="itens">itens 10</div>
+                    <div class="itens">itens 11</div>
+                    <div class="itens">itens 12</div>
+                </div>      
+
+            </li>
+            <li>flex-end: Os itens flexíveis são agrupados no final do contêiner.
+                <h2>Exemplo:</h2>
+                <code>display: flex;<br>
+                    aling-content: flex-end;</code>
+                <div class="container container01 aling-content aling-flex-end">
+            
+                    <div class="itens">itens 01</div>
+                    <div class="itens">itens 02</div>
+                    <div class="itens">itens 03</div>
+                    <div class="itens">itens 04</div>
+                    <div class="itens">itens 05</div>
+                    <div class="itens">itens 06</div>
+                    <div class="itens">itens 07</div>
+                    <div class="itens">itens 08</div>
+                    <div class="itens">itens 09</div>
+                    <div class="itens">itens 10</div>
+                    <div class="itens">itens 11</div>
+                    <div class="itens">itens 12</div>
+                </div>
+        
+                <div class="container container02 aling-content aling-flex-end">
+            
+                    <div class="itens">itens 01</div>
+                    <div class="itens">itens 02</div>
+                    <div class="itens">itens 03</div>
+                    <div class="itens">itens 04</div>
+                    <div class="itens">itens 05</div>
+                    <div class="itens">itens 06</div>
+                    <div class="itens">itens 07</div>
+                    <div class="itens">itens 08</div>
+                    <div class="itens">itens 09</div>
+                    <div class="itens">itens 10</div>
+                    <div class="itens">itens 11</div>
+                    <div class="itens">itens 12</div>
+                </div>
+
+            </li>
+            <li>center: Os itens flexíveis são agrupados no centro do contêiner.
+                <h2>Exemplo:</h2>
+                <code>display: flex;<br>
+                   aling-content: center;</code>
+                <div class="container container01 aling-content aling-center">
+            
+                    <div class="itens">itens 01</div>
+                    <div class="itens">itens 02</div>
+                    <div class="itens">itens 03</div>
+                    <div class="itens">itens 04</div>
+                    <div class="itens">itens 05</div>
+                    <div class="itens">itens 06</div>
+                    <div class="itens">itens 07</div>
+                    <div class="itens">itens 08</div>
+                    <div class="itens">itens 09</div>
+                    <div class="itens">itens 10</div>
+                    <div class="itens">itens 11</div>
+                    <div class="itens">itens 12</div>
+                </div>
+        
+                <div class="container container02 aling-content aling-center">
+            
+                    <div class="itens">itens 01</div>
+                    <div class="itens">itens 02</div>
+                    <div class="itens">itens 03</div>
+                    <div class="itens">itens 04</div>
+                    <div class="itens">itens 05</div>
+                    <div class="itens">itens 06</div>
+                    <div class="itens">itens 07</div>
+                    <div class="itens">itens 08</div>
+                    <div class="itens">itens 09</div>
+                    <div class="itens">itens 10</div>
+                    <div class="itens">itens 11</div>
+                    <div class="itens">itens 12</div>
+                </div>
+            </li>
+            <li>space-between: Os itens flexíveis são distribuídos uniformemente no contêiner; o primeiro item está no início e o último está no final.
+                <h2>Exemplo:</h2>
+                <code>display: flex;<br>
+                   aling-content: space-between;</code>
+                <div class="container container01 aling-content aling-space-between">
+            
+                    <div class="itens">itens 01</div>
+                    <div class="itens">itens 02</div>
+                    <div class="itens">itens 03</div>
+                    <div class="itens">itens 04</div>
+                    <div class="itens">itens 05</div>
+                    <div class="itens">itens 06</div>
+                    <div class="itens">itens 07</div>
+                    <div class="itens">itens 08</div>
+                    <div class="itens">itens 09</div>
+                    <div class="itens">itens 10</div>
+                    <div class="itens">itens 11</div>
+                    <div class="itens">itens 12</div>
+                </div>
+        
+                <div class="container container02 aling-content aling-space-between">
+            
+                    <div class="itens">itens 01</div>
+                    <div class="itens">itens 02</div>
+                    <div class="itens">itens 03</div>
+                    <div class="itens">itens 04</div>
+                    <div class="itens">itens 05</div>
+                    <div class="itens">itens 06</div>
+                    <div class="itens">itens 07</div>
+                    <div class="itens">itens 08</div>
+                    <div class="itens">itens 09</div>
+                    <div class="itens">itens 10</div>
+                    <div class="itens">itens 11</div>
+                    <div class="itens">itens 12</div>
+                </div>
+            </li>
+            <li>space-around: Os itens flexíveis são distribuídos uniformemente no contêiner com espaço igual ao redor deles.
+                <h2>Exemplo:</h2>
+                <code>display: flex;<br>
+                   aling-content: space-around;</code>
+                <div class="container container01 aling-content aling-space-around">
+            
+                    <div class="itens">itens 01</div>
+                    <div class="itens">itens 02</div>
+                    <div class="itens">itens 03</div>
+                    <div class="itens">itens 04</div>
+                    <div class="itens">itens 05</div>
+                    <div class="itens">itens 06</div>
+                    <div class="itens">itens 07</div>
+                    <div class="itens">itens 08</div>
+                    <div class="itens">itens 09</div>
+                    <div class="itens">itens 10</div>
+                    <div class="itens">itens 11</div>
+                    <div class="itens">itens 12</div>
+                </div>
+        
+                <div class="container container02 aling-content aling-space-around">
+            
+                    <div class="itens">itens 01</div>
+                    <div class="itens">itens 02</div>
+                    <div class="itens">itens 03</div>
+                    <div class="itens">itens 04</div>
+                    <div class="itens">itens 05</div>
+                    <div class="itens">itens 06</div>
+                    <div class="itens">itens 07</div>
+                    <div class="itens">itens 08</div>
+                    <div class="itens">itens 09</div>
+                    <div class="itens">itens 10</div>
+                    <div class="itens">itens 11</div>
+                    <div class="itens">itens 12</div>
+                </div>
+            </li>
+            <li>stretch: Os itens flexíveis são esticados para preencher o contêiner.
+                <h2>Exemplo:</h2>
+                <code>display: flex;<br>
+                   aling-content: stretch;</code>
+                <div class="container container01 aling-content aling-stretch">
+            
+                    <div class="itens">itens 01</div>
+                    <div class="itens">itens 02</div>
+                    <div class="itens">itens 03</div>
+                    <div class="itens">itens 04</div>
+                    <div class="itens">itens 05</div>
+                    <div class="itens">itens 06</div>
+                    <div class="itens">itens 07</div>
+                    <div class="itens">itens 08</div>
+                    <div class="itens">itens 09</div>
+                    <div class="itens">itens 10</div>
+                    <div class="itens">itens 11</div>
+                    <div class="itens">itens 12</div>
+                </div>
+        
+                <div class="container container02 aling-content aling-stretch">
+            
+                    <div class="itens">itens 01</div>
+                    <div class="itens">itens 02</div>
+                    <div class="itens">itens 03</div>
+                    <div class="itens">itens 04</div>
+                    <div class="itens">itens 05</div>
+                    <div class="itens">itens 06</div>
+                    <div class="itens">itens 07</div>
+                    <div class="itens">itens 08</div>
+                    <div class="itens">itens 09</div>
+                    <div class="itens">itens 10</div>
+                    <div class="itens">itens 11</div>
+                    <div class="itens">itens 12</div>
+                </div>
+            </li>
+            <li>space-evenly: Os itens flexíveis são distribuídos uniformemente no contêiner com espaços iguais em torno deles, incluindo antes do primeiro e após o último item.
+                <h2>Exemplo:</h2>
+                <code>display: flex;<br>
+                   aling-content: space-evenly;</code>
+                <div class="container container01 aling-content aling-space-evenly">
+            
+                    <div class="itens">itens 01</div>
+                    <div class="itens">itens 02</div>
+                    <div class="itens">itens 03</div>
+                    <div class="itens">itens 04</div>
+                    <div class="itens">itens 05</div>
+                    <div class="itens">itens 06</div>
+                    <div class="itens">itens 07</div>
+                    <div class="itens">itens 08</div>
+                    <div class="itens">itens 09</div>
+                    <div class="itens">itens 10</div>
+                    <div class="itens">itens 11</div>
+                    <div class="itens">itens 12</div>
+                </div>
+        
+                <div class="container container02 aling-content aling-space-evenly">
+            
+                    <div class="itens">itens 01</div>
+                    <div class="itens">itens 02</div>
+                    <div class="itens">itens 03</div>
+                    <div class="itens">itens 04</div>
+                    <div class="itens">itens 05</div>
+                    <div class="itens">itens 06</div>
+                    <div class="itens">itens 07</div>
+                    <div class="itens">itens 08</div>
+                    <div class="itens">itens 09</div>
+                    <div class="itens">itens 10</div>
+                    <div class="itens">itens 11</div>
+                    <div class="itens">itens 12</div>
+                </div>
+            </li>
+         </ol>
+
+
+       
+    </section>
+    <section id="gap">
+        <h1>Controlando os espaços entre os itens com Gap</h1>
+        <p>A propriedade gap é uma propriedade CSS usada em layouts de grade (Grid). Ela define o espaço entre as linhas e colunas de uma grade. Essa propriedade é uma forma abreviada das propriedades row-gap e column-gap, que definem separadamente o espaço entre as linhas e as colunas, respectivamente.</p>
+        <h2>Exemplo:</h2>
+                <code>display: flex;</code><br>
+                <code>aling-content: flex-wrap;</code><br>
+                <code>row-gap: 10px;</code><br>
+                <code>column-gap: 20px;</code>
+                <br>
+                <div class="gap-container gap-row">
+            
+                    <div class="iten">itens 01</div>
+                    <div class="iten">itens 02</div>
+                    <div class="iten">itens 03</div>
+                    <div class="iten">itens 04</div>
+                    <div class="iten">itens 05</div>
+                    <div class="iten">itens 06</div>
+                    <div class="iten">itens 07</div>
+                    <div class="iten">itens 08</div>
+                    <div class="iten">itens 09</div>
+                    <div class="iten">itens 10</div>
+                    <div class="iten">itens 11</div>
+                    <div class="iten">itens 12</div>
+                </div>
+                <div class="gap-container gap-column">
+            
+                    <div class="iten">itens 01</div>
+                    <div class="iten">itens 02</div>
+                    <div class="iten">itens 03</div>
+                    <div class="iten">itens 04</div>
+                    <div class="iten">itens 05</div>
+                    <div class="iten">itens 06</div>
+                    <div class="iten">itens 07</div>
+                    <div class="iten">itens 08</div>
+                    <div class="iten">itens 09</div>
+                    <div class="iten">itens 10</div>
+                    <div class="iten">itens 11</div>
+                    <div class="iten">itens 12</div>
+                </div>
+                <hr>
+                <p>de forma resumida:</p>
+                <code>gap: 10px 20px;</code><br>
+                <p>sendo o primeiro valor row (horizontal) e o segundo colunm (vertical). com apenas um valor ele aplicara em ambas as direções.</P>
+
+                <div class="gap-container gap-column gap-dois-valores">
+            
+                    <div class="iten">itens 01</div>
+                    <div class="iten">itens 02</div>
+                    <div class="iten">itens 03</div>
+                    <div class="iten">itens 04</div>
+                    <div class="iten">itens 05</div>
+                    <div class="iten">itens 06</div>
+                    <div class="iten">itens 07</div>
+                    <div class="iten">itens 08</div>
+                    <div class="iten">itens 09</div>
+                    <div class="iten">itens 10</div>
+                    <div class="iten">itens 11</div>
+                    <div class="iten">itens 12</div>
+                </div>
+    
+    </section>
+    <section id="order">
+        <h1>Propriedade order</h1>
+        <p>No contexto do Flexbox, a propriedade order é usada para especificar a ordem em que os itens flexíveis devem ser exibidos no contêiner flexível. Por padrão, os itens flexíveis são exibidos na ordem em que aparecem no HTML, mas a propriedade order permite reorganizá-los. Ela aceita valores numéricos, onde itens com um valor de order menor são exibidos primeiro e itens com um valor maior são exibidos depois. Se dois itens têm o mesmo valor de order, eles são exibidos na ordem em que aparecem no HTML.
+            No contexto do Grid, a propriedade order não é aplicável, pois a ordem dos itens em uma grade é determinada pelo posicionamento deles na estrutura de grade, não por uma propriedade específica de ordem.
+        </p>
+        <h2>Exemplo:</h2>
+        <p>item 9 no lugar do item 1</p>
+        <p>item 4 no lugar do item 0</p>
+        <code>order: -2;</code>
+        <code>order: -1;</code>
+        <div class="container container01 aling-content">
+
+            <div class="itens it-1">itens-1</div>
+            <div class="itens it-2">itens-2</div>
+            <div class="itens it-3">itens-3</div>
+            <div class="itens it-4">itens-4</div>
+            <div class="itens it-5">itens-5</div>
+            <div class="itens it-6">itens-6</div>
+            <div class="itens it-7">itens-7</div>
+            <div class="itens it-8">itens-8</div>
+            <div class="itens it-9">itens-9</div>
+            <div class="itens it-10">itens-10</div>
+            <div class="itens it-11">itens-11</div>
+            <div class="itens it-12">itens-12</div>
+          
+        </div>
+        <div class="container container02">
+
+            <div class="itens it-1">itens-1</div>
+            <div class="itens it-2">itens-2</div>
+            <div class="itens it-3">itens-3</div>
+            <div class="itens it-4">itens-4</div>
+            <div class="itens it-5">itens-5</div>
+            <div class="itens it-6">itens-6</div>
+            <div class="itens it-7">itens-7</div>
+            <div class="itens it-8">itens-8</div>
+            <div class="itens it-9">itens-9</div>
+            <div class="itens it-10">itens-10</div>
+            <div class="itens it-11">itens-11</div>
+            <div class="itens it-12">itens-12</div>
+          
+        </div>
+    </section>
+    <section id="flex-grow">
+        <h1>Propriedade flex-grow</h1>
+        <p>Ela determina a capacidade de um item flexível expandir-se para preencher o espaço disponível dentro de um contêiner flexível.
+
+            Essa propriedade aceita um valor numérico que representa a proporção em que o item deve crescer em relação aos outros itens flexíveis dentro do mesmo contêiner. Quanto maior o valor de flex-grow para um item em comparação com outros itens, mais espaço ele ocupará em relação a eles quando houver espaço extra disponível.
+            
+            Se todos os itens em um contêiner flexível tiverem o mesmo valor de flex-grow, eles crescerão igualmente para preencher o espaço disponível. Se um item tiver um valor de flex-grow maior que os outros, ele ocupará uma parcela maior do espaço extra.
+        </p>
+        <h2>Exemplo:</h2>
+        <p>Aplicado em todos os itens igualmente.</p>
+        <code> flex-grow: 1;</code>
+        <div class="container-flex-grow container-flex-1">
+                        
+            <div class="iten-grow ITEM-G IT-1">itens 01</div>
+            <div class="iten-grow ITEM-G IT-2">itens 02</div>
+            <div class="iten-grow ITEM-G IT-3">itens 03</div>
+         
+        </div>
+        <div class="container-flex-grow container-flex-1">
+                        
+            <div class="iten-grow ITEM-G IT-1">DIO</div>
+            <div class="iten-grow ITEM-G IT-2">Bem-Vindo</div>
+            <div class="iten-grow ITEM-G IT-3">Trilha de CSS</div>
+         
+        </div>
+        <hr>
+        <h2>Exemplo:</h2>
+        <p>Aplicado no item especifico.</p>
+        <code> flex-grow: 2;</code>
+        <div class="container-flex-grow container-flex-2">
+                        
+            <div class="iten-grow IT-1">itens 01</div>
+            <div class="iten-grow IT-2">itens 02</div>
+            <div class="iten-grow IT-3">itens 03</div>
+         
+        </div>
+        <div class="container-flex-grow container-flex-2">
+                        
+            <div class="iten-grow IT-1">DIO</div>
+            <div class="iten-grow IT-2">Bem-Vindo</div>
+            <div class="iten-grow IT-3">Trilha de CSS</div>
+         
+        </div>
+
+
+    </section>
+    <section id="flex-shrink">
+        
+    </section>
+</body>
+</html>
