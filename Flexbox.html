@@ -22,6 +22,16 @@
         text-align: center;
         margin: 1%;
        }
+       code{
+        
+        padding: .5%;
+        border: 2px solid;
+        border-radius: 5px;
+       }
+       ol, ul, li {
+        margin: .8%;
+        text-align: justify;
+       }
        .container{
         
         margin: 1%;
@@ -34,15 +44,14 @@
      
         }
        .itens{
-        padding: 1%;
+        padding: 1.5%;
         margin: 10px;
         background-color: orange;
         border: 1px solid;
         border-radius: 10px;
         width: 100px;
         height: 100px;
-       
-             
+        
        }
        .inline-flex{
         display: inline-flex;
@@ -52,9 +61,6 @@
        }
        .container02{
          flex-direction: column;
-       }
-       ol, ul, li {
-        text-align: justify;
        }
        .container10{
           flex-direction: row-reverse;
@@ -116,16 +122,16 @@
            width: 94.6%;
            height: 400px;
        }
-       .iten-1{
+       #aling-itens .iten-1{
           width: 50px;
           height: 50px;
           
        }
-       .iten-2{
+       #aling-itens .iten-2{
           width: 80px;
           height: 80px;
        }
-       .iten-3{
+       #aling-itens .iten-3{
           width: 40px;
           height: 40px;
        }
@@ -199,9 +205,12 @@
   
        }
        .iten{
+        gap: 10px; 
+        align-items: flex-start;
+        margin: 1%;
+        text-align: center;
         background-color: orange;
        }
-
        .gap-row{
      
         display: flex;
@@ -220,10 +229,10 @@
        .gap-dois-valores{
           gap: 10px 20px;
        }
-       .it-9{
+       #order .it-9{
         order: -1;
        }
-       .it-4{
+       #order .it-4{
         order: -2;
        }
        .container-flex-grow{
@@ -245,8 +254,79 @@
        .container-flex-2 .IT-2{
           flex-grow: 2;
        }
+       #flex-shrink .container{
+        width: 1200px;
+        height: 200px;
+        display: flex;
+        flex-wrap:  nowrap;
+       }
+       #flex-shrink .itens{
+        width: 65px;
+        height: 65px;
+        flex-shrink: 1;
+       }
+       #flex-shrink .container-flex-shrink-2 .itens{
+        width: 65px;
+        height: 65px;
+        flex-shrink: 0;
+       }
+       #flex-shrink .container-flex-shrink-3 .it-9{
+        background-color: black;
+        flex-shrink: 0;
+       }
+       #flex-shrink .container-flex-shrink-3 .it-3{
+        background-color: black;
+        flex-shrink: 3;
+       }
+       #flex-basis .container-flex-basis .itens{
+          flex-basis: 180px;
+       }
+       #flex-basis .container-flex-basis .iten-2{
+        background-color: orangered;
+          flex-basis: 600px;
+       }
+       #shorthand-flex .container{
+        background-color: blueviolet;
+        margin: 20px;
+        width: 600px;
+        height: 300px;
+       }
+       #shorthand-flex .container-shorthand .iten{
+        flex: 1 1 auto;
 
-    </style>
+       }
+       #shorthand-flex .container-initial .iten{
+       
+        flex: initial;
+       }
+       #shorthand-flex .container-auto .iten{
+       
+       flex: auto;
+       }
+        #shorthand-flex .container-none .iten{
+       
+       flex: none;
+       }
+       #shorthand-flex .container-positivo .iten{
+       
+       flex: 1;
+       }
+       #aling-self .container-auto .iten-2{
+        align-self: auto;
+       }
+       #aling-self .container-flex-start .iten-2{
+        align-self: flex-start;
+       }
+        #aling-self .container-flex-end .iten-2{
+        align-self: flex-end;
+       }
+       #aling-self .container-baseline .iten-2{
+        align-self: baseline;
+       }
+       #aling-self .container-stretch .iten-2{
+        align-self: stretch;
+       }
+     </style>
 </head>
 <body>
     <section id="conceitos-flexbox">
@@ -321,7 +401,7 @@
         </ul>
         <p>Esses eixos são fundamentais para entender como os itens flexíveis são posicionados e alinhados dentro do contêiner flexível. As propriedades justify-content e align-items controlam o alinhamento dos itens ao longo do eixo principal e do eixo transversal, respectivamente. Entender e manipular esses eixos é essencial para criar layouts flexíveis e responsivos com Flexbox.</p>
 
-        <div class="container" id="container01">
+        <div class="container container01">
            <p> Eixo Principal (Main Axis):</p>
             <div class="itens">itens 01</div>
             <div class="itens">itens 02</div>
@@ -330,7 +410,7 @@
             <div class="itens">itens 05</div>
            
         </div>
-        <div class="container" id="container02">
+        <div class="container container02">
             <p>Eixo Transversal (Cross Axis):</p>
             <div class="itens">itens 01</div>
             <div class="itens">itens 02</div>
@@ -1208,7 +1288,354 @@
 
     </section>
     <section id="flex-shrink">
+        <h1>Propriedade flex-shrink</h1>
+        <p>A propriedade flex-shrink é usada em layouts flexíveis para determinar a capacidade de um item flexível <strong>encolher</strong> em relação aos outros itens flexíveis no contêiner flexível quando há espaço insuficiente disponível. Ou seja, vai controlar o quanto esse item vai diminuir, se necessário.</p>
+        <hr>
+        <p>O valor padrão é 1.0. Quanto maior o valor de flex-shrink, mais o item encolherá em comparação com os outros itens quando o espaço for reduzido.</p>
+        <h2>Exemplo:</h2>
+        <p>Aplicado em todos os itens igualmente.</p>
+        <code> flex-shrink: 1; (valor padrão)</code>
+        <div class="container container01 container-flex-shrink-1">
+                
+            <div class="itens">itens 01</div>
+            <div class="itens">itens 02</div>
+            <div class="itens">itens 03</div>
+            <div class="itens">itens 04</div>
+            <div class="itens">itens 05</div>
+            <div class="itens">itens 06</div>
+            <div class="itens">itens 07</div>
+            <div class="itens">itens 08</div>
+            <div class="itens">itens 09</div>
+            <div class="itens">itens 10</div>
+            <div class="itens">itens 11</div>
+            <div class="itens">itens 12</div>
+        </div>
+        <hr>
+        <p>Se todos os itens têm flex-shrink definido como 0, eles não diminuirão para acomodar o contêiner flexível se não houver espaço suficiente.</p>
+        <h2>Exemplo:</h2>
+        <p>Aplicado em todos os itens igualmente.</p>
+        <code> flex-shrink: 0;</code>
+        <div class="container container01 container-flex-shrink-2">
+                
+            <div class="itens">itens 01</div>
+            <div class="itens">itens 02</div>
+            <div class="itens">itens 03</div>
+            <div class="itens">itens 04</div>
+            <div class="itens">itens 05</div>
+            <div class="itens">itens 06</div>
+            <div class="itens">itens 07</div>
+            <div class="itens">itens 08</div>
+            <div class="itens">itens 09</div>
+            <div class="itens">itens 10</div>
+            <div class="itens">itens 11</div>
+            <div class="itens">itens 12</div>
+        </div>
+        <hr>
+        <h2>Exemplo:</h2>
+        <p>Aplicado em um item especifico.</p>
+        <p>(item 09 no seu tamanho real)<code>flex-shrink: 0;</code></p>
+        <p> (item 03 <b>MENOR</b> que os outros)<code>flex-shrink: 3;</code></p>
+        <div class="container container01 container-flex-shrink-3">
+            
+            <div class="itens it-1">iten-1</div>
+            <div class="itens it-2">iten-2</div>
+            <div class="itens it-3">iten-3</div>
+            <div class="itens it-4">iten-4</div>
+            <div class="itens it-5">iten-5</div>
+            <div class="itens it-6">iten-6</div>
+            <div class="itens it-7">iten-7</div>
+            <div class="itens it-8">iten-8</div>
+            <div class="itens it-9">iten-9</div>
+            <div class="itens it-10">iten-10</div>
+            <div class="itens it-11">iten-11</div>
+            <div class="itens it-12">iten-12</div>
+        </div>
+      
+    </section>
+    <section id="flex-basis">
+        <h1>Propriedade flex-basis</h1>
+        <p>A propriedade flex-basis é usada em layouts flexíveis (flexbox) em CSS para definir o tamanho inicial de um item flexível antes que o espaço restante seja distribuído. Ela especifica o tamanho base de um item flexível no contêiner flexível, antes que o espaço adicional seja distribuído de acordo com as proporções definidas pelas propriedades flex-grow e flex-shrink.
+
+            O valor padrão para flex-basis é auto, o que significa que o tamanho inicial do item será o seu tamanho intrínseco (se houver) ou o tamanho determinado pelo valor width ou height, dependendo da direção principal do flex container.
+            
+            Por exemplo, se flex-direction for row, flex-basis controlará a largura inicial do item. Se flex-direction for column, flex-basis controlará a altura inicial do item.
+            
+            Você pode definir o valor de flex-basis como um valor específico de largura, altura ou porcentagem, ou usar palavras-chave como auto ou content.
+        </p>
+        <h2>Exemplo:</h2>
+        <p>Aplicado em todos os itens <code>flex-basis: 150px</code></p>
+        <div class="container container-flex-basis">
+            
+            <div class="itens">itens 01</div>
+            <div class="itens">itens 02</div>
+            <div class="itens">itens 03</div>
+
+        </div>
+        <div class="container container-flex-basis">
+           
+            <div class="itens">Curto</div>
+            <div class="itens">Texto Médio</div>
+            <div class="itens">Texto Mais mais mais longo</div>
+           
+        </div> 
+        <hr>   
+        <h2>Exemplo:</h2>
+        <p>Aplicado em um item expecifico (Item 02) <code>flex-basis: 600px</code></p>
+        <div class="container container-flex-basis">
+            
+            <div class="itens iten-1">itens 01</div>
+            <div class="itens iten-2">itens 02</div>
+            <div class="itens iten-3">itens 03</div>
+
+        </div>
+        <div class="container container-flex-basis">
+           
+            <div class="itens iten-1">Curto</div>
+            <div class="itens iten-2">Texto Médio</div>
+            <div class="itens iten-3">Texto Mais mais mais longo</div>
+           
+        </div> 
+        <h1>FLEX-BASIS X WIDTH/HEIGHT</h1>     
+        <p>Se usarmos a propriedade flex-basis no item, ele irá sobrescrever o valor do wdth/height do elemento. Porém, vai respeitar o max-width-max-height definido para o elemento, assim como o min-width/min-height.</p>              
         
+    </section>
+    <section id="shorthand-flex">
+        <h1>Propriedade shorthand-flex</h1>
+        <p>A propriedade shorthand flex é uma maneira conveniente de definir as três propriedades flexíveis: flex-grow, flex-shrink e flex-basis, tudo em uma única linha.</p>
+        <h2> A sintaxe geral é:</h2>
+        <code>flex: [flex-grow] [flex-shrink] [flex-basis];</code>
+        <p>Por exemplo, se você definir flex: 1 1 auto; significa que o item flexível pode crescer (flex-grow: 1), pode encolher (flex-shrink: 1) e o tamanho inicial será determinado automaticamente pelo navegador (flex-basis: auto;).
+
+            Se você fornecer apenas um valor numérico, ele será interpretado como o valor de flex-grow. Se fornecer dois valores numéricos, o primeiro será flex-grow e o segundo será flex-shrink, e o terceiro valor será flex-basis. Se fornecer um valor seguido pela palavra-chave auto, isso definirá flex-grow e flex-basis, com flex-shrink sendo 1. Se você fornecer apenas um valor seguido por auto, o valor será interpretado como flex-grow, e o flex-basis será definido como auto.
+            
+            É uma ótima maneira de simplificar o código CSS quando você precisa definir as propriedades flexíveis de uma só vez.
+        </p>
+        <h3>Exemplo:</h3>
+        <code>flex: 1 1 auto;</code>
+        <div class="container container-shorthand">
+            
+            <div class="iten iten-1">itens 01</div>
+            <div class="iten iten-2">itens 02</div>
+            <div class="iten iten-3">itens 03</div>
+
+        </div>
+        <div class="container container-shorthand">
+           
+            <div class="iten iten-1">Curto</div>
+            <div class="iten iten-2">Texto Médio</div>
+            <div class="iten iten-3">Texto Mais mais mais longo</div>
+           
+        </div> 
+        <hr>
+        <h1>Valores pré definidos:</h1>
+        <ol>
+            <li><code>flex: initial;</code>
+                <p>Equivale á</p>
+                <ul>
+                    <li><code>flex: 0 1 auto</code></li>
+                    <li><code>flex: [flex-grow] [flex-shrink] [flex-basis];</code></li>
+
+                </ul>   
+                <h3>Exemplo:</h3>
+                <div class="container container-initial">
+            
+                    <div class="iten iten-1">itens 01</div>
+                    <div class="iten iten-2">itens 02</div>
+                    <div class="iten iten-3">itens 03</div>
+
+                </div>
+                <div class="container container-initial">
+           
+                    <div class="iten iten-1">Curto</div>
+                    <div class="iten iten-2">Texto Médio</div>
+                    <div class="iten iten-3">Texto Mais mais mais longo</div>
+           
+                </div> 
+            </li>
+            <hr>
+            <li><code>flex: auto;</code>
+                <p>Equivale á</p>
+                <ul>
+                    <li><code>flex: 1 1 auto</code></li>
+                    <li><code>flex: [flex-grow] [flex-shrink] [flex-basis];</code></li>
+
+                </ul>   
+                <h3>Exemplo:</h3>
+                <div class="container container-auto">
+            
+                    <div class="iten iten-1">itens 01</div>
+                    <div class="iten iten-2">itens 02</div>
+                    <div class="iten iten-3">itens 03</div>
+
+                </div>
+                <div class="container container-auto">
+           
+                    <div class="iten iten-1">Curto</div>
+                    <div class="iten iten-2">Texto Médio</div>
+                    <div class="iten iten-3">Texto Mais mais mais longo</div>
+           
+                </div> 
+            </li>
+            <hr>
+            <li><code>flex: none;</code>
+                <h2>o item fica totalmente inflexivel</h2>
+
+                <p>Equivale á</p>
+                <ul>
+                    <li><code>flex: 0 0 auto;</code></li>
+                    <li><code>flex: [flex-grow] [flex-shrink] [flex-basis];</code></li>
+
+                </ul>   
+                <h3>Exemplo:</h3>
+                <div class="container container-none">
+            
+                    <div class="iten iten-1">itens 01</div>
+                    <div class="iten iten-2">itens 02</div>
+                    <div class="iten iten-3">itens 03</div>
+
+                </div>
+                <div class="container container-none">
+           
+                    <div class="iten iten-1">Curto</div>
+                    <div class="iten iten-2">Texto Médio</div>
+                    <div class="iten iten-3">Texto Mais mais mais  mais  mais  mais  mais longo</div>
+           
+                </div> 
+            </li>
+            <hr>
+            <li><code>flex: (numero positivo);</code>
+                <p>Equivale á</p>
+                <p>Um número positivo: Isso define o valor de flex-grow. Quanto maior o número, mais o item flexível crescerá para ocupar o espaço disponível no contêiner. Se todos os itens têm flex-grow definido como 1, o espaço disponível será dividido igualmente entre eles. Se um item tiver flex-grow definido como 2 e os outros como 1, ele ocupará o dobro do espaço disponível em relação aos outros itens.</p>
+                <ul>
+                    <li><code>flex: 1;</code></li>
+                    <li><code>flex: [flex-grow] [flex-shrink] [flex-basis];</code></li>
+
+                </ul>   
+                <h3>Exemplo:</h3>
+                <div class="container container-positivo">
+            
+                    <div class="iten iten-1">itens 01</div>
+                    <div class="iten iten-2">itens 02</div>
+                    <div class="iten iten-3">itens 03</div>
+
+                </div>
+                <div class="container container-positivo">
+           
+                    <div class="iten iten-1">Curto</div>
+                    <div class="iten iten-2">Texto Médio</div>
+                    <div class="iten iten-3">Texto Mais mais mais longo</div>
+           
+                </div> 
+
+        </ol>
+        
+        
+      
+
+    </section>
+    <section id="aling-self">
+        <h1>Propriedade aling-self</h1>
+        <p>A propriedade align-self é uma propriedade CSS usada em layouts flexíveis (flexbox) para controlar o alinhamento de um único item flexível em relação ao eixo transversal do contêiner flexível. Enquanto a propriedade align-items é usada para alinhar todos os itens flexíveis dentro do contêiner, a propriedade align-self permite ajustar individualmente o alinhamento de um item específico.</p>
+        <ul><h2>A propriedade align-self pode receber os seguintes valores:</h2>
+            <li>auto: O comportamento de alinhamento é herdado do contêiner flexível.<br><br>
+                
+                <code>align-self: auto;</code>
+                <div class="container container01 container-auto">
+
+                    <div class="iten iten-1">itens 01</div>
+                    <div class="iten iten-2">itens 02</div>
+                    <div class="iten iten-3">itens 03</div>
+                </div>
+                <div class="container container02 container-auto">
+            
+                    <div class="iten iten-1">itens 01</div>
+                    <div class="iten iten-2">itens 02</div>
+                    <div class="iten iten-3">itens 03</div>
+                </div>
+                <hr>
+            </li>
+            <li>flex-start: O item é alinhado no início do eixo transversal do contêiner flexível.<br><br>
+                <code>align-self: flex-start;</code>
+                <div class="container container01 container-flex-start">
+
+                    <div class="itens iten-1">itens 01</div>
+                    <div class="itens iten-2">itens 02</div>
+                    <div class="itens iten-3">itens 03</div>
+                </div>
+                <div class="container container02 container-flex-start">
+            
+                    <div class="itens iten-1">itens 01</div>
+                    <div class="itens iten-2">itens 02</div>
+                    <div class="itens iten-3">itens 03</div>
+                </div>
+                <hr>
+            </li>
+            <li>flex-end: O item é alinhado no final do eixo transversal do contêiner flexível.<br><br>
+                <code>align-self: flex-end;</code>
+                <div class="container container01 container-flex-end">
+
+                    <div class="itens iten-1">itens 01</div>
+                    <div class="itens iten-2">itens 02</div>
+                    <div class="itens iten-3">itens 03</div>
+                </div>
+                <div class="container container02 container-flex-end">
+            
+                    <div class="itens iten-1">itens 01</div>
+                    <div class="itens iten-2">itens 02</div>
+                    <div class="itens iten-3">itens 03</div>
+                </div>
+                <hr>
+            </li>
+            <li>center: O item é centralizado ao longo do eixo transversal do contêiner flexível.<br><br>
+                <code>align-self: center;</code>
+                <div class="container container01 container-center">
+
+                    <div class="itens iten-1">itens 01</div>
+                    <div class="itens iten-2">itens 02</div>
+                    <div class="itens iten-3">itens 03</div>
+                </div>
+                <div class="container container02 container-center">
+            
+                    <div class="itens iten-1">itens 01</div>
+                    <div class="itens iten-2">itens 02</div>
+                    <div class="itens iten-3">itens 03</div>
+                </div>
+                <hr>
+            </li>
+            <li>baseline: O item é alinhado com a linha de base de outros itens flexíveis no contêiner.<br><br>
+                <code>align-self: baseline;</code>
+                <div class="container container01 container-baseline">
+
+                    <div class="itens iten-1">itens 01</div>
+                    <div class="itens iten-2">itens 02</div>
+                    <div class="itens iten-3">itens 03</div>
+                </div>
+                <div class="container container02 container-baseline">
+            
+                    <div class="itens iten-1">itens 01</div>
+                    <div class="itens iten-2">itens 02</div>
+                    <div class="itens iten-3">itens 03</div>
+                </div>
+                <hr>
+            </li>
+            <li>stretch: O item é esticado para preencher o contêiner flexível ao longo do eixo transversal.<br><br>
+                <code>align-self: stretch;</code>
+                <div class="container container01 container-stretch">
+
+                    <div class="itens iten-1">itens 01</div>
+                    <div class="itens iten-2">itens 02</div>
+                    <div class="itens iten-3">itens 03</div>
+                </div>
+                <div class="container container02 container-stretch">
+            
+                    <div class="itens iten-1">itens 01</div>
+                    <div class="itens iten-2">itens 02</div>
+                    <div class="itens iten-3">itens 03</div>
+                </div>
+                <hr>
+            </li>
+        </ul>
+        <p>A propriedade align-self substitui qualquer valor de alinhamento que tenha sido definido pelo align-items para o item específico ao qual está aplicado.</p>
     </section>
 </body>
 </html>
