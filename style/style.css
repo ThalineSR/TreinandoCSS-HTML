@@ -1,0 +1,227 @@
+
+  @import url('https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+
+body{  
+    background-color: black;
+    padding: 3%;  
+    font-family: "Comic Neue", cursive;
+    font-style: normal;
+    font-size: xx-large;
+}
+header{
+    width: 100%;
+    height: 5%;
+    background-color: white;
+}
+main{
+     
+}
+footer{
+    width: 100%;
+    height: 5%;
+    background-color: white;
+}
+section{
+    background-image: radial-gradient(darkviolet, black);
+    color: bisque;
+    padding: 1%;
+    border: 1px solid;
+    border-radius: 10px;
+    text-align: center;
+    margin: 1%;
+}
+ul, li, ol {
+    text-align: justify;
+    
+}
+
+/*background-color*/
+
+#Alterando-Fundos .exemplo{
+    width: 300px;
+    height: 300px;
+}
+#Alterando-Fundos .color{
+    background-color: red;
+}
+#Alterando-Fundos .Hexadecimal{
+    background-color: #ff0000
+}
+#Alterando-Fundos .RGB{
+    background-color: rgb(255, 0, 0);
+}
+#Alterando-Fundos .RGBA{
+    background-color: rgba(255, 0, 0, 0.5);
+}
+#Alterando-Fundos .HSL{
+    background-color: hsl(0, 100%, 50%);
+}
+#Alterando-Fundos .HSLA{
+    background-color: hsla(0, 100%, 50%, 0.5);
+}
+#Alterando-Fundos ul{
+    gap: 5%;
+    display: inline-block;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+/*background-image*/
+#Alterando-Fundos .Ex1{
+    
+    background-image: radial-gradient(rgb(255, 0, 0), rgb(22, 4, 102));
+}
+#Alterando-Fundos .Ex2{
+   
+    background-image: linear-gradient(to right, red, blue);
+}
+#Alterando-Fundos .Ex3{
+    
+    background-image: url(https://img.freepik.com/fotos-gratis/papel-de-parede-abstrato-ultra-detalhado-da-nebulosa-6_1562-751.jpg);
+}
+#Alterando-Fundos .Ex4{
+ 
+    background-image: url(https://img.freepik.com/fotos-gratis/papel-de-parede-abstrato-ultra-detalhado-da-nebulosa-6_1562-751.jpg), linear-gradient(to right, red, blue);
+    background-blend-mode:multiply;
+}
+
+/*Redimencionando imagens*/
+
+#background-size .exemplo{
+    width: 300px;
+    height: 300px;
+}
+#background-size .Ex1{
+    
+    background-image: url(https://img.freepik.com/fotos-gratis/papel-de-parede-abstrato-ultra-detalhado-da-nebulosa-6_1562-751.jpg);
+
+ } 
+#background-size .Ex2{
+    
+    background-image: url(https://img.freepik.com/fotos-gratis/papel-de-parede-abstrato-ultra-detalhado-da-nebulosa-6_1562-751.jpg);
+    background-size: cover;
+ }  
+ #background-size .Ex3{
+    
+    background-image: url(https://img.freepik.com/fotos-gratis/papel-de-parede-abstrato-ultra-detalhado-da-nebulosa-6_1562-751.jpg);
+    background-size: contain;
+ } 
+ #background-size .Ex4{
+    
+    background-image: url(https://img.freepik.com/fotos-gratis/papel-de-parede-abstrato-ultra-detalhado-da-nebulosa-6_1562-751.jpg);
+    background-size: 50% ;
+ }     
+#background-size .Ex5{
+    
+    background-image: url(https://img.freepik.com/fotos-gratis/papel-de-parede-abstrato-ultra-detalhado-da-nebulosa-6_1562-751.jpg);
+    background-size: 200px 250px;
+ } 
+
+/*BackGround-origin*/
+
+#background-origin .container{
+    display: inline-flex;
+    margin: 3%;
+    padding: 1%;
+    width: 100%;
+    
+}
+#background-origin .exemplo{
+      
+    padding: 3%;
+    width: 300px;
+    height: 300px;
+   
+    background-image: url(https://t3.ftcdn.net/jpg/03/95/29/32/360_F_395293226_A4boRgABAbfXmAmmynQHcjjIIB3MjDCj.jpg);
+    background-size:  100% 100%;
+    background-repeat: no-repeat;
+
+    border: 15px dashed rgb(83, 1, 76);
+  
+}
+#background-origin .texto{
+    padding: 3%;
+    width: 600px;
+    height: 600px;
+
+}
+#background-origin #padding-box{
+    background-origin: padding-box;
+}
+#background-origin #border-box{
+    background-origin: border-box;
+}
+#background-origin #contenet-box{
+    background-origin: content-box;
+}
+
+/*BackGround Attachment*/
+
+#BackGround-Attachment .Ex-1, .Ex-2, .Ex-3{
+    display: inline-block;
+    margin: 5px;
+    
+    border: 5px solid violet;
+    width: 300px;
+    height: 300px;
+    background-image: url(https://t3.ftcdn.net/jpg/03/95/29/32/360_F_395293226_A4boRgABAbfXmAmmynQHcjjIIB3MjDCj.jpg);
+    background-size: auto;
+    overflow: auto; 
+
+}
+#BackGround-Attachment .Ex-1 {
+    background-attachment: fixed;
+}
+#BackGround-Attachment .Ex-2{
+    background-attachment: scroll;
+}
+#BackGround-Attachment .Ex-3{
+    background-attachment: local;
+}
+
+/*background-clip*/
+
+#background-clip .container{
+    margin: 3%;
+    padding: 1%;
+    width: 100%;
+
+    display: flex;
+    display: inline-flex;
+    justify-content: space-evenly;
+}
+#background-clip .texto{
+    padding: 3%;
+    width: 35%;
+    height: 300px;
+    
+}
+
+#background-clip .exemplo{
+    width: 300px;
+    height: 300px;
+    border: 15px dashed orangered;
+    color:white;
+    padding: 30px;
+    font-size: 100px;
+    font-weight: 900;
+    background-color: aqua;
+    background-image: url(https://assets-global.website-files.com/6009ec8cda7f305645c9d91b/6010813f5ce191dc4701ea9b_6002086f72b72724ad01dec6_flexbox-and-css-grid.jpeg);
+            
+}
+#background-clip #padding-box{
+    background-clip: padding-box ;
+}
+#background-clip #border-box{
+    background-clip: border-box ;       
+}
+#background-clip #content-box{
+    background-clip: content-box;
+}
+#background-clip #text{
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+}
+
