@@ -53,26 +53,50 @@
             <h1>background-image</h1>
             <p>A propriedade background-image no CSS é usada para definir uma ou mais imagens de fundo para um elemento. Essas imagens podem ser arquivos de imagem, gradientes ou outros tipos de imagens suportados pelo CSS. A utilização adequada de background-image pode adicionar um apelo visual significativo às suas páginas web.</p>
             <h3>Sintaxe Básica <code>background-image: url('imagem.jpg');</code></h3>
-            <h2>Valore:</h2>
-            <ul>            
-                <li>Gradientes:
-                    <ol>Radial Gradient:<code>background-image: radial-gradient(circle, red, blue);</code>
-                        <div class="exemplo Ex1"></div>
-                    </ol>
-                    <ol>Linear Gradient:<code>background-image: linear-gradient(to right, red, blue);</code>
-                        <div class="exemplo Ex2"></div>
-                    </ol>                  
+            <h2>Valores:</h2>
+            <ul>
+                <li>           
+                    <ul><h1>Gradientes: </h1>
+                        <li>                                      
+                            <div class="container"> 
+                                <div class="texto">
+                                    <p>Radial Gradient:</p>
+                                        
+                                    <code>background-image: radial-gradient(circle, red, blue);</code>
+                                </div>
+                                <div class="exemplo Ex1"></div>
+                            </div>
+                        </li>
+                        <li>
+                           <div class="container">
+                                <div class="texto">
+                                    <p>Linear Gradient:</p>
+                                    <code>background-image: linear-gradient(to right, red, blue);</code>
+                                </div>
+                                <div class="exemplo Ex2"></div>
+                            </div>
+                        </li>
+                      
+                    </ul>                            
+                </li>                
+                <li> 
+                    <div class="container">
+                      <div class="texto"><p>URL de Imagem:</p>
+                        <code>background-image: url('imagem.jpg');</code></div>
+                      <div class="exemplo Ex3"></div>
+                    </div>
+                    
                 </li>
-                
-                <li>URL de Imagem:
-                    <code>background-image: url('imagem.jpg');</code><br>
-                    <div class="exemplo Ex3"></div>
-                </li>
-
-                <li>Múltiplas Imagens: Permite definir múltiplas imagens de fundo, que serão empilhadas umas sobre as outras, a primeira definida será a mais próxima do usuário.
-                    <code>background-image: url('imagem1.jpg'), linear-gradient(to right, red, blue);</code>
-                    <code>background-blend-mode:multiply;</code>
-                    <div class="exemplo Ex4"></div>
+                <li>
+                    <div class="container multiplas">
+                <li> 
+                    <div class="texto"><p>Múltiplas Imagens:</p>
+                            <p>Permite definir múltiplas imagens de fundo, que serão empilhadas umas sobre as outras, a primeira definida será a mais próxima do usuário.</p>
+                            <code>background-image: url('imagem1.jpg'), linear-gradient(to right, red, blue);</code>
+                            <code>background-blend-mode:multiply;</code>
+                        </div>
+                        <div class="exemplo Ex4"></div>
+                    </div>
                 </li>
             </ul>
         </section>
@@ -81,81 +105,95 @@
             <p>Ela permite que você ajuste a imagem para cobrir o elemento de diferentes maneiras, garantindo que o design da página seja responsivo e visualmente agradável.</p>
             <h2>Valores</h2>
             <ul>
-                <li>Background-size: Auto;<p>Mantém o tamanho original da imagem.</p>
-                    <div class="exemplo Ex1"></div>
+                <li>
+                    <div class="container">
+                        <Div class="texto">Background-size: Auto;<p>Mantém o tamanho original da imagem.</p></Div>
+                        <div class="exemplo Ex1"></div>
+                    </div>                    
                 </li>
-                <li>Background-size: cover;<p>Redimensiona a imagem para cobrir completamente o elemento, mantendo a proporção original da imagem. A imagem pode ser cortada para preencher o elemento.</p>
-                    <div class="exemplo Ex2"></div>
+                <li>
+                    <div class="container">
+                        <div class="texto">Background-size: cover;<p>Redimensiona a imagem para cobrir completamente o elemento, mantendo a proporção original da imagem. A imagem pode ser cortada para preencher o elemento.</p></div>
+                        <div class="exemplo Ex2"></div>
+                    </div>
                 </li>
-                <li>Background-size: contain;<p>Redimensiona a imagem para caber dentro do elemento, mantendo a proporção original da imagem. A imagem será dimensionada para garantir que toda ela seja visível.</p>
-                    <div class="exemplo Ex3"></div>
+                <li>                   
+                    <div class="container">
+                        <div class="texto">Background-size: contain;<p>Redimensiona a imagem para caber dentro do elemento, mantendo a proporção original da imagem. A imagem será dimensionada para garantir que toda ela seja visível.</p></div>
+                        <div class="exemplo Ex3"></div>
+                    </div> 
                 </li>
-                <li>Background-size: valor;<p>Define o tamanho da imagem de fundo em unidades como pixels, porcentagem, etc.</p>
-                    <div class="exemplo Ex4"></div>
-
+                <li>
+                    <div class="container">
+                       <div class="texto">Background-size: valor;<p>Define o tamanho da imagem de fundo em unidades como pixels, porcentagem, etc.</p></div>
+                       <div class="exemplo Ex4"></div>
+                    </div>
                 </li>
-                <li>Background-size: x y; (dois valores)<p>Define o tamanho da imagem de fundo em unidades como pixels, porcentagem, etc.</p>
-                    <div class="exemplo Ex5"></div>
-
+                <li>
+                    <div class="container">
+                       <div class="texto">Background-size: x y; (dois valores)<p>Define o tamanho da imagem de fundo em unidades como pixels, porcentagem, etc.</p></div>
+                       <div class="exemplo Ex5"></div>
+                    </div>
                 </li>             
             </ul>
           
         </section>
         <section id="BackGround-Attachment">
             <h1>Propriedades BackGround Attachment</h1>
-              
-            <code>background-attachment: fixade;</code>
-            <div class="Ex-1">
-                <p>
-                    No vasto céu azul, as nuvens pairam como pinceladas de uma paleta celestial, pintando o firmamento com cores que desafiam a imaginação. Não mais restritas ao branco impoluto, essas esferas de vapor ganham vida em tons vibrantes e inesperados, transformando o horizonte em um espetáculo de tonalidades.
-                    
-                    À medida que o sol se põe, as nuvens adotam tons de laranja e rosa, como se estivessem mergulhadas em chamas douradas. Os raios de luz dançam entre os interstícios das nuvens, criando um espetáculo efêmero de cores ardentes que aquecem até mesmo os corações mais frios.
-                    
-                    Nas manhãs serenas, o céu se veste com um manto de azul suave, adornado por nuvens cor-de-rosa e lilás, como se o próprio amanhecer estivesse tingido por uma paleta de aquarela. Essas nuvens delicadas flutuam gentilmente, como flores celestiais que desabrocham ao romper do dia.
-                    
-                    Em dias de tempestade, as nuvens adquirem tons sombrios e profundos, carregando consigo a promessa de chuvas revigorantes. Os raios partem dos confins escuros das nuvens, iluminando o céu com uma energia elétrica que corta a escuridão e traz vida à atmosfera.
-                    
-                    E em raros momentos de magia, quando as condições atmosféricas são perfeitas, as nuvens se tornam telas para o espetáculo celestial mais extraordinário de todos: o arco-íris. Suas cores vivas e vibrantes cortam o céu como um sorriso da natureza, lembrando-nos da beleza efêmera e da maravilha que existe em nosso mundo.
-                    
-                    Assim, as nuvens coloridas não são apenas fenômenos meteorológicos, mas sim obras de arte em constante evolução, pintadas pelos caprichos da luz e da atmosfera, lembrando-nos da infinita criatividade da natureza e inspirando-nos a olhar para o céu com admiração renovada.
-                </p>
-             </div>
-             <hr>             
-             <code>background-attachment: scroll; </code> 
-            <div class="Ex-2">
-                <p>
-                No vasto céu azul, as nuvens pairam como pinceladas de uma paleta celestial, pintando o firmamento com cores que desafiam a imaginação. Não mais restritas ao branco impoluto, essas esferas de vapor ganham vida em tons vibrantes e inesperados, transformando o horizonte em um espetáculo de tonalidades.
-                
-                À medida que o sol se põe, as nuvens adotam tons de laranja e rosa, como se estivessem mergulhadas em chamas douradas. Os raios de luz dançam entre os interstícios das nuvens, criando um espetáculo efêmero de cores ardentes que aquecem até mesmo os corações mais frios.
-                
-                Nas manhãs serenas, o céu se veste com um manto de azul suave, adornado por nuvens cor-de-rosa e lilás, como se o próprio amanhecer estivesse tingido por uma paleta de aquarela. Essas nuvens delicadas flutuam gentilmente, como flores celestiais que desabrocham ao romper do dia.
-                
-                Em dias de tempestade, as nuvens adquirem tons sombrios e profundos, carregando consigo a promessa de chuvas revigorantes. Os raios partem dos confins escuros das nuvens, iluminando o céu com uma energia elétrica que corta a escuridão e traz vida à atmosfera.
-                
-                E em raros momentos de magia, quando as condições atmosféricas são perfeitas, as nuvens se tornam telas para o espetáculo celestial mais extraordinário de todos: o arco-íris. Suas cores vivas e vibrantes cortam o céu como um sorriso da natureza, lembrando-nos da beleza efêmera e da maravilha que existe em nosso mundo.
-                
-                Assim, as nuvens coloridas não são apenas fenômenos meteorológicos, mas sim obras de arte em constante evolução, pintadas pelos caprichos da luz e da atmosfera, lembrando-nos da infinita criatividade da natureza e inspirando-nos a olhar para o céu com admiração renovada.
-                </p>
-            </div>
-            <hr>        
-            <code>background-attachment: local; </code> 
-            <div class="Ex-3">
-                <p>
-                No vasto céu azul, as nuvens pairam como pinceladas de uma paleta celestial, pintando o firmamento com cores que desafiam a imaginação. Não mais restritas ao branco impoluto, essas esferas de vapor ganham vida em tons vibrantes e inesperados, transformando o horizonte em um espetáculo de tonalidades.
-                
-                À medida que o sol se põe, as nuvens adotam tons de laranja e rosa, como se estivessem mergulhadas em chamas douradas. Os raios de luz dançam entre os interstícios das nuvens, criando um espetáculo efêmero de cores ardentes que aquecem até mesmo os corações mais frios.
-                
-                Nas manhãs serenas, o céu se veste com um manto de azul suave, adornado por nuvens cor-de-rosa e lilás, como se o próprio amanhecer estivesse tingido por uma paleta de aquarela. Essas nuvens delicadas flutuam gentilmente, como flores celestiais que desabrocham ao romper do dia.
-                
-                Em dias de tempestade, as nuvens adquirem tons sombrios e profundos, carregando consigo a promessa de chuvas revigorantes. Os raios partem dos confins escuros das nuvens, iluminando o céu com uma energia elétrica que corta a escuridão e traz vida à atmosfera.
-                
-                E em raros momentos de magia, quando as condições atmosféricas são perfeitas, as nuvens se tornam telas para o espetáculo celestial mais extraordinário de todos: o arco-íris. Suas cores vivas e vibrantes cortam o céu como um sorriso da natureza, lembrando-nos da beleza efêmera e da maravilha que existe em nosso mundo.
-                
-                Assim, as nuvens coloridas não são apenas fenômenos meteorológicos, mas sim obras de arte em constante evolução, pintadas pelos caprichos da luz e da atmosfera, lembrando-nos da infinita criatividade da natureza e inspirando-nos a olhar para o céu com admiração renovada.
-               </p>
-            </div><br>
-        
-
+            <h2>Valores:</h2>
+            <ul>
+                <li><code>background-attachment: fixade;</code>
+                    <div class="Ex-1">
+                        <p>
+                            No vasto céu azul, as nuvens pairam como pinceladas de uma paleta celestial, pintando o firmamento com cores que desafiam a imaginação. Não mais restritas ao branco impoluto, essas esferas de vapor ganham vida em tons vibrantes e inesperados, transformando o horizonte em um espetáculo de tonalidades.
+                            
+                            À medida que o sol se põe, as nuvens adotam tons de laranja e rosa, como se estivessem mergulhadas em chamas douradas. Os raios de luz dançam entre os interstícios das nuvens, criando um espetáculo efêmero de cores ardentes que aquecem até mesmo os corações mais frios.
+                            
+                            Nas manhãs serenas, o céu se veste com um manto de azul suave, adornado por nuvens cor-de-rosa e lilás, como se o próprio amanhecer estivesse tingido por uma paleta de aquarela. Essas nuvens delicadas flutuam gentilmente, como flores celestiais que desabrocham ao romper do dia.
+                            
+                            Em dias de tempestade, as nuvens adquirem tons sombrios e profundos, carregando consigo a promessa de chuvas revigorantes. Os raios partem dos confins escuros das nuvens, iluminando o céu com uma energia elétrica que corta a escuridão e traz vida à atmosfera.
+                            
+                            E em raros momentos de magia, quando as condições atmosféricas são perfeitas, as nuvens se tornam telas para o espetáculo celestial mais extraordinário de todos: o arco-íris. Suas cores vivas e vibrantes cortam o céu como um sorriso da natureza, lembrando-nos da beleza efêmera e da maravilha que existe em nosso mundo.
+                            
+                            Assim, as nuvens coloridas não são apenas fenômenos meteorológicos, mas sim obras de arte em constante evolução, pintadas pelos caprichos da luz e da atmosfera, lembrando-nos da infinita criatividade da natureza e inspirando-nos a olhar para o céu com admiração renovada.
+                        </p>
+                     </div>
+                </li>
+                <li><code>background-attachment: scroll; </code> 
+                    <div class="Ex-2">
+                        <p>
+                        No vasto céu azul, as nuvens pairam como pinceladas de uma paleta celestial, pintando o firmamento com cores que desafiam a imaginação. Não mais restritas ao branco impoluto, essas esferas de vapor ganham vida em tons vibrantes e inesperados, transformando o horizonte em um espetáculo de tonalidades.
+                        
+                        À medida que o sol se põe, as nuvens adotam tons de laranja e rosa, como se estivessem mergulhadas em chamas douradas. Os raios de luz dançam entre os interstícios das nuvens, criando um espetáculo efêmero de cores ardentes que aquecem até mesmo os corações mais frios.
+                        
+                        Nas manhãs serenas, o céu se veste com um manto de azul suave, adornado por nuvens cor-de-rosa e lilás, como se o próprio amanhecer estivesse tingido por uma paleta de aquarela. Essas nuvens delicadas flutuam gentilmente, como flores celestiais que desabrocham ao romper do dia.
+                        
+                        Em dias de tempestade, as nuvens adquirem tons sombrios e profundos, carregando consigo a promessa de chuvas revigorantes. Os raios partem dos confins escuros das nuvens, iluminando o céu com uma energia elétrica que corta a escuridão e traz vida à atmosfera.
+                        
+                        E em raros momentos de magia, quando as condições atmosféricas são perfeitas, as nuvens se tornam telas para o espetáculo celestial mais extraordinário de todos: o arco-íris. Suas cores vivas e vibrantes cortam o céu como um sorriso da natureza, lembrando-nos da beleza efêmera e da maravilha que existe em nosso mundo.
+                        
+                        Assim, as nuvens coloridas não são apenas fenômenos meteorológicos, mas sim obras de arte em constante evolução, pintadas pelos caprichos da luz e da atmosfera, lembrando-nos da infinita criatividade da natureza e inspirando-nos a olhar para o céu com admiração renovada.
+                        </p>
+                    </div>
+                </li>
+                <li><code>background-attachment: local; </code> 
+                    <div class="Ex-3">
+                        <p>
+                        No vasto céu azul, as nuvens pairam como pinceladas de uma paleta celestial, pintando o firmamento com cores que desafiam a imaginação. Não mais restritas ao branco impoluto, essas esferas de vapor ganham vida em tons vibrantes e inesperados, transformando o horizonte em um espetáculo de tonalidades.
+                        
+                        À medida que o sol se põe, as nuvens adotam tons de laranja e rosa, como se estivessem mergulhadas em chamas douradas. Os raios de luz dançam entre os interstícios das nuvens, criando um espetáculo efêmero de cores ardentes que aquecem até mesmo os corações mais frios.
+                        
+                        Nas manhãs serenas, o céu se veste com um manto de azul suave, adornado por nuvens cor-de-rosa e lilás, como se o próprio amanhecer estivesse tingido por uma paleta de aquarela. Essas nuvens delicadas flutuam gentilmente, como flores celestiais que desabrocham ao romper do dia.
+                        
+                        Em dias de tempestade, as nuvens adquirem tons sombrios e profundos, carregando consigo a promessa de chuvas revigorantes. Os raios partem dos confins escuros das nuvens, iluminando o céu com uma energia elétrica que corta a escuridão e traz vida à atmosfera.
+                        
+                        E em raros momentos de magia, quando as condições atmosféricas são perfeitas, as nuvens se tornam telas para o espetáculo celestial mais extraordinário de todos: o arco-íris. Suas cores vivas e vibrantes cortam o céu como um sorriso da natureza, lembrando-nos da beleza efêmera e da maravilha que existe em nosso mundo.
+                        
+                        Assim, as nuvens coloridas não são apenas fenômenos meteorológicos, mas sim obras de arte em constante evolução, pintadas pelos caprichos da luz e da atmosfera, lembrando-nos da infinita criatividade da natureza e inspirando-nos a olhar para o céu com admiração renovada.
+                       </p>
+                    </div>
+                </li>
+            </ul>
         </section>
         <section id="background-origin">
             <h1>propriedade background-origin</h1>
@@ -168,14 +206,14 @@
             <ul>
                 <li>
                     <div class="container">
-                      <div class="texto"><p>padding-box: A imagem de fundo começa a ser exibida a partir das bordas internas da área de preenchimento (padding) do elemento. Isso significa que a imagem de fundo será cortada para se ajustar à área de preenchimento do elemento.</p><code>background-origin: padding-box;</code></div>           
+                      <div class="texto"><p>padding-box: A imagem de fundo começa a ser exibida a partir das bordas internas da área de preenchimento (padding) do elemento. Isso significa que a imagem de fundo será cortada para se ajustar à área de preenchimento do elemento. <code>background-origin: padding-box;</code></p></div>           
                       <div class="exemplo" id="padding-box"></div>  
                     </div>            
                 </li>
                 
                 <li>
                     <div class="container">
-                        <div class="texto"><p>border-box: A imagem de fundo começa a ser exibida a partir das bordas da borda (border) do elemento. Isso significa que a imagem de fundo será cortada para se ajustar à área de preenchimento e à borda do elemento.</p><code>background-origin: border-box;</code><br></div>
+                        <div class="texto"><p>border-box: A imagem de fundo começa a ser exibida a partir das bordas da borda (border) do elemento. Isso significa que a imagem de fundo será cortada para se ajustar à área de preenchimento e à borda do elemento. <code>background-origin: border-box;</code></p></div>
                         <div class="exemplo" id="border-box"></div>
                     </div> 
                    
@@ -183,7 +221,7 @@
                 
                 <li> 
                    <div class="container">
-                        <div class="texto"><p>content-box: A imagem de fundo começa a ser exibida a partir das bordas externas do conteúdo (content) do elemento. Isso significa que a imagem de fundo será exibida sem ser cortada e será posicionada em relação ao conteúdo do elemento.<code>background-origin: content-box;</code></p></div>
+                        <div class="texto"><p>content-box: A imagem de fundo começa a ser exibida a partir das bordas externas do conteúdo (content) do elemento. Isso significa que a imagem de fundo será exibida sem ser cortada e será posicionada em relação ao conteúdo do elemento. <code>background-origin: content-box;</code></p></div>
                         <div class="exemplo" id="content-box"></div>
                    </div>                   
                 </li>
@@ -192,7 +230,7 @@
         <section id="background-clip">
             <h1>Propriedade background-clip</h1>
             <p>A propriedade background-clip no CSS é utilizada para definir até onde a imagem ou cor de fundo de um elemento deve se estender dentro do modelo de caixa (box model) do elemento. Isso permite um controle detalhado sobre a área de pintura do fundo, que pode incluir a borda, o preenchimento (padding), ou apenas o conteúdo do elemento.</p>
-             <H2>Sintaxe: <code>background-clip: valor;</code></H2>
+             <H2>Sintaxe: <strong><i>background-clip: valor;</i></strong></H2>
              <h3>Valores:</h3>
              <ul>
                 <li>
@@ -230,6 +268,86 @@
             </ul>
             
 
+        </section>
+        <section id="blend-mode">
+            <h1>Propriedade blend-mode</h1>
+            <p>No CSS, a propriedade mix-blend-mode é usada para especificar como o conteúdo de um elemento deve ser combinado com o conteúdo do seu fundo. Além disso, a propriedade background-blend-mode define como as camadas de fundo de um elemento devem ser mescladas entre si.</p>
+            <h2>Valores:</h2>
+            <ul>
+                <li><hr>Normal:  (padrão);
+                    <div class="container">
+                        <div class=" texto"><p><code>background-blend-mode: normal;</code></p></div>                 
+                        <div class="exemplo" id="normal">Trilha CSS</div>
+                    </div>
+                </li>
+                <li><hr>Multiply:
+                    <div class="container">
+                        <div class=" texto"><p><code>background-blend-mode: multiply; </code></p></div>                 
+                        <div class="exemplo" id="multiply">Trilha CSS</div>
+                    </div>
+                </li>
+                <li><hr>Screen:
+                    <div class="container">
+                        <div class=" texto"><p><code>background-blend-mode: screen; </code></p></div>                 
+                        <div class="exemplo" id="screen">Trilha CSS</div>
+                    </div>
+                </li>
+                <li><hr>Overlay:
+                    <div class="container">
+                        <div class=" texto"><p><code>background-blend-mode: overlay;</code></p></div>
+                        <div class="exemplo" id="overlay">Trilha CSS</div>
+                    </div>
+                </li>
+                <li><hr>Darken:
+                    <div class="container">
+                        <div class=" texto"><p><code>background-blend-mode: darken;</code></p></div>
+                        <div class="exemplo" id="darken">Trilha CSS</div>
+                    </div>
+                </li>
+                <li><hr>Lighten:
+                    <div class="container">
+                        <div class=" texto"><p><code>background-blend-mode: lighten;</code> </p></div>
+                        <div class="exemplo" id="lighten">Trilha CSS</div>
+                    </div>
+                </li>
+                <li><hr>Difference:
+                </div><div class="container">
+                    <div class=" texto"><p><code>background-blend-mode: difference;</code></p></div>
+                    <div class="exemplo" id="difference">Trilha CSS</div><br>
+                </div>
+                </li>
+                <li><hr>Exclusion:
+                    </div><div class="container">
+                        <div class=" texto"><p><code>background-blend-mode: exclusion;</code> </p></div>
+                        <div class="exemplo" id="exclusion">Trilha CSS</div><br>
+                    </div>
+                </li>
+                <li><hr>Color-Dodge:
+                    <div class="container">
+                        <div class=" texto"><p><code>background-blend-mode: color-dodge;</code> </p></div>
+                        <div class="exemplo" id="color-dodge">Trilha CSS</div><br>
+                    </div>
+                </li>
+                <li><hr>Color-Burn:
+                    <div class="container">
+                        <div class=" texto"><p>  <code>background-blend-mode: color-burn;</code> </p></div>
+                        <div class="exemplo" id="color-burn">Trilha CSS</div><br>
+                    </div>
+                </li>
+                <li><hr>Hard-Ligth:
+                    <div class="container">
+                        <div class=" texto"><p><code>background-blend-mode: hard-light;</code> </p></div>
+                        <div class="exemplo" id="hard-light">Trilha CSS</div><br>
+                    </div>
+                </li>
+                <li><hr>soft-light:
+                   </div><div class="container">
+                       <div class=" texto"><p> <code>background-blend-mode: soft-light;</code> </p></div>
+                       <div class="exemplo" id="soft-light">Trilha CSS</div><br> 
+                    </div>
+                </li>
+                
+            </ul>
         </section>
        
     </main> 

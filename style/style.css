@@ -28,18 +28,38 @@ section{
     border: 1px solid;
     border-radius: 10px;
     text-align: center;
-    margin: 1%;
+    margin: .5%;
 }
-ul, li, ol {
+p{
     text-align: justify;
-    
+    white-space: pre-wrap;
 }
-
+code{
+    background-color: black;
+    opacity: .5;
+    color: whitesmoke;
+    font-size: x-large;
+}
+ol li{
+    display: inline-flex;
+    flex-wrap: wrap;
+    
+   
+}
+ol, ul, li{
+    list-style-type: none;
+    margin: 1%;
+    display: flex;
+    justify-content: space-between;
+}
+.exemplo{
+    width: 300px;
+    height: 300px;
+}
 /*background-color*/
 
 #Alterando-Fundos .exemplo{
-    width: 300px;
-    height: 300px;
+   
 }
 #Alterando-Fundos .color{
     background-color: red;
@@ -68,29 +88,64 @@ ul, li, ol {
 }
 
 /*background-image*/
-#Alterando-Fundos .Ex1{
+#background-image .container{
+    display: inline-flex;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 50%;
+}
+#background-image .texto{
+    padding: 3%;
+    width: 700px;
+    height: 600px;
+}
+#background-image .exemplo{
+   
+}
+#background-image .multiplas code{
+    background-color: black;
+    opacity: .5;
+    color: whitesmoke;
+    font-size: large;
+    display: flex;
+    justify-content: flex-start;
+}
+#background-image .Ex1{
     
     background-image: radial-gradient(rgb(255, 0, 0), rgb(22, 4, 102));
 }
-#Alterando-Fundos .Ex2{
+#background-image .Ex2{
    
     background-image: linear-gradient(to right, red, blue);
 }
-#Alterando-Fundos .Ex3{
+#background-image .Ex3{
     
     background-image: url(https://img.freepik.com/fotos-gratis/papel-de-parede-abstrato-ultra-detalhado-da-nebulosa-6_1562-751.jpg);
 }
-#Alterando-Fundos .Ex4{
+#background-image .Ex4{
  
     background-image: url(https://img.freepik.com/fotos-gratis/papel-de-parede-abstrato-ultra-detalhado-da-nebulosa-6_1562-751.jpg), linear-gradient(to right, red, blue);
     background-blend-mode:multiply;
 }
 
-/*Redimencionando imagens*/
+/*#background-size*/
 
+#background-size .container{
+    display: inline-flex;
+    margin: 1%;
+    padding: 1%;
+    width: 100%;
+   
+}
+#background-size .texto{
+    padding: 3%;
+    width: 600px;
+    height: 600px;
+   
+}
 #background-size .exemplo{
-    width: 300px;
-    height: 300px;
+   
 }
 #background-size .Ex1{
     
@@ -130,9 +185,7 @@ ul, li, ol {
 #background-origin .exemplo{
       
     padding: 3%;
-    width: 300px;
-    height: 300px;
-   
+    
     background-image: url(https://t3.ftcdn.net/jpg/03/95/29/32/360_F_395293226_A4boRgABAbfXmAmmynQHcjjIIB3MjDCj.jpg);
     background-size:  100% 100%;
     background-repeat: no-repeat;
@@ -159,12 +212,15 @@ ul, li, ol {
 /*BackGround Attachment*/
 
 #BackGround-Attachment .Ex-1, .Ex-2, .Ex-3{
-    display: inline-block;
-    margin: 5px;
     
+    display: flex;
+    flex-direction: row;
+
+    margin: 5px;
     border: 5px solid violet;
     width: 300px;
     height: 300px;
+    
     background-image: url(https://t3.ftcdn.net/jpg/03/95/29/32/360_F_395293226_A4boRgABAbfXmAmmynQHcjjIIB3MjDCj.jpg);
     background-size: auto;
     overflow: auto; 
@@ -184,7 +240,6 @@ ul, li, ol {
 
 #background-clip .container{
     margin: 3%;
-    padding: 1%;
     width: 100%;
 
     display: flex;
@@ -197,13 +252,11 @@ ul, li, ol {
     height: 300px;
     
 }
-
 #background-clip .exemplo{
-    width: 300px;
-    height: 300px;
+    margin: 3%;
     border: 15px dashed orangered;
     color:white;
-    padding: 30px;
+    padding: 3%;
     font-size: 100px;
     font-weight: 900;
     background-color: aqua;
@@ -224,4 +277,70 @@ ul, li, ol {
     -webkit-background-clip: text;
     background-clip: text;
 }
+
+/*blend-mode*/
+#blend-mode .container{
+   
+    margin: 3%;
+    width: 100%;
+    
+}
+#blend-mode .texto{
+    width: 100%;
+    flex-wrap: nowrap;
+}
+#blend-mode code{
+    background-color: black;
+    opacity: .5;
+    color: whitesmoke;
+    font-size: large;
+}
+
+#blend-mode .exemplo{
+
+    border: 15px dashed orangered;
+    color:white;
+    font-size: 100px;
+    font-weight: 900;
+    background-color: rgb(7, 107, 107);
+    background-image: url(https://img.freepik.com/fotos-gratis/fundo-de-pintura-abstrata-com-pintura-em-aquarela-multicolorida-gerada-por-ia_188544-15558.jpg)           
+}
+#blend-mode #normal {
+    
+    background-blend-mode: normal;
+}
+#blend-mode #multiply {
+    background-blend-mode: multiply;
+}
+#blend-mode #screen {
+    background-blend-mode: screen;
+}
+#blend-mode #overlay {
+    background-blend-mode: overlay;
+}
+#blend-mode #darken {
+    background-blend-mode: darken;
+}
+#blend-mode #lighten {
+    background-blend-mode: lighten;
+}
+#blend-mode #color-dodge {
+    background-blend-mode: color-dodge;
+}
+#blend-mode #color-burn {
+    background-blend-mode: color-burn;
+}
+#blend-mode #hard-light {
+    background-blend-mode: hard-light;
+}
+#blend-mode #soft-light {
+    background-blend-mode: soft-light;
+}
+#blend-mode #difference {
+    background-blend-mode: difference;
+}
+#blend-mode #exclusion {
+    background-blend-mode: exclusion;
+}
+
 
