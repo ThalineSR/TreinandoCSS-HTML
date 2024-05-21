@@ -41,6 +41,13 @@ code{
     font-size: 14px;    
 }
 ul{
+    
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content:space-between;
+    gap: 15px 15px;
+
     list-style: none;
     padding: 0;
     margin: 0;
@@ -54,21 +61,56 @@ ul{
 /*navegacao*/
 #navegacao{
     position: fixed;
-    margin: 1%;
+
+    margin: 0 0 2% 2%;
     padding: 1%;
+    height: 75%;
+
     display: flex;
     flex-direction: column;
+
     color: rgb(250, 206, 153);
     border:  rgb(250, 206, 153) solid 1px;
-    border-radius: 10px;
+    border-radius: 10px 0 0 10px;
+
     font-size: large;
+
+    overflow-y: scroll; 
 }
+/* Define o estilo básico da barra de rolagem */
+::-webkit-scrollbar {
+    width: 12px; /* Largura da barra de rolagem vertical */
+    height: 12px; /* Altura da barra de rolagem horizontal */
+  }
+  
+  /* Define o estilo da trilha (track) */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1; /* Cor do fundo da trilha */
+  }
+  
+  /* Define o estilo do polegar (thumb) */
+  ::-webkit-scrollbar-thumb {
+    background: #888; /* Cor do polegar */
+    border-radius: 6px; /* Cantos arredondados do polegar */
+  }
+  
+  /* Define o estilo do polegar ao passar o mouse */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555; /* Cor do polegar ao passar o mouse */
+  }
+  
+  /* Define o estilo dos botões de incremento e decremento (opcional) */
+  ::-webkit-scrollbar-button {
+    background: #ccc; /* Cor dos botões */
+    display: none; /* Oculta os botões */
+  }
 a{
     color:  rgb(250, 206, 153);
     text-decoration: none;
     margin: 1%;
     padding: 0 5%;
     transition: color 0.3s ease;
+    
 }
 a:hover{
     border-radius: 5px;
@@ -82,11 +124,7 @@ a:hover{
     height: 300px;
 }
 /*object-fit*/
-#object-fit ul{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-}
+
 #object-fit .exemplo{
     width: 200px;
     height: 300px;
@@ -111,19 +149,6 @@ a:hover{
 }
 
 /*background-color*/
-#background-color ul{
-    
-    display: inline-block;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content:space-between;
-    
-}
-#background-color li{
-    margin-top: 30px ;
-}
-/**/
 
 #background-color .color{
     background-color: red;
@@ -147,10 +172,6 @@ a:hover{
 /*background-image*/
 
 #background-image ul{
-    
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
     justify-content: center;
 
     gap: 30px 20px;
@@ -199,12 +220,7 @@ a:hover{
     background-position: bottom 10px right 20px;
 }
 /*background-repeat*/
-#background-repeat ul{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-}
+
 #background-repeat div{
     border: 5px solid rgb(0, 0, 0);
     width: 300px;
@@ -234,12 +250,7 @@ a:hover{
     background-repeat: repeat space;
 }
 /*background-position*/
-#background-position ul{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-}
+
 #background-position div{
     border: 5px solid rgb(0, 0, 0);
     width: 300px;
@@ -318,13 +329,7 @@ a:hover{
  } 
 
 /*BackGround Attachment*/
-#BackGround-Attachment ul{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    row-gap: 5px;
-   
-}
+
 #BackGround-Attachment li{
     display: flex;
     flex-direction: column;
@@ -355,14 +360,6 @@ a:hover{
 }
 
 /*BackGround-origin*/
-#background-origin ul{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    row-gap: 5px;
-   
-}
 
 #background-origin li{
     display: flex;
@@ -395,13 +392,6 @@ a:hover{
 }
 
 /*background-clip*/
-#background-clip ul{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-around;
-      
-}
 
 #background-clip li{
     display: flex;
@@ -446,13 +436,6 @@ a:hover{
 }
 
 /*blend-mode*/
-#blend-mode ul{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between;
-      
-}
 
 #blend-mode li{
     display: flex;
@@ -538,11 +521,7 @@ a:hover{
     
 }
 /*Bordas*/
-#Bordas ul{
-    display: flex;
-    flex-direction: row;
-    column-gap: 30px;
-}
+
 #Bordas p{
     padding: 3%;
     text-align: center;
@@ -563,7 +542,11 @@ a:hover{
     border-width: 10px
 }
 /*border-radius*/
-
+#border-radius .exemplo p {
+    
+    padding: 30%;
+    text-align: center;
+}
 
 #border-radius01{
     border-radius: 20px 10px 30px 50px;
@@ -620,6 +603,8 @@ a:hover{
 
 }
 #image-outset01 {
+    margin: 30px;
+
     border: 30px solid;
     border-image-source: url(https://w7.pngwing.com/pngs/114/579/png-transparent-pink-cross-stroke-ink-brush-pen-red-ink-brush-ink-leave-the-material-text.png);
     border-image-repeat: round;
@@ -627,6 +612,8 @@ a:hover{
     border-image-outset: 30px;
 }
 #image-outset02 {
+    margin: 30px;
+
     border: 30px solid;
     border-image-source: linear-gradient(black, pink);
     border-image-repeat: round;
@@ -651,4 +638,142 @@ a:hover{
    border: 15px solid;
    border-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTZ4xHF_-9NP4RLXjFnU7xOQzlS6TpGFntG8Tid2N1BDQ&s)  10 / 20px 30px /1 round;
 }
+/*fontes*/
+#fontes .Exemplo{
+    padding: 1%;
+    
+    border-radius: 10px 10px;
+    background-color: rgba(0, 0, 0, 0.699);
+    margin: 10px;
+    
+   
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap; 
+}
+#fontes .container{
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+#fontes .code {
+    padding: 1%;
+}
+#font-family img {
+   
+    border-radius: 10px;
+    
+}
 /**/
+#font-face img{
+    
+    border-radius: 10px;
+   
+}
+/**/
+#line-heigth > .Exemplo, #font-resumo > .Exemplo{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    
+}
+
+#xx-small{
+    font-size: xx-small;
+}
+#x-small{
+    font-size: x-small;
+}
+#smal{
+    font-size: small;
+}
+#medium{
+    font-size: medium;
+}
+#large{
+    font-size: large;
+}
+#x-large{
+    font-size: x-large;
+}
+#xx-large{
+    font-size: xx-large;
+}
+#normal{
+    font-style: normal;
+}
+#italic{
+    font-style: italic;
+}
+#oblique{
+    font-style: oblique;
+}
+#weight-normal{
+    font-weight: normal;
+}
+#weight-bold{
+    font-weight: bold;
+}
+#weight-bolder{
+    font-weight: bolder;
+}
+#weight-lighter{
+    font-weight: lighter;
+}
+#font-normal{
+    font-variant: normal;
+}
+#small-caps{
+    font-variant: small-caps;
+}
+#all-small-caps{
+    font-variant: all-small-caps;
+}
+#stretch-normal{
+    font-stretch: normal;
+}
+#ultra-condensed{
+    font-stretch: ultra-condensed;
+}
+#extra-condensed{
+    font-stretch: extra-condensed;
+}
+#condensed{
+    font-stretch: condensed;
+}
+#semi-condensed{
+    font-stretch: semi-condensed;
+}
+#semi-expanded{
+    font-stretch: semi-expanded;
+}
+#expanded{
+    font-stretch: expanded;
+}
+#extra-expanded{
+    font-stretch: extra-expanded;
+}
+#ultra-expanded{
+    font-stretch: ultra-expanded;
+}
+#line-normal{
+    line-height: normal;
+}
+#line-valor01{
+    line-height: 1.5;
+}
+#line-valor02{
+    line-height: 24px;
+}
+#line-valor03{
+    line-height: 1.2em;
+}
+#line-valor04{
+    line-height: 150%;
+}
+.texto{
+    padding: 3%;
+    font: italic small-caps bold 15px/2 Georgia, serif;
+}
