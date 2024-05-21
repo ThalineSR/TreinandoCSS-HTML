@@ -2,105 +2,173 @@
 @import url('https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
 
 body{  
+    background-image: radial-gradient(rgb(88, 10, 119),rgb(0, 0, 0));
+
     background-color: #212121;
-    padding: 3%;  
+    padding: .5%;  
     font-family: "Comic Neue", cursive;
     font-style: normal;
-    font-size: xx-large;
+    font-size: x-large;
 }
 header{
-    width: 100%;
-    height: 5%;
+    
    
 }
-main{
-     
-}
 footer{
-    width: 100%;
-    height: 5%;
-    background-color: white;
+    
+    
 }
 section{
-
-    background-image: radial-gradient(rgba(88, 10, 119, 0.5),rgba(0, 0, 0, 0.5));
-    color: rgb(250, 206, 153);
+    width: 80%;
+    margin: .5%;
     padding: 2%;
+
+    background-color: rgba(0, 0, 0, 0);
+    color: rgb(250, 206, 153);
+    
     border: 1px solid;
     border-radius: 10px;
     text-align: center;
-    margin: .5%;
+    
 }
 p{
     text-align: justify;
     white-space: pre-wrap;
 }
 code{
-    
     opacity: .5;
     color: whitesmoke;
-    font-size: x-large;
+    font-size: 14px;    
 }
-
+ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+/*display-central*/
+#display-central{
+    
+    display: flex;
+    flex-direction: row-reverse;
+}
+/*navegacao*/
+#navegacao{
+    position: fixed;
+    margin: 1%;
+    padding: 1%;
+    display: flex;
+    flex-direction: column;
+    color: rgb(250, 206, 153);
+    border:  rgb(250, 206, 153) solid 1px;
+    border-radius: 10px;
+    font-size: large;
+}
+a{
+    color:  rgb(250, 206, 153);
+    text-decoration: none;
+    margin: 1%;
+    padding: 0 5%;
+    transition: color 0.3s ease;
+}
+a:hover{
+    border-radius: 5px;
+     background-color: rgba(0, 0, 0, 0.3);
+}
+/**/
 .exemplo{
+    background-color: rgba(0, 0, 0, .5);
+
     width: 300px;
     height: 300px;
 }
-/*background-color*/
+/*object-fit*/
+#object-fit ul{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+#object-fit .exemplo{
+    width: 200px;
+    height: 300px;
+    border: 5px solid rgb(242, 191, 6);
+}
+#object-fit img{
+    width: 100%;
+    height: 100%;
+}
 
-#Alterando-Fundos {
-   
+#contain{
+    object-fit: contain;
 }
-#Alterando-Fundos .color{
-    background-color: red;
+#cover{
+    object-fit: cover;
 }
-#Alterando-Fundos .Hexadecimal{
-    background-color: #ff0000
+#none{
+    object-fit: none;
 }
-#Alterando-Fundos .RGB{
-    background-color: rgb(255, 0, 0);
+#scale-down{
+    object-fit: scale-down;
 }
-#Alterando-Fundos .RGBA{
-    background-color: rgba(255, 0, 0, 0.5);
-}
-#Alterando-Fundos .HSL{
-    background-color: hsl(0, 100%, 50%);
-}
-#Alterando-Fundos .HSLA{
-    background-color: hsla(0, 100%, 50%, 0.5);
-}
-#Alterando-Fundos ul{
-    gap: 5%;
+
+/*background-color*/
+#background-color ul{
+    
     display: inline-block;
     display: flex;
+    flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content:space-between;
+    
+}
+#background-color li{
+    margin-top: 30px ;
+}
+/**/
+
+#background-color .color{
+    background-color: red;
+}
+#background-color .Hexadecimal{
+    background-color: #ff0000
+}
+#background-color .RGB{
+    background-color: rgb(255, 0, 0);
+}
+#background-color .RGBA{
+    background-color: rgba(255, 0, 0, 0.5);
+}
+#background-color .HSL{
+    background-color: hsl(0, 100%, 50%);
+}
+#background-color .HSLA{
+    background-color: hsla(0, 100%, 50%, 0.5);
 }
 
 /*background-image*/
-#background-image .container{
-    display: inline-flex;
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    height: 50%;
+
+#background-image ul{
+    
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    gap: 30px 20px;
+    padding: 1%;
+}
+#background-image .multiplas{
+    
+    display: flex;
+    flex-direction: row;
 }
 #background-image .texto{
-    padding: 3%;
-    width: 700px;
-    height: 600px;
+    margin-top: 10%;
+    text-align: justify;
+    width: 600px;
+    height: 300px;
 }
-#background-image .exemplo{
-   
-}
-#background-image .multiplas code{
-    background-color: black;
-    opacity: .5;
-    color: whitesmoke;
-    font-size: large;
-    display: flex;
-    justify-content: flex-start;
-}
+/**/
+
 #background-image .Ex1{
     
     background-image: radial-gradient(rgb(255, 0, 0), rgb(22, 4, 102));
@@ -118,25 +186,111 @@ code{
     background-image: url(https://img.freepik.com/fotos-gratis/papel-de-parede-abstrato-ultra-detalhado-da-nebulosa-6_1562-751.jpg), linear-gradient(to right, red, blue);
     background-blend-mode:multiply;
 }
+#background-image .Ex5{
+    background-position: 30px;
+}
+#background-image .Ex6{
+   background-position: center;
+}
+#background-image .Ex7{
+    background-position: 10% 30%;
+}
+#background-image .Ex8{
+    background-position: bottom 10px right 20px;
+}
+/*background-repeat*/
+#background-repeat ul{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+#background-repeat div{
+    border: 5px solid rgb(0, 0, 0);
+    width: 300px;
+    height: 300px;
+    background-image: url(https://t3.ftcdn.net/jpg/03/95/29/32/360_F_395293226_A4boRgABAbfXmAmmynQHcjjIIB3MjDCj.jpg);
+    background-size: 120px;
+}
+#background-repeat .Ex1{
+    background-repeat: repeat;
+}
+#background-repeat .Ex2{
+    background-repeat: repeat-x;
+}
+#background-repeat .Ex3{
+    background-repeat: repeat-y;
+}
+#background-repeat .Ex4{
+    background-repeat: space;
+}
+#background-repeat .Ex5{
+    background-repeat: round;
+}
+#background-repeat .Ex6{
+    background-repeat: no-repeat;
+}
+#background-repeat .Ex7{
+    background-repeat: repeat space;
+}
+/*background-position*/
+#background-position ul{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+#background-position div{
+    border: 5px solid rgb(0, 0, 0);
+    width: 300px;
+    height: 300px;
+    background-image: url(https://t3.ftcdn.net/jpg/03/95/29/32/360_F_395293226_A4boRgABAbfXmAmmynQHcjjIIB3MjDCj.jpg);
+    background-size: 120px;
+    background-repeat: no-repeat; 
+    
+}
+#background-position .Ex1{
+    background-position: bottom;
+}
+#background-position .Ex2{
+    background-position: top;
+}
+#background-position .Ex3{
+    background-position: left;
+}
+#background-position .Ex4{
+    background-position:right;
+}
+#background-position .Ex5{
+    background-position: 30px;
+}
+#background-position .Ex6{
+   background-position: center;
+}
+#background-position .Ex7{
+    background-position: 10% 30%;
+}
+#background-position .Ex8{
+    background-position: bottom 10px right 20px;
+}
 
 /*#background-size*/
 
-#background-size .container{
-    display: inline-flex;
-    margin: 1%;
-    padding: 1%;
+#background-size li{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    row-gap: 5px;
     width: 100%;
-   
 }
 #background-size .texto{
+    align-items: end;
     padding: 3%;
-    width: 600px;
-    height: 600px;
+    width: 500px;
+    height: 300px;
    
 }
-#background-size .exemplo{
-   
-}
+/**/
 #background-size .Ex1{
     
     background-image: url(https://img.freepik.com/fotos-gratis/papel-de-parede-abstrato-ultra-detalhado-da-nebulosa-6_1562-751.jpg);
@@ -163,51 +317,25 @@ code{
     background-size: 200px 250px;
  } 
 
-/*BackGround-origin*/
-
-#background-origin .container{
-    display: inline-flex;
-    margin: 3%;
-    padding: 1%;
-    width: 100%;
-    
+/*BackGround Attachment*/
+#BackGround-Attachment ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    row-gap: 5px;
+   
 }
-#background-origin .exemplo{
-      
-    padding: 3%;
-    
-    background-image: url(https://t3.ftcdn.net/jpg/03/95/29/32/360_F_395293226_A4boRgABAbfXmAmmynQHcjjIIB3MjDCj.jpg);
-    background-size:  100% 100%;
-    background-repeat: no-repeat;
-
-    border: 15px dashed rgb(83, 1, 76);
+#BackGround-Attachment li{
+    display: flex;
+    flex-direction: column;
   
 }
-#background-origin .texto{
-    padding: 3%;
-    width: 600px;
-    height: 600px;
-
-}
-#background-origin #padding-box{
-    background-origin: padding-box;
-}
-#background-origin #border-box{
-    background-origin: border-box;
-}
-#background-origin #contenet-box{
-    background-origin: content-box;
-}
-
-/*BackGround Attachment*/
 
 #BackGround-Attachment .Ex-1, .Ex-2, .Ex-3{
     
-    display: flex;
-    flex-direction: row;
-
+    
     margin: 5px;
-    border: 5px solid violet;
+    border: 5px solid rgba(0, 0, 0, 0.5);
     width: 300px;
     height: 300px;
     
@@ -226,23 +354,71 @@ code{
     background-attachment: local;
 }
 
-/*background-clip*/
-
-#background-clip .container{
-    margin: 3%;
-    width: 100%;
-
+/*BackGround-origin*/
+#background-origin ul{
     display: flex;
-    display: inline-flex;
-    justify-content: space-evenly;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    row-gap: 5px;
+   
 }
-#background-clip .texto{
+
+#background-origin li{
+    display: flex;
+    flex-direction: column;
+  
+}
+#background-origin .exemplo{
+           
+    background-image: url(https://t3.ftcdn.net/jpg/03/95/29/32/360_F_395293226_A4boRgABAbfXmAmmynQHcjjIIB3MjDCj.jpg);
+    background-size: 400px 350px;
+    background-repeat: no-repeat;
+
+    border: 10px dashed rgba(0, 0, 0, .5);
+  
+}
+#background-origin .texto{
     padding: 3%;
-    width: 35%;
-    height: 300px;
+    width: 300px;
+    height: 350px;
+}
+/**/
+#background-origin #padding-box{
+    background-origin: padding-box;
+}
+#background-origin #border-box{
+    background-origin: border-box;
+}
+#background-origin #contenet-box{
+    background-origin: content-box;
+}
+
+/*background-clip*/
+#background-clip ul{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+      
+}
+
+#background-clip li{
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    
+}
+
+#background-clip .texto{
+    padding: 1%;
+    width: 400px;
+    height: 200px;
+   
     
 }
 #background-clip .exemplo{
+   
     margin: 3%;
     border: 15px dashed orangered;
     color:white;
@@ -253,6 +429,7 @@ code{
     background-image: url(https://assets-global.website-files.com/6009ec8cda7f305645c9d91b/6010813f5ce191dc4701ea9b_6002086f72b72724ad01dec6_flexbox-and-css-grid.jpeg);
             
 }
+/**/
 #background-clip #padding-box{
     background-clip: padding-box ;
 }
@@ -269,21 +446,19 @@ code{
 }
 
 /*blend-mode*/
-#blend-mode .container{
-   
-    margin: 3%;
-    width: 100%;
+#blend-mode ul{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+      
+}
+
+#blend-mode li{
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
     
-}
-#blend-mode .texto{
-    width: 100%;
-    flex-wrap: nowrap;
-}
-#blend-mode code{
-    background-color: black;
-    opacity: .5;
-    color: whitesmoke;
-    font-size: large;
 }
 
 #blend-mode .exemplo{
@@ -295,6 +470,7 @@ code{
     background-color: rgb(7, 107, 107);
     background-image: url(https://img.freepik.com/fotos-gratis/fundo-de-pintura-abstrata-com-pintura-em-aquarela-multicolorida-gerada-por-ia_188544-15558.jpg)           
 }
+/**/
 #blend-mode #normal {
     
     background-blend-mode: normal;
@@ -332,3 +508,147 @@ code{
 #blend-mode #exclusion {
     background-blend-mode: exclusion;
 }
+/*background*/
+
+#background .exemplo{
+    width: 300px;
+    height: 300px;
+
+    border: 15px dashed orangered;
+    color:white;
+   
+    font-size: 100px;
+    font-weight: 900;
+  
+}
+#background-resumido {
+    background: violet url(https://img.freepik.com/fotos-gratis/fundo-de-pintura-abstrata-com-pintura-em-aquarela-multicolorida-gerada-por-ia_188544-15558.jpg) no-repeat top center/200px 200px fixed padding-box content-box;
+    
+}
+#background div{
+    margin-left: auto;
+    margin-right: auto;
+   
+}
+#background code, p, ol{
+    
+    color: white;
+    font-size: 20px;
+    text-align: start;
+    
+}
+/*Bordas*/
+#Bordas ul{
+    display: flex;
+    flex-direction: row;
+    column-gap: 30px;
+}
+#Bordas p{
+    padding: 3%;
+    text-align: center;
+}
+#width {
+    border-style: solid;
+    border-width: 10px 20px 30px 40px;
+
+}
+#style {
+    border-width: 10px;
+    border-style: dashed groove dotted double;
+
+}
+#color {
+    border-color: rgb(0, 78, 81) green violet yellow;
+    border-style: solid;
+    border-width: 10px
+}
+/*border-radius*/
+
+
+#border-radius01{
+    border-radius: 20px 10px 30px 50px;
+}
+#border-radius02{
+    border-radius: 50%;
+}
+#border-radius03{
+    border-radius: 50% 20px 20px;
+}
+/*image-source*/
+#image-source01 {
+    border: 20px solid;
+    border-image-source: url(https://laart.art.br/wp-content/uploads/2020/02/oqueearteabstrata-capa.jpg);
+}
+#image-source02 {
+    border: 20px solid;
+    border-image-source:linear-gradient(black, rgb(228, 14, 232));
+}
+#image-width {
+    border: 20px solid;
+    border-image-source: url(https://laart.art.br/wp-content/uploads/2020/02/oqueearteabstrata-capa.jpg); /* URL da imagem da borda */
+    border-image-slice: 20;
+    border-image-repeat: repeat;
+    border-image-width: 10px 20px 30px;            
+}
+#image-repeat01 {
+    border: 20px solid;
+    border-image-source: url(https://st5.depositphotos.com/35914836/63548/i/450/depositphotos_635487238-stock-photo-abstract-background-neon-light-motion.jpg);
+    border-image-slice: 20;
+    border-image-repeat: repeat;
+    
+}
+#image-repeat02{
+    border: 20px solid;
+    border-image-source: url(https://st5.depositphotos.com/35914836/63548/i/450/depositphotos_635487238-stock-photo-abstract-background-neon-light-motion.jpg);
+    border-image-slice: 20;
+    border-image-repeat: stretch;
+    
+
+}
+#image-repeat03{
+    border: 20px solid;
+    border-image-source: url(https://st5.depositphotos.com/35914836/63548/i/450/depositphotos_635487238-stock-photo-abstract-background-neon-light-motion.jpg);
+    border-image-slice: 20;
+    border-image-repeat: space;
+}
+#image-repeat04{
+    border: 20px solid;
+    border-image-source: url(https://st5.depositphotos.com/35914836/63548/i/450/depositphotos_635487238-stock-photo-abstract-background-neon-light-motion.jpg);
+    border-image-slice: 20;
+    border-image-repeat: round;
+    
+
+}
+#image-outset01 {
+    border: 30px solid;
+    border-image-source: url(https://w7.pngwing.com/pngs/114/579/png-transparent-pink-cross-stroke-ink-brush-pen-red-ink-brush-ink-leave-the-material-text.png);
+    border-image-repeat: round;
+    border-image-slice: 169;
+    border-image-outset: 30px;
+}
+#image-outset02 {
+    border: 30px solid;
+    border-image-source: linear-gradient(black, pink);
+    border-image-repeat: round;
+    border-image-slice: 19;
+    border-image-outset: 40px
+    
+}
+#image-slice01 {
+   border: 20px solid;
+   border-image-source: url(https://laart.art.br/wp-content/uploads/2020/02/oqueearteabstrata-capa.jpg); /* URL da imagem da borda */
+   border-image-slice: 40; /* Define a largura da área de corte da imagem da borda, se acrescentar o "fill" ao lado do tamanho, a imagem cortada volta como imagem de fundo*/
+   border-image-repeat: round; /* Repete a imagem da borda para preencher a borda */
+            
+}
+#image-slice02 {
+   border: 20px solid;
+   border-image-source: linear-gradient(black, green); 
+   border-image-slice: 10; 
+            
+}
+#resumindo{
+   border: 15px solid;
+   border-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTZ4xHF_-9NP4RLXjFnU7xOQzlS6TpGFntG8Tid2N1BDQ&s)  10 / 20px 30px /1 round;
+}
+/**/

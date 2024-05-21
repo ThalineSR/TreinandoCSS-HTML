@@ -12,139 +12,264 @@
         <section id="">CAbeçalho            
         </section>
     </header>
-    <main id="Alterando-Fundos">
-        <section id="background-color">
-            <H1>Propriedade background-color</H1>
-            <p>A propriedade CSS background-color é utilizada para definir a cor de fundo de um elemento. Essa propriedade pode ser aplicada a praticamente qualquer elemento HTML para alterar a aparência visual do conteúdo e dar destaque ou contraste ao design da página. A background-color pode ser especificada utilizando diferentes formatos de valores, como nomes de cores, valores hexadecimais, RGB, RGBA, HSL, e HSLA.</p>
-            <h2>Exemplos de Uso:</h2>
-            <UL>
-                <li>Nome da Cor:<br>
-                  <code>background-color: red;</code> 
-                   <div class="exemplo color"></div>
-                </li>
-                <li>Valor Hexadecimal:<br>
-                    <code>background-color:</code><br>
-                    <code>#ff0000;</code>
-                    <div class="exemplo Hexadecimal"></div>
-                </li>
-                <li>RGB: <br>
-                    <code>background-color:</code><br>
-                    <code> rgb(255, 0, 0);</code>
-                    <div class="exemplo RGB"></div>
-                </li>
-                <li>RGBA (com opacidade): <br>
-                    <code>background-color:</code><br>
-                    <code>rgba(255, 0, 0, 0.5);</code>
-                    <div class="exemplo RGBA"></div>
-                </li>
-                <li>HSL:<br>
-                    <code>background-color:</code><br>
-                    <code>hsl(0, 100%, 50%);</code>
-                    <div class="exemplo HSL"></div>
-                </li>
-                <li>HSLA (com opacidade):<br>
-                    <code>background-color:</code><br>
-                    <code>hsla(0, 100%, 50%, 0.5);</code>
-                    <div class="exemplo HSL"></div>
-                </li>
-            </UL>
-        </section>
-        <section id="background-image">
-            <h1>background-image</h1>
-            <p>A propriedade background-image no CSS é usada para definir uma ou mais imagens de fundo para um elemento. Essas imagens podem ser arquivos de imagem, gradientes ou outros tipos de imagens suportados pelo CSS. A utilização adequada de background-image pode adicionar um apelo visual significativo às suas páginas web.</p>
-            <h3>Sintaxe Básica <code>background-image: url('imagem.jpg');</code></h3>
-            <h2>Valores:</h2>
-            <ul>
-                <li>           
-                    <ul><h1>Gradientes: </h1>
-                        <li>                                      
-                            <div class="container"> 
-                                <div class="texto">
-                                    <p>Radial Gradient:</p>
-                                        
-                                    <code>background-image: radial-gradient(circle, red, blue);</code>
-                                </div>
-                                <div class="exemplo Ex1"></div>
-                            </div>
-                        </li>
-                        <li>
-                           <div class="container">
-                                <div class="texto">
-                                    <p>Linear Gradient:</p>
-                                    <code>background-image: linear-gradient(to right, red, blue);</code>
-                                </div>
-                                <div class="exemplo Ex2"></div>
-                            </div>
-                        </li>
-                      
-                    </ul>                            
-                </li>                
-                <li> 
-                    <div class="container">
-                      <div class="texto"><p>URL de Imagem:</p>
-                        <code>background-image: url('imagem.jpg');</code></div>
-                      <div class="exemplo Ex3"></div>
-                    </div>
-                    
-                </li>
-                <li>
-                    <div class="container multiplas">
-                <li> 
-                    <div class="texto"><p>Múltiplas Imagens:</p>
-                            <p>Permite definir múltiplas imagens de fundo, que serão empilhadas umas sobre as outras, a primeira definida será a mais próxima do usuário.</p>
-                            <code>background-image: url('imagem1.jpg'), linear-gradient(to right, red, blue);</code>
-                            <code>background-blend-mode:multiply;</code>
+    <div id="display-central">
+        <nav id="navegacao">
+            <H1>Nesta pagina</H1>
+
+            <a href="#object-fit">object-fit</a>          
+            <a href="#background-color">color</a>
+            <a href="#background-image">image</a>
+            <a href="#background-repeat">repeat</a>
+            <a href="#background-position">position</a>
+            <a href="#background-size">size</a>
+            <a href="#BackGround-Attachment">Attachment</a>
+            <a href="#background-origin">origin</a>
+            <a href="#background-clip">clip</a>
+            <a href="#blend-mode">blend-mode</a>
+            <a href="#background">Resumido</a>
+            <a href="#Bordas">Bordas</a>
+            <a href="#border-radius">border-radius</a>
+            <a href="#image-source">image-source</a>
+        </nav>
+        <div id="Estilizacao-basica">
+
+            <section id="object-fit">
+                <h1>Propriedade: Object-fit</h1>
+                <p>Essa propriedade vai dizer se a imagem deve ser distorcida para caber no objeto ou se ela deve se manter no seu tamanho, respeitando ou não o objeto, podendo assim alterar a qualidade da imagem.</p>
+                <h2>Valores:</h2>
+                <ul>
+                    <li><code>object-fit: fill; (Padrao)</code> 
+                        <div class="exemplo">
+                            <img src="https://i.pinimg.com/originals/1b/3c/58/1b3c5821c4ef798f196b30cc3eb46ac2.gif" id="fill">
                         </div>
-                        <div class="exemplo Ex4"></div>
-                    </div>
-                </li>
-            </ul>
-        </section>
-        <section id="background-size">
-            <h1>Propriedade back-size</h1>
-            <p>Ela permite que você ajuste a imagem para cobrir o elemento de diferentes maneiras, garantindo que o design da página seja responsivo e visualmente agradável.</p>
-            <h2>Valores</h2>
-            <ul>
-                <li>
-                    <div class="container">
-                        <Div class="texto">Background-size: Auto;<p>Mantém o tamanho original da imagem.</p></Div>
+                    </li>
+                    <li><code>object-fit: contain;</code>
+                        <div class="exemplo">
+                            <img src="https://i.pinimg.com/originals/1b/3c/58/1b3c5821c4ef798f196b30cc3eb46ac2.gif" id="contain">
+                        </div>
+                    </li>
+                    <li><code>object-fit: cover;</code> 
+                        <div class="exemplo">
+                            <img src="https://i.pinimg.com/originals/1b/3c/58/1b3c5821c4ef798f196b30cc3eb46ac2.gif" id="cover">
+                        </div>
+                    </li>
+                    <li><code>object-fit: none;</code> 
+                        <div class="exemplo">
+                            <img src="https://i.pinimg.com/originals/1b/3c/58/1b3c5821c4ef798f196b30cc3eb46ac2.gif" id="none">
+                        </div>
+                    </li>
+                    <li><code>object-fit:scale-down ;</code> 
+                        <div class="exemplo">
+                            <img src="https://i.pinimg.com/originals/1b/3c/58/1b3c5821c4ef798f196b30cc3eb46ac2.gif" alt="Gif cidade neom chuvosa" id="scale-down">
+                        </div>
+                    </li>    
+                </ul>
+
+                <h1>object-position</h1>
+                <p>A propriedade CSS object-position é usada em conjunto com object-fit para definir a posição de uma imagem ou vídeo dentro do contêiner, quando o tamanho do conteúdo é diferente do tamanho do contêiner.</p>
+                <h3>Sintaxe: <code>object-position: x y;</code></h3>
+                <P>
+                   x: Posição horizontal (pode ser um valor de comprimento, porcentagem, ou palavra-chave).
+                   y: Posição vertical (pode ser um valor de comprimento, porcentagem, ou palavra-chave).
+                   Valores Comuns
+                   Palavras-chave predefinidas:
+                    
+                   left, center, right (horizontal)
+                   top, center, bottom (vertical)
+                   Porcentagem:
+                    
+                   0% representa o início (esquerda ou topo).
+                   100% representa o fim (direita ou fundo).
+                   50% representa o meio.
+                   Comprimento:
+                    
+                   Pode ser especificado em unidades como px, em, rem, etc.
+                </P>           
+            
+            </section>
+            <section id="background-color">
+                <H1>Propriedade background-color</H1>
+                <p>A propriedade CSS background-color é utilizada para definir a cor de fundo de um elemento. Essa propriedade pode ser aplicada a praticamente qualquer elemento HTML para alterar a aparência visual do conteúdo e dar destaque ou contraste ao design da página. A background-color pode ser especificada utilizando diferentes formatos de valores, como nomes de cores, valores hexadecimais, RGB, RGBA, HSL, e HSLA.</p>
+                <h2>Exemplos de Uso:</h2>
+                <UL>
+                    <li>Nome da Cor:<br>
+                      <code>background-color: red;</code> 
+                       <div class="exemplo color"></div>
+                    </li>
+                    <li>Valor Hexadecimal:<br>
+                        <code>background-color: #ff0000;</code>
+                        <div class="exemplo Hexadecimal"></div>
+                    </li>
+                    <li>RGB: <br>
+                        <code>background-color: rgb(255, 0, 0);</code>
+                        <div class="exemplo RGB"></div>
+                    </li>
+                    <li>RGBA (com opacidade): <br>
+                        <code>background-color: rgba(255, 0, 0, 0.5);</code>
+                        <div class="exemplo RGBA"></div>
+                    </li>
+                    <li>HSL:<br>
+                        <code>background-color: hsl(0, 100%, 50%);</code>
+                        <div class="exemplo HSL"></div>
+                    </li>
+                    <li>HSLA (com opacidade):<br>
+                        <code>background-color: hsla(0, 100%, 50%, 0.5);</code>
+                        <div class="exemplo HSLA"></div>
+                    </li>
+                </UL>    
+            </section>
+            <section id="background-image">
+                <h1>background-image</h1>
+                <p>A propriedade background-image no CSS é usada para definir uma ou mais imagens de fundo para um elemento. Essas imagens podem ser arquivos de imagem, gradientes ou outros tipos de imagens suportados pelo CSS. A utilização adequada de background-image pode adicionar um apelo visual significativo às suas páginas web.</p>
+                <h3>Sintaxe Básica: background-image: url('imagem.jpg');</h3>
+                <h2>Valores:</h2>
+                <ul>
+                    <li class="multiplas"><br>                   
+                        <div class="texto">Radial Gradient:<br>                                      
+                        <code>background-image: radial-gradient(circle, red, blue);</code>
+                        </div>
                         <div class="exemplo Ex1"></div>
-                    </div>                    
-                </li>
-                <li>
-                    <div class="container">
+                    </li>
+                    <li class="multiplas"><br>                   
+                        <div class="texto">Linear Gradient:<br>
+                        <code>background-image: linear-gradient(to right, red, blue);</code>
+                        </div>
+                        <div class="exemplo Ex2"></div>
+                    </li>                                              
+                    </li>                
+                    <li class="multiplas">
+                        <div class="texto">URL de Imagem:<br> 
+                           <code>background-image: url('imagem.jpg');</code>
+                        </div>
+                        <div class="exemplo Ex3"></div>
+                    </li>
+                    <li class="multiplas"><br>                   
+                        <div class="texto">Múltiplas Imagens:<br>
+                            <code>background-image: url('imagem1.jpg'), linear-gradient(to right, red, blue);</code><br>
+                            <code>background-blend-mode:multiply;</code>
+                        </div>                    
+                        <div class="exemplo Ex4"></div>
+                    </li>
+                </ul>
+            </section>
+            <section id="background-repeat">
+                <h1>background-repeat</h1>
+                <p>É usada para definir como uma imagem de fundo deve se repetir dentro de um elemento. Ela pode especificar se a imagem de fundo deve ser repetida horizontalmente, verticalmente, em ambas as direções, ou não ser repetida.</p>
+                <h2>Valores:</h2>
+                <ul>
+                    <li><code>background-repeat: repeat (valor padrão); </code> 
+                        <div class="Ex1"></div>
+                    </li>
+                    <li><code>background-repeat: repeat-x ; </code> 
+                        <div class="Ex2"></div>
+                    </li>
+                    <li><code>background-repeat: repeat-y ; </code> 
+                        <div class="Ex3"></div>
+                    </li>
+                    <li><code>background-repeat: space; </code> 
+                        <div class="Ex4"></div>
+                    </li>
+                    <li><code>background-repeat: round; </code> 
+                        <div class="Ex5"></div>
+                    </li>
+                    <li><code>background-repeat: no-repeat; </code> 
+                        <div class="Ex6"></div>
+                    </li>
+                    <li><code>background-repeat: dois valores; </code> 
+                        <div class="Ex7"></div>
+                    </li>
+                </ul>
+            </section>
+            <section id="background-position">
+                <h1>background-position</h1>
+                <p>Esta propriedade permite especificar a posição inicial da imagem de fundo e pode ser definida utilizando valores de comprimento, porcentagem, ou palavras-chave predefinidas.</p>
+                <h2>Valores:</h2>
+                <ul>
+                    <li>
+                        <code>background-position: bottom; (valor padrão); </code> 
+                        <div class="Ex1"></div>
+                    </li>
+                    <li>
+                        <code>background-position: top; </code> 
+                        <div class="Ex2"></div>
+                    </li>
+                    <li>
+                        <code>background-position: left; </code> 
+                        <div class="Ex3"></div>
+                    </li>
+                    <li>
+                        <code>background-position:right </code> 
+                        <div class="Ex4"></div>
+                    </li>
+                    <li>
+                        <code>background-position: valor (30px);</code> 
+                        <div class="Ex5"></div>
+                    </li>
+                    <li>
+                        <code>background-position: center; </code> 
+                        <div class="Ex6"></div>
+                    </li>
+                    <li>
+                        <code>background-position: dois valores; </code> 
+                        <div class="Ex7"></div>
+                    </li>
+                    <li>
+                        <code>background-position: valores de cantos relativos; y, x </code> 
+                        <div class="Ex8"></div>
+                    </li>
+                </ul>
+            </section>
+            <section id="background-size">
+                <h1>Propriedade back-size</h1>
+                <p>Ela permite que você ajuste a imagem para cobrir o elemento de diferentes maneiras, garantindo que o design da página seja responsivo e visualmente agradável.</p>
+                <h2>Valores:</h2>
+                <ul>
+                    <li>
+                        <Div class="texto">Background-size: Auto;<p>Mantém o tamanho original da imagem.</Div>
+                        <div class="exemplo Ex1"></div>
+                    </li>
+                    <li>
                         <div class="texto">Background-size: cover;<p>Redimensiona a imagem para cobrir completamente o elemento, mantendo a proporção original da imagem. A imagem pode ser cortada para preencher o elemento.</p></div>
                         <div class="exemplo Ex2"></div>
-                    </div>
-                </li>
-                <li>                   
-                    <div class="container">
+                    </li>
+                    <li>                   
                         <div class="texto">Background-size: contain;<p>Redimensiona a imagem para caber dentro do elemento, mantendo a proporção original da imagem. A imagem será dimensionada para garantir que toda ela seja visível.</p></div>
                         <div class="exemplo Ex3"></div>
-                    </div> 
-                </li>
-                <li>
-                    <div class="container">
-                       <div class="texto">Background-size: valor;<p>Define o tamanho da imagem de fundo em unidades como pixels, porcentagem, etc.</p></div>
-                       <div class="exemplo Ex4"></div>
-                    </div>
-                </li>
-                <li>
-                    <div class="container">
-                       <div class="texto">Background-size: x y; (dois valores)<p>Define o tamanho da imagem de fundo em unidades como pixels, porcentagem, etc.</p></div>
-                       <div class="exemplo Ex5"></div>
-                    </div>
-                </li>             
-            </ul>
-          
-        </section>
-        <section id="BackGround-Attachment">
-            <h1>Propriedades BackGround Attachment</h1>
-            <h2>Valores:</h2>
-            <ul>
-                <li><code>background-attachment: fixade;</code>
-                    <div class="Ex-1">
-                        <p>
+                    </li>
+                    <li>
+                        <div class="texto">Background-size: valor;<p>Define o tamanho da imagem de fundo em unidades como pixels, porcentagem, etc.</p></div>
+                        <div class="exemplo Ex4"></div>
+                    </li>
+                    <li>
+                        <div class="texto">Background-size: x y; (dois valores)<p>Define o tamanho da imagem de fundo em unidades como pixels, porcentagem, etc.</p></div>
+                        <div class="exemplo Ex5"></div>
+                    </li>             
+                </ul>
+            </section>
+            <section id="BackGround-Attachment">
+                <h1>Propriedades BackGround Attachment</h1>
+                <h2>Valores:</h2>
+                <ul>
+                    <li><code>background-attachment: fixade;</code>
+                        <div class="Ex-1">
+                            <p>
+                                No vasto céu azul, as nuvens pairam como pinceladas de uma paleta celestial, pintando o firmamento com cores que desafiam a imaginação. Não mais restritas ao branco impoluto, essas esferas de vapor ganham vida em tons vibrantes e inesperados, transformando o horizonte em um espetáculo de tonalidades.
+                                
+                                À medida que o sol se põe, as nuvens adotam tons de laranja e rosa, como se estivessem mergulhadas em chamas douradas. Os raios de luz dançam entre os interstícios das nuvens, criando um espetáculo efêmero de cores ardentes que aquecem até mesmo os corações mais frios.
+                                
+                                Nas manhãs serenas, o céu se veste com um manto de azul suave, adornado por nuvens cor-de-rosa e lilás, como se o próprio amanhecer estivesse tingido por uma paleta de aquarela. Essas nuvens delicadas flutuam gentilmente, como flores celestiais que desabrocham ao romper do dia.
+                                
+                                Em dias de tempestade, as nuvens adquirem tons sombrios e profundos, carregando consigo a promessa de chuvas revigorantes. Os raios partem dos confins escuros das nuvens, iluminando o céu com uma energia elétrica que corta a escuridão e traz vida à atmosfera.
+                                
+                                E em raros momentos de magia, quando as condições atmosféricas são perfeitas, as nuvens se tornam telas para o espetáculo celestial mais extraordinário de todos: o arco-íris. Suas cores vivas e vibrantes cortam o céu como um sorriso da natureza, lembrando-nos da beleza efêmera e da maravilha que existe em nosso mundo.
+                                
+                                Assim, as nuvens coloridas não são apenas fenômenos meteorológicos, mas sim obras de arte em constante evolução, pintadas pelos caprichos da luz e da atmosfera, lembrando-nos da infinita criatividade da natureza e inspirando-nos a olhar para o céu com admiração renovada.
+                            </p>
+                         </div>
+                    </li>
+                    <li><code>background-attachment: scroll; </code> 
+                        <div class="Ex-2">
+                            <p>
                             No vasto céu azul, as nuvens pairam como pinceladas de uma paleta celestial, pintando o firmamento com cores que desafiam a imaginação. Não mais restritas ao branco impoluto, essas esferas de vapor ganham vida em tons vibrantes e inesperados, transformando o horizonte em um espetáculo de tonalidades.
                             
                             À medida que o sol se põe, as nuvens adotam tons de laranja e rosa, como se estivessem mergulhadas em chamas douradas. Os raios de luz dançam entre os interstícios das nuvens, criando um espetáculo efêmero de cores ardentes que aquecem até mesmo os corações mais frios.
@@ -156,201 +281,247 @@
                             E em raros momentos de magia, quando as condições atmosféricas são perfeitas, as nuvens se tornam telas para o espetáculo celestial mais extraordinário de todos: o arco-íris. Suas cores vivas e vibrantes cortam o céu como um sorriso da natureza, lembrando-nos da beleza efêmera e da maravilha que existe em nosso mundo.
                             
                             Assim, as nuvens coloridas não são apenas fenômenos meteorológicos, mas sim obras de arte em constante evolução, pintadas pelos caprichos da luz e da atmosfera, lembrando-nos da infinita criatividade da natureza e inspirando-nos a olhar para o céu com admiração renovada.
-                        </p>
-                     </div>
-                </li>
-                <li><code>background-attachment: scroll; </code> 
-                    <div class="Ex-2">
-                        <p>
-                        No vasto céu azul, as nuvens pairam como pinceladas de uma paleta celestial, pintando o firmamento com cores que desafiam a imaginação. Não mais restritas ao branco impoluto, essas esferas de vapor ganham vida em tons vibrantes e inesperados, transformando o horizonte em um espetáculo de tonalidades.
-                        
-                        À medida que o sol se põe, as nuvens adotam tons de laranja e rosa, como se estivessem mergulhadas em chamas douradas. Os raios de luz dançam entre os interstícios das nuvens, criando um espetáculo efêmero de cores ardentes que aquecem até mesmo os corações mais frios.
-                        
-                        Nas manhãs serenas, o céu se veste com um manto de azul suave, adornado por nuvens cor-de-rosa e lilás, como se o próprio amanhecer estivesse tingido por uma paleta de aquarela. Essas nuvens delicadas flutuam gentilmente, como flores celestiais que desabrocham ao romper do dia.
-                        
-                        Em dias de tempestade, as nuvens adquirem tons sombrios e profundos, carregando consigo a promessa de chuvas revigorantes. Os raios partem dos confins escuros das nuvens, iluminando o céu com uma energia elétrica que corta a escuridão e traz vida à atmosfera.
-                        
-                        E em raros momentos de magia, quando as condições atmosféricas são perfeitas, as nuvens se tornam telas para o espetáculo celestial mais extraordinário de todos: o arco-íris. Suas cores vivas e vibrantes cortam o céu como um sorriso da natureza, lembrando-nos da beleza efêmera e da maravilha que existe em nosso mundo.
-                        
-                        Assim, as nuvens coloridas não são apenas fenômenos meteorológicos, mas sim obras de arte em constante evolução, pintadas pelos caprichos da luz e da atmosfera, lembrando-nos da infinita criatividade da natureza e inspirando-nos a olhar para o céu com admiração renovada.
-                        </p>
-                    </div>
-                </li>
-                <li><code>background-attachment: local; </code> 
-                    <div class="Ex-3">
-                        <p>
-                        No vasto céu azul, as nuvens pairam como pinceladas de uma paleta celestial, pintando o firmamento com cores que desafiam a imaginação. Não mais restritas ao branco impoluto, essas esferas de vapor ganham vida em tons vibrantes e inesperados, transformando o horizonte em um espetáculo de tonalidades.
-                        
-                        À medida que o sol se põe, as nuvens adotam tons de laranja e rosa, como se estivessem mergulhadas em chamas douradas. Os raios de luz dançam entre os interstícios das nuvens, criando um espetáculo efêmero de cores ardentes que aquecem até mesmo os corações mais frios.
-                        
-                        Nas manhãs serenas, o céu se veste com um manto de azul suave, adornado por nuvens cor-de-rosa e lilás, como se o próprio amanhecer estivesse tingido por uma paleta de aquarela. Essas nuvens delicadas flutuam gentilmente, como flores celestiais que desabrocham ao romper do dia.
-                        
-                        Em dias de tempestade, as nuvens adquirem tons sombrios e profundos, carregando consigo a promessa de chuvas revigorantes. Os raios partem dos confins escuros das nuvens, iluminando o céu com uma energia elétrica que corta a escuridão e traz vida à atmosfera.
-                        
-                        E em raros momentos de magia, quando as condições atmosféricas são perfeitas, as nuvens se tornam telas para o espetáculo celestial mais extraordinário de todos: o arco-íris. Suas cores vivas e vibrantes cortam o céu como um sorriso da natureza, lembrando-nos da beleza efêmera e da maravilha que existe em nosso mundo.
-                        
-                        Assim, as nuvens coloridas não são apenas fenômenos meteorológicos, mas sim obras de arte em constante evolução, pintadas pelos caprichos da luz e da atmosfera, lembrando-nos da infinita criatividade da natureza e inspirando-nos a olhar para o céu com admiração renovada.
-                       </p>
-                    </div>
-                </li>
-            </ul>
-        </section>
-        <section id="background-origin">
-            <h1>propriedade background-origin</h1>
-    
-            <p>A propriedade CSS background-origin especifica a caixa de referência usada para calcular a posição inicial de uma imagem de fundo (background) em um elemento.
-    
-                Ela determina onde a imagem de fundo começará a ser exibida em relação à caixa do elemento.
-            </p>
-            <h2>Os três valores possíveis para background-origin são:</h2>
-            <ul>
-                <li>
-                    <div class="container">
-                      <div class="texto"><p>padding-box: A imagem de fundo começa a ser exibida a partir das bordas internas da área de preenchimento (padding) do elemento. Isso significa que a imagem de fundo será cortada para se ajustar à área de preenchimento do elemento. <code>background-origin: padding-box;</code></p></div>           
-                      <div class="exemplo" id="padding-box"></div>  
-                    </div>            
-                </li>
-                
-                <li>
-                    <div class="container">
-                        <div class="texto"><p>border-box: A imagem de fundo começa a ser exibida a partir das bordas da borda (border) do elemento. Isso significa que a imagem de fundo será cortada para se ajustar à área de preenchimento e à borda do elemento. <code>background-origin: border-box;</code></p></div>
-                        <div class="exemplo" id="border-box"></div>
-                    </div> 
-                   
-                </li>
-                
-                <li> 
-                   <div class="container">
-                        <div class="texto"><p>content-box: A imagem de fundo começa a ser exibida a partir das bordas externas do conteúdo (content) do elemento. Isso significa que a imagem de fundo será exibida sem ser cortada e será posicionada em relação ao conteúdo do elemento. <code>background-origin: content-box;</code></p></div>
-                        <div class="exemplo" id="content-box"></div>
-                   </div>                   
-                </li>
-            </ul>
-        </section>
-        <section id="background-clip">
-            <h1>Propriedade background-clip</h1>
-            <p>A propriedade background-clip no CSS é utilizada para definir até onde a imagem ou cor de fundo de um elemento deve se estender dentro do modelo de caixa (box model) do elemento. Isso permite um controle detalhado sobre a área de pintura do fundo, que pode incluir a borda, o preenchimento (padding), ou apenas o conteúdo do elemento.</p>
-             <H2>Sintaxe: <strong><i>background-clip: valor;</i></strong></H2>
-             <h3>Valores:</h3>
-             <ul>
-                <li>
-                    <div class="container">
-                        <div class="texto"><p>O fundo se estende até a borda interna do padding, excluindo a borda.
-                            <code>background-clip: padding-box;</code></p>
+                            </p>
                         </div>
-                        <div class="exemplo" id="padding-box">Trilha CSS</div>
-                    </div>      
-                </li>
-                <li> 
-                    <div class="container">
-                        <div class="texto"><p>O fundo se estende até a borda externa do elemento, incluindo a borda.
-                            <code>background-clip: border-box;</code> </p>
+                    </li>
+                    <li><code>background-attachment: local; </code> 
+                        <div class="Ex-3">
+                            <p>
+                            No vasto céu azul, as nuvens pairam como pinceladas de uma paleta celestial, pintando o firmamento com cores que desafiam a imaginação. Não mais restritas ao branco impoluto, essas esferas de vapor ganham vida em tons vibrantes e inesperados, transformando o horizonte em um espetáculo de tonalidades.
+                            
+                            À medida que o sol se põe, as nuvens adotam tons de laranja e rosa, como se estivessem mergulhadas em chamas douradas. Os raios de luz dançam entre os interstícios das nuvens, criando um espetáculo efêmero de cores ardentes que aquecem até mesmo os corações mais frios.
+                            
+                            Nas manhãs serenas, o céu se veste com um manto de azul suave, adornado por nuvens cor-de-rosa e lilás, como se o próprio amanhecer estivesse tingido por uma paleta de aquarela. Essas nuvens delicadas flutuam gentilmente, como flores celestiais que desabrocham ao romper do dia.
+                            
+                            Em dias de tempestade, as nuvens adquirem tons sombrios e profundos, carregando consigo a promessa de chuvas revigorantes. Os raios partem dos confins escuros das nuvens, iluminando o céu com uma energia elétrica que corta a escuridão e traz vida à atmosfera.
+                            
+                            E em raros momentos de magia, quando as condições atmosféricas são perfeitas, as nuvens se tornam telas para o espetáculo celestial mais extraordinário de todos: o arco-íris. Suas cores vivas e vibrantes cortam o céu como um sorriso da natureza, lembrando-nos da beleza efêmera e da maravilha que existe em nosso mundo.
+                            
+                            Assim, as nuvens coloridas não são apenas fenômenos meteorológicos, mas sim obras de arte em constante evolução, pintadas pelos caprichos da luz e da atmosfera, lembrando-nos da infinita criatividade da natureza e inspirando-nos a olhar para o céu com admiração renovada.
+                           </p>
+                        </div>
+                    </li>
+                </ul>
+            </section>
+            <section id="background-origin">
+                <h1>propriedade background-origin</h1>
+        
+                <p>A propriedade CSS background-origin especifica a caixa de referência usada para calcular a posição inicial de uma imagem de fundo (background) em um elemento.
+        
+                    Ela determina onde a imagem de fundo começará a ser exibida em relação à caixa do elemento.
+                </p>
+                <h2>Os três valores possíveis para background-origin são:</h2>
+                <ul>
+                    <li>
+                        <div class="texto"><p>padding-box: A imagem de fundo começa a ser exibida a partir das bordas internas da área de preenchimento (padding) do elemento. Isso significa que a imagem de fundo será cortada para se ajustar à área de preenchimento do elemento.</p> 
+                            <code>background-origin: padding-box;</code></div>           
+                        <div class="exemplo" id="padding-box"></div>             
+                    </li>
+                    
+                    <li>
+                        <div class="texto"><p>border-box: A imagem de fundo começa a ser exibida a partir das bordas da borda (border) do elemento. Isso significa que a imagem de fundo será cortada para se ajustar à área de preenchimento e à borda do elemento.</p> 
+                            <code>background-origin: border-box;</code></div>
+                        <div class="exemplo" id="border-box"></div>
+                    </li>
+                    
+                    <li> 
+                        <div class="texto"><p>content-box: A imagem de fundo começa a ser exibida a partir das bordas externas do conteúdo (content) do elemento. Isso significa que a imagem de fundo será exibida sem ser cortada e será posicionada em relação ao conteúdo do elemento.</p> 
+                            <code>background-origin: content-box;</code></div>
+                        <div class="exemplo" id="content-box"></div>                
+                    </li>
+                </ul>
+            </section>
+            <section id="background-clip">
+                <h1>Propriedade background-clip</h1>
+                <p>A propriedade background-clip no CSS é utilizada para definir até onde a imagem ou cor de fundo de um elemento deve se estender dentro do modelo de caixa (box model) do elemento. Isso permite um controle detalhado sobre a área de pintura do fundo, que pode incluir a borda, o preenchimento (padding), ou apenas o conteúdo do elemento.</p>
+                 <H2>Sintaxe: <strong><i>background-clip: valor;</i></strong></H2>
+                 <h3>Valores:</h3>
+                 <ul>
+                    <li>
+                        <div class="texto">
+                            <p>O fundo se estende até a borda interna do padding, excluindo a borda.</p>
+                            <code>background-clip: padding-box;</code>
+                        </div>
+                        <div class="exemplo" id="padding-box">Trilha CSS</div>     
+                    </li>
+                    <li> 
+                        <div class="texto"><p>O fundo se estende até a borda externa do elemento, incluindo a borda.</p>
+                            <code>background-clip: border-box;</code>
                         </div>
                         <div class="exemplo" id="border-box">Trilha CSS</div>
-                    </div>
-                </li>
-                <li>
-                    <div class="container">
-                        <div class="texto"><p> O fundo se estende apenas até a borda do conteúdo, excluindo o padding e a borda.
-                            <code>background-clip: content-box;</code> </p>
+                    </li>
+                    <li>
+                        <div class="texto"><p> O fundo se estende apenas até a borda do conteúdo, excluindo o padding e a borda.</p>
+                            <code>background-clip: content-box;</code>
                         </div>
                         <div class="exemplo" id="content-box">Trilha CSS</div>
-                    </div>
-                </li>
-                <li>
-                    <div class="container">
-                        <div class="texto"><p>O fundo se aplica ao texto dentro do elemento. Este valor é menos comum e só é suportado em certos navegadores.
-                            <code>background-clip; text</code> </p>
+                    </li>
+                    <li>
+                        <div class="texto"><p>O fundo se aplica ao texto dentro do elemento. Este valor é menos comum e só é suportado em certos navegadores.</p>
+                            <code>background-clip; text</code>
                         </div>
                         <div class="exemplo" id="text">Trilha CSS</div>
-                    </div>
-                </li>
-            </ul>
-            
-
-        </section>
-        <section id="blend-mode">
-            <h1>Propriedade blend-mode</h1>
-            <p>No CSS, a propriedade mix-blend-mode é usada para especificar como o conteúdo de um elemento deve ser combinado com o conteúdo do seu fundo. Além disso, a propriedade background-blend-mode define como as camadas de fundo de um elemento devem ser mescladas entre si.</p>
-            <h2>Valores:</h2>
-            <ul>
-                <li><hr>Normal:  (padrão);
-                    <div class="container">
-                        <div class=" texto"><p><code>background-blend-mode: normal;</code></p></div>                 
-                        <div class="exemplo" id="normal">Trilha CSS</div>
-                    </div>
-                </li>
-                <li><hr>Multiply:
-                    <div class="container">
-                        <div class=" texto"><p><code>background-blend-mode: multiply; </code></p></div>                 
+                    </li>
+                </ul>
+            </section>
+            <section id="blend-mode">
+                <h1>Propriedade blend-mode</h1>
+                <p>No CSS, a propriedade mix-blend-mode é usada para especificar como o conteúdo de um elemento deve ser combinado com o conteúdo do seu fundo. Além disso, a propriedade background-blend-mode define como as camadas de fundo de um elemento devem ser mescladas entre si.</p>
+                <h2>Valores:</h2>
+                <ul>
+                    <li>Normal:  (padrão);
+                        <div class=" texto"><code>background-blend-mode: normal;</code></div>                 
+                            <div class="exemplo" id="normal">Trilha CSS</div>
+                    </li>
+                    <li>Multiply:
+                        <div class=" texto"><code>background-blend-mode: multiply; </code></div>                 
                         <div class="exemplo" id="multiply">Trilha CSS</div>
-                    </div>
-                </li>
-                <li><hr>Screen:
-                    <div class="container">
-                        <div class=" texto"><p><code>background-blend-mode: screen; </code></p></div>                 
+                    </li>
+                    <li>Screen:
+                        <div class=" texto"><code>background-blend-mode: screen; </code></div>                 
                         <div class="exemplo" id="screen">Trilha CSS</div>
-                    </div>
-                </li>
-                <li><hr>Overlay:
-                    <div class="container">
-                        <div class=" texto"><p><code>background-blend-mode: overlay;</code></p></div>
+                    </li>
+                    <li>Overlay:
+                        <div class=" texto"><code>background-blend-mode: overlay;</code></div>
                         <div class="exemplo" id="overlay">Trilha CSS</div>
-                    </div>
-                </li>
-                <li><hr>Darken:
-                    <div class="container">
-                        <div class=" texto"><p><code>background-blend-mode: darken;</code></p></div>
+                    </li>
+                    <li>Darken:
+                        <div class=" texto"><code>background-blend-mode: darken;</code></div>
                         <div class="exemplo" id="darken">Trilha CSS</div>
-                    </div>
-                </li>
-                <li><hr>Lighten:
-                    <div class="container">
-                        <div class=" texto"><p><code>background-blend-mode: lighten;</code> </p></div>
+                    </li>
+                    <li>Lighten:
+                        <div class=" texto"><code>background-blend-mode: lighten;</code></div>
                         <div class="exemplo" id="lighten">Trilha CSS</div>
-                    </div>
-                </li>
-                <li><hr>Difference:
-                </div><div class="container">
-                    <div class=" texto"><p><code>background-blend-mode: difference;</code></p></div>
-                    <div class="exemplo" id="difference">Trilha CSS</div><br>
-                </div>
-                </li>
-                <li><hr>Exclusion:
-                    </div><div class="container">
-                        <div class=" texto"><p><code>background-blend-mode: exclusion;</code> </p></div>
-                        <div class="exemplo" id="exclusion">Trilha CSS</div><br>
-                    </div>
-                </li>
-                <li><hr>Color-Dodge:
-                    <div class="container">
-                        <div class=" texto"><p><code>background-blend-mode: color-dodge;</code> </p></div>
-                        <div class="exemplo" id="color-dodge">Trilha CSS</div><br>
-                    </div>
-                </li>
-                <li><hr>Color-Burn:
-                    <div class="container">
-                        <div class=" texto"><p>  <code>background-blend-mode: color-burn;</code> </p></div>
-                        <div class="exemplo" id="color-burn">Trilha CSS</div><br>
-                    </div>
-                </li>
-                <li><hr>Hard-Ligth:
-                    <div class="container">
-                        <div class=" texto"><p><code>background-blend-mode: hard-light;</code> </p></div>
-                        <div class="exemplo" id="hard-light">Trilha CSS</div><br>
-                    </div>
-                </li>
-                <li><hr>soft-light:
-                   </div><div class="container">
-                       <div class=" texto"><p> <code>background-blend-mode: soft-light;</code> </p></div>
-                       <div class="exemplo" id="soft-light">Trilha CSS</div><br> 
-                    </div>
-                </li>
+                    </li>
+                    <li>Difference:
+                        <div class=" texto"><code>background-blend-mode: difference;</code></div>
+                        <div class="exemplo" id="difference">Trilha CSS</div>
+                    </li>
+                    <li>Exclusion:
+                        <div class=" texto"><code>background-blend-mode: exclusion;</code></div>
+                        <div class="exemplo" id="exclusion">Trilha CSS</div>
+                    </li>
+                    <li>Color-Dodge:
+                        <div class=" texto"><code>background-blend-mode: color-dodge;</code></div>
+                        <div class="exemplo" id="color-dodge">Trilha CSS</div>
+                    </li>
+                    <li>Color-Burn:
+                        <div class=" texto"><code>background-blend-mode: color-burn;</code></div>
+                        <div class="exemplo" id="color-burn">Trilha CSS</div>
+                    </li>
+                    <li>Hard-Ligth:
+                        <div class=" texto"><code>background-blend-mode: hard-light;</code></div>
+                        <div class="exemplo" id="hard-light">Trilha CSS</div>
+                    </li>
+                    <li>soft-light:
+                        <div class=" texto"><code>background-blend-mode: soft-light;</code></div>
+                           <div class="exemplo" id="soft-light">Trilha CSS</div> 
+                    </li>
+                </ul>
+            </section>
+            <section id="background">
+
+                <div class="exemplo" id="background-resumido">Trilha CSS</div><br>
+
+                <code>background: violet url(https://img.freepik.com/fotos-gratis/fundo-de-pintura-abstrata-com-pintura-em-aquarela-multicolorida-gerada-por-ia_188544-15558.jpg) no-repeat top center/200px 200px fixed padding-box content-box;</code>
+           
+                <p>Para resumir uma unidade background em CSS, geralmente seguimos uma ordem lógica para garantir que todas as propriedades relevantes sejam definidas de forma clara e organizada. Aqui está uma ordem comum para resumir uma unidade background:</p>
+                   <ol>
+                      <li>background-color: Define a cor de fundo.</li>
+                      <li>background-image: Especifica a imagem de fundo, se houver.</li>
+                      <li>background-repeat: Define como a imagem de fundo deve se repetir.</li>
+                      <li>background-position: Define a posição inicial da imagem de fundo.</li>
+                      <li>background-size: Especifica o tamanho da imagem de fundo.</li>
+                      <li>background-attachment: Define se a imagem de fundo deve se mover com o conteúdo ou permanecer fixa enquanto a página é rolada.</li>
+                      <li>background-clip: Especifica a área de recorte para o plano de fundo, se necessário.</li>
+                      <li>background-origin: Define a posição de origem do plano de fundo em relação à caixa do elemento, se necessário.</li>
+                      <li>background-blend-mode: Especifica o modo de mesclagem entre a imagem de fundo e o conteúdo, se necessário.</li>
+                   </ol>
+            </section>
+            <section id="Bordas">
+                <h1>Bordas</h1>
+                <p>Podemos definir as configurações das nossas bordas através das seguintes propriedades:</p>
                 
-            </ul>
-        </section>
+                <p>Individualmente não aparece, é necessário a combinação da <code>border-style: (estilo);</code></p><br>
+                
+                   <ul>
+                       <li>border-width
+                            <div class="exemplo" id="width">
+                                <p>Espessura de Borda: nos quatro cantos o mesmo valor ou acrescentando até quatro valores.</p>
+                            </div>
+                       </li>
+                       <li>border-style
+                            <div class="exemplo" id="style">
+                                <p>Valores de estilos de borda. podendo aplicar até quatro valores.</p>
+                            </div>
+                        </li>
+                       <li>border-color
+                            <div class="exemplo" id="color">
+                                <p>Podendo aplicar quatro valores e estilos de cores como gradiente ou imagens...</p>
+                            </div>
+                       </li>
+                   </ul>
+              
+                   <p>Podemos resumir a aplicação dos valores em uma linha</p>
+                   <code>border: 10px solid black:</code>
+        
+            </section>
+            <section id="border-radius">
+                <h1>Arredondamento de Bordas</h1>
+                <p>Usando a propriedade <code>border-radius: ;</code></p>
+                <h2>Exemplo:</h2>
        
-    </main> 
-    <footer>Rodapé</footer>  
+                <div class="exemplo" id="border-radius01"><p><b>Podendo receber Quatros valores.</b></p></div>
+                <div class="exemplo" id="border-radius02"><p><b>Dependendo da escolha da altura e largura pode-se criar um circulo perfeito</b></p></div>
+                <div class="exemplo" id="border-radius03"><p><b>Brincando com as formas podendo misturar valores.</b></p></div>
+       
+            </section>
+            <section id="image-source">
+                <h1>Bordas com Imagens</h1>
+                <p>Usando a propriedade <code>border-image: ;</code></p>
+                <h2>Exemplo: <cite>border-image: image-source;</cite></h2>
+                
+                
+                <div class="exemplo" id="image-source01"><p><b>Define uma imagem como borda</b></p></div>
+                <div class="exemplo" id="image-source02"><p><b>Define efeito de cor como o gradiente.</b></p></div>
+            
+                <h1>Exemplo: <cite>border-image: image-width;</cite></h1>
+                <div class="exemplo" id="image-width"><p><b>Define a largura da imagem da nossa borda, podendo receber até quatro valores.</b></p></div>
+                 
+                <h1>Exemplo:<cite>border-image: image-repeat; (especifica como a imagem da borda deve ser repetida para preencher a borda)</cite></h1>
+                <div class="exemplo" id="image-repeat01"><p><b> image-repeat: A imagem é repetida (tiled) ao longo da borda.</b></p></div>
+                <div class="exemplo" id="image-repeat02"><p><b> image-stretch: imagem é esticada para preencher a borda inteira.</b></p></div>
+                <div class="exemplo" id="image-repeat03"><p><b> space: Repetida ao longo da borda, mas é estendida de modo que as imagens sejam exibidas igualmente.</b></p></div>
+                <div class="exemplo" id="image-repeat04"><p><b> round: A imagem é dimensionada proporcionalmente para preencher a borda, de modo que o número de repetições seja inteiro.</b></p></div>
+      
+            
+                <h1>Exemplo:<cite>border-image: image-outset;</cite></h1>
+                <div class="exemplo" id="image-outset01"><p><b></b></p></div>
+                <div class="exemplo" id="image-outset02"><p><b></b></p></div>
+    
+                <h1>Explo:<cite>border-image: image-slice;</cite></h1>
+                <div class="exemplo" id="image-slice01"><p><b>determina quais partes da imagem serão esticadas para desenhar a borda.</b></p></div>
+                <div class="exemplo" id="image-slice02"><p><b>determina quais partes da imagem serão esticadas para desenhar a borda.</b></p></div>
+                
+                <h1><strong>Resumindo a propriedade <code>borde-image: ;</code></strong></h1>
+                <div class="exemplo" id="resumindo"><p><b></b></p></div>
+                  
+                <h1>A ordem correta para resumir a propriedade border-image é a seguinte:</h1>
+                <ol>
+                   <li>source: URL da imagem ou efeito a ser usada como borda.</li>
+                   <li>slice: Define a região da imagem da borda que será usada para desenhar a borda.</li>
+                   <li>width: Define a largura da borda.</li>
+                   <li>outset: Define a margem entre a borda e o conteúdo.</li>
+                   <li>repeat: Define como a imagem da borda deve ser repetida para preencher a borda.</p></li>
+                </ol>   
+           </section>
+      
+             
+                  
+        </div> 
+        </div>
+    <footer>
+        <section>Rodapé</section>
+    </footer>  
 </body>
 </html>
