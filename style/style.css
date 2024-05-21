@@ -640,45 +640,37 @@ a:hover{
 }
 /*fontes*/
 #fontes .Exemplo{
+    
     padding: 1%;
+    width: 200px;
     
     border-radius: 10px 10px;
     background-color: rgba(0, 0, 0, 0.699);
     margin: 10px;
-    
    
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap; 
 }
 #fontes .container{
 
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    justify-content: space-between;
 }
 #fontes .code {
-    padding: 1%;
+    padding: 3%;
 }
 #font-family img {
    
     border-radius: 10px;
     
 }
-/**/
+/*font-face*/
 #font-face img{
     
     border-radius: 10px;
    
 }
-/**/
-#line-heigth > .Exemplo, #font-resumo > .Exemplo{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    
-}
+/*font-size*/
 
 #xx-small{
     font-size: xx-small;
@@ -701,6 +693,7 @@ a:hover{
 #xx-large{
     font-size: xx-large;
 }
+/*font-style*/
 #normal{
     font-style: normal;
 }
@@ -710,6 +703,7 @@ a:hover{
 #oblique{
     font-style: oblique;
 }
+/*font-weigth*/
 #weight-normal{
     font-weight: normal;
 }
@@ -722,6 +716,7 @@ a:hover{
 #weight-lighter{
     font-weight: lighter;
 }
+/*font-variant*/
 #font-normal{
     font-variant: normal;
 }
@@ -731,6 +726,7 @@ a:hover{
 #all-small-caps{
     font-variant: all-small-caps;
 }
+/*font-strech*/
 #stretch-normal{
     font-stretch: normal;
 }
@@ -758,6 +754,9 @@ a:hover{
 #ultra-expanded{
     font-stretch: ultra-expanded;
 }
+/*line-heigth*/
+
+
 #line-normal{
     line-height: normal;
 }
@@ -772,8 +771,4 @@ a:hover{
 }
 #line-valor04{
     line-height: 150%;
-}
-.texto{
-    padding: 3%;
-    font: italic small-caps bold 15px/2 Georgia, serif;
 }
