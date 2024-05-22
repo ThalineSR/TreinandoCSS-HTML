@@ -29,6 +29,9 @@ section{
     border: 1px solid;
     border-radius: 10px;
     text-align: center;
+
+    overflow: hidden;          
+    text-overflow: ellipsis;
     
 }
 p{
@@ -122,6 +125,8 @@ a:hover{
 
     width: 300px;
     height: 300px;
+
+    border-radius: 10px;
 }
 /*object-fit*/
 
@@ -755,8 +760,6 @@ a:hover{
     font-stretch: ultra-expanded;
 }
 /*line-heigth*/
-
-
 #line-normal{
     line-height: normal;
 }
@@ -771,4 +774,195 @@ a:hover{
 }
 #line-valor04{
     line-height: 150%;
+}
+/*texto*/
+#texto .text-decoration{
+    text-align: justify;
+}
+
+/*text-transform*/
+#text-transform .exemplo{
+    background-color: rgba(0, 0, 0, .5);
+    border-radius: 10px;
+
+    width: 300px;
+    height: 100px;
+    padding: 0 2% 0 5%;
+}
+#text-none{
+    text-transform: none;
+}
+#text-capitalize{
+    text-transform: capitalize;
+}
+#text-uppercase{
+    text-transform: uppercase;
+}
+#text-lowercase{
+    text-transform: lowercase;
+}
+#text-initial{
+    text-transform: initial;
+}
+#text-inherit{
+    text-transform: inherit;
+}
+/*text-aling*/
+#text-aling .exemplo{
+    width: 300px;
+    height: 200px;
+    padding: 3%;
+}
+#aling-left{
+    text-align: left;
+}
+#aling-right{
+    text-align: right;
+}
+#aling-center{
+    text-align: center;
+}
+#aling-justify{
+    text-align: justify;
+}
+#aling-initial{
+    text-align: initial;
+}
+#aling-inherit{
+    text-align: inherit;
+}
+/*text-decoration*/
+#text-decoration .exemplo{
+    padding: 2%;
+    width: 300px;
+    height: 200px;
+}
+#decoration-none{
+    text-decoration:none;
+}
+#decoration-underline{
+    text-decoration:underline;
+}
+#decoration-overline{
+    text-decoration: overline;
+}
+#decoration-line-through{
+    text-decoration: line-through;
+}
+#decoration-underline-overline{
+    text-decoration: underline overline;
+}
+#decoration-underline-line-through{
+    text-decoration: underline line-through;
+}
+#decoration-blink{
+    text-decoration: blink;
+}
+#style-solid{
+    text-decoration-line: underline;
+    text-decoration-style: solid;
+}
+#style-double{
+    text-decoration-line: underline;
+    text-decoration-style: double;
+}
+#style-dotted{
+    text-decoration-line: underline;
+    text-decoration-style: dotted;
+}
+#style-dashed{
+    text-decoration-line: underline;
+    text-decoration-style: dashed
+}
+#style-wavy{
+    text-decoration-line: underline;
+    text-decoration-style: wavy;
+}
+#exemplo-color{
+    text-decoration-line: underline; 
+    text-decoration-color: red; 
+}
+#exemplo-thickness{
+    text-decoration-line: underline;
+    text-decoration-thickness: 5px;
+}
+/*text-indent*/
+#text-indent{
+    text-indent: 20px;
+}
+#Text-ident .exemplo{
+    padding: 1%;
+    height: auto;
+
+}
+/*letter-spacing*/
+
+#letter-spacing{
+    letter-spacing: 12px;
+
+}
+/*word-spacing*/
+#word-spacing{
+    word-spacing: 12px;
+}
+/*white-space*/
+#white-space .exemplo{
+    margin-bottom: 500px;
+}
+#space-normal{
+    white-space: normal;
+}
+#space-nowrap{
+    white-space: nowrap;            
+}
+#space-pre{
+    white-space: pre;
+}
+#space-pre-wrap{
+    white-space: pre-wrap;
+}
+#space-pre-line{
+    white-space: pre-line;
+}
+.white-space{
+    background-color: yellowgreen;
+}
+#wrap-normal{
+    word-wrap: normal;
+}
+#wrap-break{
+    word-wrap: break-word;
+}
+#break-normal{
+    word-break: normal;
+}
+#break-break-all{
+    word-break: break-all;
+}
+#break-keep-all{
+    word-break: keep-all;
+}
+#horizontal-tb{
+    writing-mode: horizontal-tb;
+}
+#vertical-rl{
+    writing-mode: vertical-rl;
+}
+#vertical-lr{
+    writing-mode: vertical-lr;
+}
+#clip{
+   text-overflow: clip;
+}
+#ellipsis{
+  text-overflow: ellipsis;
+}
+#string{
+  text-overflow: 'ver mais';
+}
+#text-overflow p{
+white-space: nowrap;
+overflow: hidden;
+background-color: yellowgreen;
+
 }
