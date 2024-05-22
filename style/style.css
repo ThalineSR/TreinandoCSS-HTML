@@ -924,9 +924,10 @@ a:hover{
 #space-pre-line{
     white-space: pre-line;
 }
-.white-space{
+#white-space .white-space{
     background-color: yellowgreen;
 }
+/*word*/
 #wrap-normal{
     word-wrap: normal;
 }
@@ -942,6 +943,7 @@ a:hover{
 #break-keep-all{
     word-break: keep-all;
 }
+/*wrinting-mode*/
 #horizontal-tb{
     writing-mode: horizontal-tb;
 }
@@ -951,6 +953,7 @@ a:hover{
 #vertical-lr{
     writing-mode: vertical-lr;
 }
+/*text-overflow*/
 #clip{
    text-overflow: clip;
 }
@@ -965,4 +968,152 @@ white-space: nowrap;
 overflow: hidden;
 background-color: yellowgreen;
 
+}
+/*sombras*/
+#sombras img{
+            
+    margin: 20px auto;
+    object-fit: cover;
+    width: 500px;
+    height: 200px;
+    object-fit: cover;
+    
+}
+#sombras .exemplo {
+    display: inline-block;
+    background-color: blueviolet;
+    width: 200px;
+    height: 200px;
+    border: 10px solid rgb(65, 19, 107);
+    margin: 30px;
+    padding: 40px;
+    text-align: center;
+ 
+}
+#sombras .display{
+    display: inline-block;
+    margin: 30px;
+    padding: 40px;
+    text-align: center;
+}
+#h-shadow{
+    box-shadow: 20px 10px; /*primeiro valor horizontal e segundo valor na vertical*/
+}   
+#v-shado{
+    box-shadow: -10px -10px;
+}   
+#blur{
+    box-shadow: 30px 30px 10px; /*o terçeiro valor define o desfoque*/
+}
+#spread{
+    box-shadow: 30px 30px 20px -5px; /*o quarto valor define a propagação da sombra, tanto com valores negativos como com positivos*/
+}
+#color{
+    box-shadow: 20px 30px rgb(56, 2, 40); /*ultimo valor define cor a sombra*/
+}
+#inset{
+    box-shadow: inset 30px 30px 20px -5px rgb(226, 36, 169) ; /*o primeiro valor define que a sombra seja na parte interna do conteiner*/
+}
+#duplo{
+    box-shadow: inset 30px 30px 20px -5px rgb(36, 64, 226), 20px 30px rgb(10, 2, 56); /*primeiro valor esta definindo a sombra interna, separado por uma virgula, o segundo valor determina uma sombra externa*/ 
+
+}
+/*filter*/
+
+#filter ul{
+    
+    flex-direction: column;
+    text-align: start;
+}
+#filter hr{
+    width: 100%;
+}
+#filter-drop-shadow{
+    
+    filter: drop-shadow(20px 20px 10px rgb(48, 3, 48));
+
+}  
+#filter-blur{
+    filter: blur(5px);
+}
+#filter-brightness{
+    filter: brightness(150%);
+}
+#filter-contrast{
+    filter: contrast(150%);
+}
+#filter-grayscale{
+    filter: grayscale(100%);
+
+}
+#filter-hue-rotate{
+    filter: hue-rotate(90deg);
+}
+#filter-invert{
+    filter: invert(100%);
+}
+#filter-saturate{
+    filter: saturate(200%);
+}
+#filter-sepia{
+    filter: sepia(100%);
+}
+/*text-shedow*/
+#text-shadow strong{
+    font-size: 40px;
+}
+
+#text-h-shadow{
+    text-shadow: 10px 5px;
+}
+#text-v-shadow{
+    text-shadow: 20px -20px;
+}
+#text-blur{
+    text-shadow: 20px 10px 5px;
+}
+#text-color{
+    text-shadow: 10px 20px 5px violet;
+}
+/*outros*/
+#outros .exemplo {
+    display: inline-block;
+    background-color: #b400b4;
+    border: 5px solid orange;
+    border-radius: 20px 10px;
+    margin: 30px;
+    padding: 40px;
+    text-align: center;
+    color: orange;
+    width: 150px;
+    height: 250px;
+ 
+}
+#outros img{
+    width: 200px;
+    height: 200px;
+}
+#valor03{
+    opacity: .3;
+
+}
+#valor10{
+    opacity: .10;
+
+}
+#valor0{
+    opacity: .0;
+
+}
+#over-visible{
+    overflow: visible;
+}
+#over-hidden{
+    overflow:hidden;
+}
+#over-scroll{
+    overflow: scroll;
+}
+#over-auto{
+    overflow: auto;
 }
