@@ -1,0 +1,56 @@
+*{
+    font-family: Arial, Helvetica, sans-serif;
+    
+}
+
+body{
+
+    background: linear-gradient(to right, #000000, #4d034c,  #000000); 
+    background-size: 100% 100%;
+    background-position:center;
+    color: rgb(239, 136, 0);
+    
+}
+header, main{
+    display: contents;
+}
+
+main {
+   color: rgb(239, 136, 0);
+
+}
+a {
+    color: rgb(239, 136, 0);
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+#lirio img{
+    
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit:cover;
+    object-position: center center;
+   
+}
+div {
+    margin: 20px;
+    display: inline-block; 
+    align-items: center;
+    
+}
+.links{
+
+border-radius: 35%;
+border: solid;
+border-color: rgb(239, 136, 0);
+padding: 2px;
+}
+
+footer{
+    border-radius: 20%;
+    border: solid;
+    border-color: rgb(239, 136, 0);
+    padding: 20px;
+}

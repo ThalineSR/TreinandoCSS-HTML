@@ -10,12 +10,44 @@ body{
     font-style: normal;
     font-size: x-large;
 }
-header{
+header {
     
+    
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    background-color: transparent;
+    color: rgb(239, 136, 0);
+    
+    border: 1px solid;
+    border-radius: 10px;
    
 }
-footer{
+#Meu-Caderno .pagina{
+    text-align: center;
+    padding-top: 3%;
+
+    border: 2px solid rgb(239, 136, 0);
+    border-radius: 5px 40px 0 0;
+
+    height: 50px;
+    width: 400px;
+
+    margin: 2% 2% 0 2%;
     
+}
+/**/
+footer{
+   
+
+    width: 80%;
+    margin: .5%;
+    padding: 2%;
+
+    border: 1px solid rgb(239, 136, 0);
+    border-radius: 10px;
     
 }
 section{
@@ -23,8 +55,8 @@ section{
     margin: .5%;
     padding: 2%;
 
-    background-color: rgba(0, 0, 0, 0);
-    color: rgb(250, 206, 153);
+    background-color: transparent;
+    color: rgb(239, 136, 0);
     
     border: 1px solid;
     border-radius: 10px;
@@ -65,15 +97,15 @@ ul{
 #navegacao{
     position: fixed;
 
-    margin: 0 0 2% 2%;
+    margin: .5% 0 2% 2%;
     padding: 1%;
     height: 75%;
 
     display: flex;
     flex-direction: column;
 
-    color: rgb(250, 206, 153);
-    border:  rgb(250, 206, 153) solid 1px;
+    color: rgb(239, 136, 0);
+    border:  rgb(239, 136, 0) solid 1px;
     border-radius: 10px 0 0 10px;
 
     font-size: large;
@@ -108,7 +140,7 @@ ul{
     display: none; /* Oculta os botões */
   }
 a{
-    color:  rgb(250, 206, 153);
+    color:  rgb(239, 136, 0);
     text-decoration: none;
     margin: 1%;
     padding: 0 5%;
