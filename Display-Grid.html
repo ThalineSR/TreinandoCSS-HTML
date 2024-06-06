@@ -7,286 +7,309 @@
     <link rel="stylesheet" href="/style/gris-style.css">
     <title>display-grid</title>
 </head>
-
+   
 <body>
-    <section id="conceitos">
-        <h1>Grid Layout</h1>
-        <p>
-            Grid layout é um sistema de design usado no desenvolvimento web e no design gráfico que permite a
-            organização de conteúdo utilizando uma grade de linhas e colunas. Esse método é benéfico para criar layouts
-            estruturados, responsivos e visualmente atraentes.
+    <header>
+        <nav id="navegacao">
+            <ul>Nesta página:
+                <li><a href="#conceitos">Conceitos</a></li>
+                <li><a href="#nomenclatura">Nomenclatura</a></li>
+                <li><a href="#adicionando-linhas-colunas">Adicionando linhas colunas</a></li>
+                <li><a href="#implicito-explicito">Implicito-Explicito</a></li>
+                <li><a href="#alocando">Alocando</a></li>
+                <li><a href="#Shorthand">Shorthand</a></li>
+                <li><a href="#nomeando-areas">Nomeando areas</a></li>
+                <li><a href="#Definindo-espacamento">Definindo espaçamento</a></li>
+                <li><a href="#shorthand-grid">Shorthand grid</a></li>
+                <li><a href="#justify-items">Justify items</a></li>
+                <li><a href="#align-items">Align items</a></li>
+                <li><a href="#justify-content-grid">Justify content grid</a></li>
+                <li><a href="#grid-align-content">Grid align content</a></li>
+                <li><a href="#Alinhando-justify-aling-self">Alinhando justify aling self</a></li>
 
-        <h2>Grid Layout no CSS</h2>
-        O layout de grade (Grid Layout) do CSS é um sistema de layout bidimensional para a web. Ele permite que você
-        organize itens em linhas e colunas, facilitando o design de páginas web sem precisar usar floats e
-        posicionamentos complicados.
-        </p>
-        <img src="./assets/imagens/grid/conceito-grid.JPG" alt="exemplo de html para container">
-    </section>
-    <section id="nomemclatura">
-        <h1>Nomenclaturas do grid</h1>
-        <p>HTML</p>
-        <img src="./assets/imagens/grid/container-grade.JPG" alt="conteiner de grade">
-        <hr>
-        <p>grid columns As faixas verticais dos itens do grid, são chamados de colunas (grid columns)</p>
-        <img src="./assets/imagens/grid/columns.JPG" alt="exemplo grid-columns">
-        <hr>
-        <p>grid rows As faixas horizontais dos itens do grid, são chamados de linhas (grid rows)</p>
-        <img src="./assets/imagens/grid/row.JPG" alt="exemplo grid-row">
-        <hr>
-        <p>grid gaps Espaços entre as linhas (grid rows) e coluna (grid columns) do grid</p>
-        <img src="./assets/imagens/grid/gap.JPG" alt="exemplo gap">
-        <img src="./assets/imagens/grid/gap-abreviado.JPG" alt="exemplo gap gap-abreviado">
-        <img src="./assets/imagens/grid/gap-abreviado-2.JPG" alt="exemplo gap-abreviado-2">
-        <hr>
-        <p>Grid Container (Contêiner de Grade): O elemento ao qual se aplica display: grid. Ele é o pai direto de todos
-            os itens da grade.</p>
-        <img src="./assets/imagens/grid/grid-container.JPG" alt="exemplo de grid-container">
-        <hr>
-        <p>Grid Items (Itens da Grade): Os filhos diretos do contêiner de grade.</p>
-        <img src="./assets/imagens/grid/grid-item.JPG" alt="exemplo de grid-item">
-        <hr>
-        <p>Grid Lines (Linhas da Grade): As linhas divisórias que definem as células da grade.</p>
-        <img src="./assets/imagens/grid/grid-line.JPG" alt="exemplo grid-linha">
-        <hr>
-        <p>Grid Tracks (Trilhas da Grade): As linhas verticais e horizontais que compõem a grade. Elas são formadas
-            pelos espaços entre as linhas da grade.</p>
-        <img src="./assets/imagens/grid/trilha-grade.JPG" alt="exemplo grid-tracks">
-        <hr>
-        <p>Grid Cells (Células da Grade): Os espaços individuais definidos entre duas linhas de grade horizontais e duas
-            verticais.</p>
-        <img src="./assets/imagens/grid/celula.JPG" alt="exemplo celula">
-        <hr>
-        <p>Grid Areas (Áreas da Grade): Espaços retangulares na grade que podem ser ocupados por um ou mais itens de
-            grade.</p>
-        <img src="./assets/imagens/grid/area-grade.JPG" alt="exemplo de area-grade">
-    </section>
-    <section id="adicionando-linhas-colunas">
-        <h1>Adicionando colunas e linhas ao grid</h1>
-        <p>grid-template-columns define as colunas (columns) do grid</p>
-        <img src="./assets/imagens/grid/tamplate-columns.JPG" alt="exemplo tamplate-columns">
-        <hr>
-        <p>grid-template-rows define as linhas (rows) do grid</p>
-        <img src="./assets/imagens/grid/tamplate-rows.JPG" alt="exemplo tamplate-rows">
-        <hr>
-        <hr>
-        <h1>Unidade de medida <i>fr</i></h1>
-        <p>Criada para o CSS Grid, a unidade de medida fr representa uma fração do espaço disponível no container do
-            grid</p>
-        <img src="./assets/imagens/grid/fr.JPG" alt="exemplo fr">
-        <hr>
-        <hr>
-        <h1>Função repeat</h1>
-        <p>Permite repetir para todas, ou para algumas das faixas, o mesmo valor para seu tamanho de coluna ou linha.
-        </p>
-        <img src="./assets/imagens/grid/repeat.JPG" alt="exemplo repeat">
-        <hr>
-        <h1>asdadadasda Função repeat: outros valores</h1>
-        <img src="./assets/imagens/grid/repeat-outros.JPG" alt="exemplo repeat-outros">
-    </section>
-    <section id="implicito-explicito">
-        <h1>Grid implícito e explícito</h1>
-        <h2>Unidade de medida fr</h2>
-        <p>
-            Quando define-se as colunas e linhas através das propriedades
-            das propriedades grid-template-columns e grid-template-rows,
-            estamos criando um grid explícito.
-            Mas, se os itens não couberem, o grid colocará um item fora
-            desse grid que definimos, criando o que chamamos de grid
-            implícito.
-        </p>
-        <hr>
-        <h1>Propriedade grid-auto-flow</h1>
-        <p>Controla como o algoritmo de reposicionamento automático irá se comportar.</p>
-        <img src="./assets/imagens/grid/autoflow-row.JPG" alt="exemplo autoflow-row">
-        <img src="./assets/imagens/grid/autoflow-column.JPG" alt="exemplo autoflow-column">
-        <img src="./assets/imagens/grid/autoflow-dense.JPG" alt="exemplo autoflow-dense">
-    </section>
-    <section id="alocando">
-        <h1>Alocando os itens do Grid nas posições específicas</h1>
-        <h2>Grid Lines</h2>
-        <p>
-            Divisórias que compõem a
-            estrutura da grade.
-            As linhas entre as colunas são
-            chamadas de column lines
-            (linhas de coluna) e, as que
-            estão entre as faixas
-            horizontais, são chamadas de
-            row lines (linhas de linha).
-        </p>
-        <img src="./assets/imagens/grid/grid-line.JPG" alt="exemplo grid-line">
-        <p>
-            Cada linha possui um
-            número para que possamos
-            usar de referência (exceto
-            para grids implícitos).
-        </p>
-        <img src="./assets/imagens/grid/grid-line-numero.JPG" alt="exemplo numeros de referência">
-        <hr>
-        <hr>
-        <h2>Posicionando os itens do grid</h2>
-        <img src="./assets/imagens/grid/item-a.JPG" alt="exemplo posicionamento">
-        <img src="./assets/imagens/grid/html-item-a.JPG" alt="exemplo html">
-        <hr>
-        <img src="./assets/imagens/grid/item-b.JPG" alt="exemplo posicionamento">
-        <img src="./assets/imagens/grid/html-item-b.JPG" alt="exemplo html">
-        <hr>
-        <img src="./assets/imagens/grid/item-c.JPG" alt="exemplo posicionamento">
-        <img src="./assets/imagens/grid/html-item-c.JPG" alt="exemplo html">
-        <hr>
-        <img src="./assets/imagens/grid/item-d.JPG" alt="exemplo posicionamento">
-        <img src="./assets/imagens/grid/html-item-d.JPG" alt="exemplo html">
-        <hr>
-        <img src="./assets/imagens/grid/item-e.JPG" alt="exemplo posicionamento">
-        <img src="./assets/imagens/grid/html-item-e.JPG" alt="exemplo html">
-    </section>
-    <section id="Shorthand">
-        <h1>Áreas do grid</h1>
-        <h2>Shorthand de outras propriedades</h2>
-        <p>
-            Através da propriedade grid-area, nós conseguimos definir os
-            valores das propriedades grid-row-start, grid-row-end,
-            grid-column-start e grid-column-end de uma só vez.
-        </p>
-        <img src="./assets/imagens/grid/shorthand.JPG" alt="exemplo shorthand">
-    </section>
-    <section id="nomeando-areas">
-        <h1>Nomeando as áreas</h1>
-        <p>
-            É possível nomear as
-            áreas do grid e posicionar
-            os itens dentro das áreas
-            específicas, as
-            referenciando através do
-            nome.
-        </p>
-        <img src="./assets/imagens/grid/Grid-area-2.JPG" alt="exemplo de grid-area">
-    </section>
-    <section id="Definindo-espacamento">
-        <h1>Definindo os espaçamentos dos elementos do grid</h1>
-        <h2>Espaçamento entre as faixas do grid</h2>
-        <p>
-            Tamanho das linhas do
-            grid (grid lines) através
-            das propriedades
-            column-gap e row-gap
-            (ou através da shorthand
-            gap)
-        </p>
-        <img src="./assets/imagens/grid/grid-line.JPG" alt="exemplo tamanho de linha">
-        <hr>
-        <h1>Espaçamento entre as faixas do grid</h1>
-        <p>
-            Os espaçamentos são
-            adicionados apenas entre
-            uma linha/coluna e outra.
-        </p>
-        <img src="assets/imagens/grid/espacamento.JPG" alt="exemplo espaçamentos">
-    </section>
-    <section id="shorthand-grid">
-        <h1>Shorthand “grid”</h1>
-        <img src="./assets/imagens/grid/short-1.JPG" alt="exemplo">
-        <hr>
-        <img src="./assets/imagens/grid/short-2.JPG" alt="exemplo">
-        <hr>
-        <img src="./assets/imagens/grid/short-3.JPG" alt="exemplo">
-        <hr>
-        <img src="./assets/imagens/grid/short-4.JPG" alt="exemplo">
-        <hr>
-        <img src="./assets/imagens/grid/short-5.JPG" alt="exemplo">
-        <hr>
-        <img src="./assets/imagens/grid/short-6.JPG" alt="exemplo">
-        <hr>
-    </section>
-    <section id="justify-items">
-        <h1>Valores de justify-items</h1>
-        <h2>justify-items: start;</h2>
-        <img src="./assets/imagens/grid/justify-items-start.JPG" alt="exemplo justify-items-start">
-        <h2>justify-items: end;</h2>
-        <img src="./assets/imagens/grid/justify-items-end.JPG" alt="exemplo justify-items-end">
-        <h2>justify-items: center;</h2>
-        <img src="./assets/imagens/grid/justify-items-center.JPG" alt="exemplo justify-items-center">
-        <h2>justify-items: stretch; </h2>
-        <img src="./assets/imagens/grid/justify-items-strech.JPG" alt="exemplo justify-items-strech">
-    </section>
-    <section id="align-items">
-        <h1>Valores de align-items</h1>
-        <h2>align-items: start;</h2>
-        <img src="./assets/imagens/grid/aling-items-start.JPG" alt="exemplo aling-items-start">
-        <h2>align-items: end;</h2>
-        <img src="./assets/imagens/grid/aling-items-end.JPG" alt="exemplo aling-items-end">
-        <h2>align-items: center;</h2>
-        <img src="./assets/imagens/grid/aling-items-center.JPG" alt="exemplo aling-items-center">
-        <h2>align-items: stretch;</h2>
-        <img src="./assets/imagens/grid/aling-items-stretch.JPG" alt="exemplo aling-items-stretch">
-    </section>
-    <section id="justify-content-grid">
-        <h1>Alinhando o conteúdo do grid com justify-content e align-content</h1>
-        <h2>Container do grid</h2>
-        <p>
-            Container é o elemento
-            que envolve a grade na
-            qual estamos criando e,
-            muitas vezes, ela acaba
-            sendo maior do que o
-            grid.
-        </p>
-        <img src="./assets/imagens/grid/container-do-grid.JPG" alt="exemplo container-do-grid">
-        <hr>
-        <h1>Valores de justify-content</h1>
-
-        <h2>justify-content: start;</h2>
-        <img src="./assets/imagens/grid/" alt="exemplo justify-content">
-        <h2>justify-content: center;</h2>
-        <img src="./assets/imagens/grid/grid-justify-content-center.JPG" alt="exemplo grid-justify-content-center">
-        <h2>justify-content: end;</h2>
-        <img src="./assets/imagens/grid/grid-justify-content-end.JPG" alt="exemplo justify-content-end">
-        <h2>justify-content: stretch;</h2>
-        <img src="./assets/imagens/grid/grid-justify-content-stretch.JPG" alt="exemplo justify-content-stretch">
-        <h2>justify-content: space-around;</h2>
-        <img src="./assets/imagens/grid/grid-justify-content-space-around.JPG" alt="exemplo justify-content-around">
-        <h2>justify-content: space-evenly</h2>
-        <img src="./assets/imagens/grid/grid-justify-content-space-evenly.JPG" alt="exemplo justify-content-evenly">
-        <h2>justify-content: space-between;</h2>
-        <img src="./assets/imagens/grid/grid-justify-content-space-between.JPG" alt="exemplo justify-content-between">
-    </section>
-    <section id="grid-align-content">
-        <h1>Valores de align-content</h1>
-        <h2>align-content: start;</h2>
-        <img src="assets/imagens/grid/grid-aling-content-start.JPG" alt="exemplo grid-aling-content-start">
-        <h2>align-content: center;</h2>
-        <img src="assets/imagens/grid/grid-aling-content-center.JPG" alt="exemplo grid-aling-content-center">
-        <h2>align-content: space-around;</h2>
-        <img src="assets/imagens/grid/grid-aling-content-space-around.JPG" alt="exemplo grid-aling-content-space-around">
-        <h2>align-content: space-evenly;</h2>
-        <img src="assets/imagens/grid/grid-aling-content-space-evenly.JPG" alt="exemplo grid-aling-content-space-evenly">
-        <h2>align-content: end;</h2>
-        <img src="assets/imagens/grid/grid-aling-content-end.JPG" alt="exemplo grid-aling-content-end">
-        <h2>align-content: stretch;</h2>
-        <img src="assets/imagens/grid/grid-aling-content-stretch.JPG" alt="exemplo grid-aling-content-stretch">
-        <h2>align-content: space-between;</h2>
-        <img src="assets/imagens/grid/grid-aling-content-space-between.JPG" alt="exemplo grid-aling-content-space-between">        
-    </section>
-    <section id="Alinhando-justify-aling-self">
-        <h1>Alinhando itens específicos com justify-self e align-self</h1>
-        <h2>justify-self: start;</h2>
-        <img src="./assets/imagens/grid/justify-items-start.JPG" alt="exemplo justify-self-start">
-        <h2>justify-self: center;</h2>
-        <img src="./assets/imagens/grid/justify-self-center.JPG" alt="exemplo justify-self-center">
-        <h2>justify-self: end;</h2>
-        <img src="./assets/imagens/grid/justify-self-end.JPG" alt="exemplo justify-self-end">
-        <h2>justify-self: stretch;</h2>
-        <img src="./assets/imagens/grid/justify-self-stretch.JPG" alt="exemplo justify-self-stretch">
-        <h2>align-self: start;</h2>
-        <img src="./assets/imagens/grid/align-self-start.JPG" alt="exemplo align-self-start">
-        <h2>align-self: center;</h2>
-        <img src="./assets/imagens/grid/align-self-center.JPG" alt="exemplo align-self-center">
-        <h2>align-self: end;</h2>
-        <img src="./assets/imagens/grid/align-self-end.JPG" alt="exemplo align-self-end">
-        <h2>align-self: stretch;</h2>
-        <img src="./assets/imagens/grid/align-self-stretch.JPG" alt="exemplo align-self-stretch">
-    </section>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="conceitos">
+            <h1>Grid Layout</h1>
+            <p>
+                Grid layout é um sistema de design usado no desenvolvimento web e no design gráfico que permite a
+                organização de conteúdo utilizando uma grade de linhas e colunas. Esse método é benéfico para criar layouts
+                estruturados, responsivos e visualmente atraentes.
+    
+            <h2>Grid Layout no CSS</h2>
+            O layout de grade (Grid Layout) do CSS é um sistema de layout bidimensional para a web. Ele permite que você
+            organize itens em linhas e colunas, facilitando o design de páginas web sem precisar usar floats e
+            posicionamentos complicados.
+            </p>
+            <img src="./assets/imagens/grid/conceito-grid.JPG" alt="exemplo de html para container">
+        </section>
+        <section id="nomenclatura">
+            <h1>Nomenclaturas do grid</h1>
+            <p>HTML</p>
+            <img src="./assets/imagens/grid/container-grade.JPG" alt="conteiner de grade">
+            <hr>
+            <p>grid columns As faixas verticais dos itens do grid, são chamados de colunas (grid columns)</p>
+            <img src="./assets/imagens/grid/columns.JPG" alt="exemplo grid-columns">
+            <hr>
+            <p>grid rows As faixas horizontais dos itens do grid, são chamados de linhas (grid rows)</p>
+            <img src="./assets/imagens/grid/row.JPG" alt="exemplo grid-row">
+            <hr>
+            <p>grid gaps Espaços entre as linhas (grid rows) e coluna (grid columns) do grid</p>
+            <img src="./assets/imagens/grid/gap.JPG" alt="exemplo gap">
+            <img src="./assets/imagens/grid/gap-abreviado.JPG" alt="exemplo gap gap-abreviado">
+            <img src="./assets/imagens/grid/gap-abreviado-2.JPG" alt="exemplo gap-abreviado-2">
+            <hr>
+            <p>Grid Container (Contêiner de Grade): O elemento ao qual se aplica display: grid. Ele é o pai direto de todos
+                os itens da grade.</p>
+            <img src="./assets/imagens/grid/grid-container.JPG" alt="exemplo de grid-container">
+            <hr>
+            <p>Grid Items (Itens da Grade): Os filhos diretos do contêiner de grade.</p>
+            <img src="./assets/imagens/grid/grid-item.JPG" alt="exemplo de grid-item">
+            <hr>
+            <p>Grid Lines (Linhas da Grade): As linhas divisórias que definem as células da grade.</p>
+            <img src="./assets/imagens/grid/grid-line.JPG" alt="exemplo grid-linha">
+            <hr>
+            <p>Grid Tracks (Trilhas da Grade): As linhas verticais e horizontais que compõem a grade. Elas são formadas
+                pelos espaços entre as linhas da grade.</p>
+            <img src="./assets/imagens/grid/trilha-grade.JPG" alt="exemplo grid-tracks">
+            <hr>
+            <p>Grid Cells (Células da Grade): Os espaços individuais definidos entre duas linhas de grade horizontais e duas
+                verticais.</p>
+            <img src="./assets/imagens/grid/celula.JPG" alt="exemplo celula">
+            <hr>
+            <p>Grid Areas (Áreas da Grade): Espaços retangulares na grade que podem ser ocupados por um ou mais itens de
+                grade.</p>
+            <img src="./assets/imagens/grid/area-grade.JPG" alt="exemplo de area-grade">
+        </section>
+        <section id="adicionando-linhas-colunas">
+            <h1>Adicionando colunas e linhas ao grid</h1>
+            <p>grid-template-columns define as colunas (columns) do grid</p>
+            <img src="./assets/imagens/grid/tamplate-columns.JPG" alt="exemplo tamplate-columns">
+            <hr>
+            <p>grid-template-rows define as linhas (rows) do grid</p>
+            <img src="./assets/imagens/grid/tamplate-rows.JPG" alt="exemplo tamplate-rows">
+            <hr>
+            <hr>
+            <h1>Unidade de medida <i>fr</i></h1>
+            <p>Criada para o CSS Grid, a unidade de medida fr representa uma fração do espaço disponível no container do
+                grid</p>
+            <img src="./assets/imagens/grid/fr.JPG" alt="exemplo fr">
+            <hr>
+            <hr>
+            <h1>Função repeat</h1>
+            <p>Permite repetir para todas, ou para algumas das faixas, o mesmo valor para seu tamanho de coluna ou linha.
+            </p>
+            <img src="./assets/imagens/grid/repeat.JPG" alt="exemplo repeat">
+            <hr>
+            <h1>asdadadasda Função repeat: outros valores</h1>
+            <img src="./assets/imagens/grid/repeat-outros.JPG" alt="exemplo repeat-outros">
+        </section>
+        <section id="implicito-explicito">
+            <h1>Grid implícito e explícito</h1>
+            <h2>Unidade de medida fr</h2>
+            <p>
+                Quando define-se as colunas e linhas através das propriedades
+                das propriedades grid-template-columns e grid-template-rows,
+                estamos criando um grid explícito.
+                Mas, se os itens não couberem, o grid colocará um item fora
+                desse grid que definimos, criando o que chamamos de grid
+                implícito.
+            </p>
+            <hr>
+            <h1>Propriedade grid-auto-flow</h1>
+            <p>Controla como o algoritmo de reposicionamento automático irá se comportar.</p>
+            <img src="./assets/imagens/grid/autoflow-row.JPG" alt="exemplo autoflow-row">
+            <img src="./assets/imagens/grid/autoflow-column.JPG" alt="exemplo autoflow-column">
+            <img src="./assets/imagens/grid/autoflow-dense.JPG" alt="exemplo autoflow-dense">
+        </section>
+        <section id="alocando">
+            <h1>Alocando os itens do Grid nas posições específicas</h1>
+            <h2>Grid Lines</h2>
+            <p>
+                Divisórias que compõem a
+                estrutura da grade.
+                As linhas entre as colunas são
+                chamadas de column lines
+                (linhas de coluna) e, as que
+                estão entre as faixas
+                horizontais, são chamadas de
+                row lines (linhas de linha).
+            </p>
+            <img src="./assets/imagens/grid/grid-line.JPG" alt="exemplo grid-line">
+            <p>
+                Cada linha possui um
+                número para que possamos
+                usar de referência (exceto
+                para grids implícitos).
+            </p>
+            <img src="./assets/imagens/grid/grid-line-numero.JPG" alt="exemplo numeros de referência">
+            <hr>
+            <hr>
+            <h2>Posicionando os itens do grid</h2>
+            <img src="./assets/imagens/grid/item-a.JPG" alt="exemplo posicionamento">
+            <img src="./assets/imagens/grid/html-item-a.JPG" alt="exemplo html">
+            <hr>
+            <img src="./assets/imagens/grid/item-b.JPG" alt="exemplo posicionamento">
+            <img src="./assets/imagens/grid/html-item-b.JPG" alt="exemplo html">
+            <hr>
+            <img src="./assets/imagens/grid/item-c.JPG" alt="exemplo posicionamento">
+            <img src="./assets/imagens/grid/html-item-c.JPG" alt="exemplo html">
+            <hr>
+            <img src="./assets/imagens/grid/item-d.JPG" alt="exemplo posicionamento">
+            <img src="./assets/imagens/grid/html-item-d.JPG" alt="exemplo html">
+            <hr>
+            <img src="./assets/imagens/grid/item-e.JPG" alt="exemplo posicionamento">
+            <img src="./assets/imagens/grid/html-item-e.JPG" alt="exemplo html">
+        </section>
+        <section id="Shorthand">
+            <h1>Áreas do grid</h1>
+            <h2>Shorthand de outras propriedades</h2>
+            <p>
+                Através da propriedade grid-area, nós conseguimos definir os
+                valores das propriedades grid-row-start, grid-row-end,
+                grid-column-start e grid-column-end de uma só vez.
+            </p>
+            <img src="./assets/imagens/grid/shorthand.JPG" alt="exemplo shorthand">
+        </section>
+        <section id="nomeando-areas">
+            <h1>Nomeando as áreas</h1>
+            <p>
+                É possível nomear as
+                áreas do grid e posicionar
+                os itens dentro das áreas
+                específicas, as
+                referenciando através do
+                nome.
+            </p>
+            <img src="./assets/imagens/grid/Grid-area-2.JPG" alt="exemplo de grid-area">
+        </section>
+        <section id="Definindo-espacamento">
+            <h1>Definindo os espaçamentos dos elementos do grid</h1>
+            <h2>Espaçamento entre as faixas do grid</h2>
+            <p>
+                Tamanho das linhas do
+                grid (grid lines) através
+                das propriedades
+                column-gap e row-gap
+                (ou através da shorthand
+                gap)
+            </p>
+            <img src="./assets/imagens/grid/grid-line.JPG" alt="exemplo tamanho de linha">
+            <hr>
+            <h1>Espaçamento entre as faixas do grid</h1>
+            <p>
+                Os espaçamentos são
+                adicionados apenas entre
+                uma linha/coluna e outra.
+            </p>
+            <img src="assets/imagens/grid/espacamento.JPG" alt="exemplo espaçamentos">
+        </section>
+        <section id="shorthand-grid">
+            <h1>Shorthand “grid”</h1>
+            <img src="./assets/imagens/grid/short-1.JPG" alt="exemplo">
+            <hr>
+            <img src="./assets/imagens/grid/short-2.JPG" alt="exemplo">
+            <hr>
+            <img src="./assets/imagens/grid/short-3.JPG" alt="exemplo">
+            <hr>
+            <img src="./assets/imagens/grid/short-4.JPG" alt="exemplo">
+            <hr>
+            <img src="./assets/imagens/grid/short-5.JPG" alt="exemplo">
+            <hr>
+            <img src="./assets/imagens/grid/short-6.JPG" alt="exemplo">
+            <hr>
+        </section>
+        <section id="justify-items">
+            <h1>Valores de justify-items</h1>
+            <h2>justify-items: start;</h2>
+            <img src="./assets/imagens/grid/justify-items-start.JPG" alt="exemplo justify-items-start">
+            <h2>justify-items: end;</h2>
+            <img src="./assets/imagens/grid/justify-items-end.JPG" alt="exemplo justify-items-end">
+            <h2>justify-items: center;</h2>
+            <img src="./assets/imagens/grid/justify-items-center.JPG" alt="exemplo justify-items-center">
+            <h2>justify-items: stretch; </h2>
+            <img src="./assets/imagens/grid/justify-items-strech.JPG" alt="exemplo justify-items-strech">
+        </section>
+        <section id="align-items">
+            <h1>Valores de align-items</h1>
+            <h2>align-items: start;</h2>
+            <img src="./assets/imagens/grid/aling-items-start.JPG" alt="exemplo aling-items-start">
+            <h2>align-items: end;</h2>
+            <img src="./assets/imagens/grid/aling-items-end.JPG" alt="exemplo aling-items-end">
+            <h2>align-items: center;</h2>
+            <img src="./assets/imagens/grid/aling-items-center.JPG" alt="exemplo aling-items-center">
+            <h2>align-items: stretch;</h2>
+            <img src="./assets/imagens/grid/aling-items-stretch.JPG" alt="exemplo aling-items-stretch">
+        </section>
+        <section id="justify-content-grid">
+            <h1>Alinhando o conteúdo do grid com justify-content e align-content</h1>
+            <h2>Container do grid</h2>
+            <p>
+                Container é o elemento
+                que envolve a grade na
+                qual estamos criando e,
+                muitas vezes, ela acaba
+                sendo maior do que o
+                grid.
+            </p>
+            <img src="./assets/imagens/grid/container-do-grid.JPG" alt="exemplo container-do-grid">
+            <hr>
+            <h1>Valores de justify-content</h1>
+    
+            <h2>justify-content: start;</h2>
+            <img src="./assets/imagens/grid/" alt="exemplo justify-content">
+            <h2>justify-content: center;</h2>
+            <img src="./assets/imagens/grid/grid-justify-content-center.JPG" alt="exemplo grid-justify-content-center">
+            <h2>justify-content: end;</h2>
+            <img src="./assets/imagens/grid/grid-justify-content-end.JPG" alt="exemplo justify-content-end">
+            <h2>justify-content: stretch;</h2>
+            <img src="./assets/imagens/grid/grid-justify-content-stretch.JPG" alt="exemplo justify-content-stretch">
+            <h2>justify-content: space-around;</h2>
+            <img src="./assets/imagens/grid/grid-justify-content-space-around.JPG" alt="exemplo justify-content-around">
+            <h2>justify-content: space-evenly</h2>
+            <img src="./assets/imagens/grid/grid-justify-content-space-evenly.JPG" alt="exemplo justify-content-evenly">
+            <h2>justify-content: space-between;</h2>
+            <img src="./assets/imagens/grid/grid-justify-content-space-between.JPG" alt="exemplo justify-content-between">
+        </section>
+        <section id="grid-align-content">
+            <h1>Valores de align-content</h1>
+            <h2>align-content: start;</h2>
+            <img src="assets/imagens/grid/grid-aling-content-start.JPG" alt="exemplo grid-aling-content-start">
+            <h2>align-content: center;</h2>
+            <img src="assets/imagens/grid/grid-aling-content-center.JPG" alt="exemplo grid-aling-content-center">
+            <h2>align-content: space-around;</h2>
+            <img src="assets/imagens/grid/grid-aling-content-space-around.JPG" alt="exemplo grid-aling-content-space-around">
+            <h2>align-content: space-evenly;</h2>
+            <img src="assets/imagens/grid/grid-aling-content-space-evenly.JPG" alt="exemplo grid-aling-content-space-evenly">
+            <h2>align-content: end;</h2>
+            <img src="assets/imagens/grid/grid-aling-content-end.JPG" alt="exemplo grid-aling-content-end">
+            <h2>align-content: stretch;</h2>
+            <img src="assets/imagens/grid/grid-aling-content-stretch.JPG" alt="exemplo grid-aling-content-stretch">
+            <h2>align-content: space-between;</h2>
+            <img src="assets/imagens/grid/grid-aling-content-space-between.JPG" alt="exemplo grid-aling-content-space-between">        
+        </section>
+        <section id="Alinhando-justify-aling-self">
+            <h1>Alinhando itens específicos com justify-self e align-self</h1>
+            <h2>justify-self: start;</h2>
+            <img src="./assets/imagens/grid/justify-items-start.JPG" alt="exemplo justify-self-start">
+            <h2>justify-self: center;</h2>
+            <img src="./assets/imagens/grid/justify-self-center.JPG" alt="exemplo justify-self-center">
+            <h2>justify-self: end;</h2>
+            <img src="./assets/imagens/grid/justify-self-end.JPG" alt="exemplo justify-self-end">
+            <h2>justify-self: stretch;</h2>
+            <img src="./assets/imagens/grid/justify-self-stretch.JPG" alt="exemplo justify-self-stretch">
+            <h2>align-self: start;</h2>
+            <img src="./assets/imagens/grid/align-self-start.JPG" alt="exemplo align-self-start">
+            <h2>align-self: center;</h2>
+            <img src="./assets/imagens/grid/align-self-center.JPG" alt="exemplo align-self-center">
+            <h2>align-self: end;</h2>
+            <img src="./assets/imagens/grid/align-self-end.JPG" alt="exemplo align-self-end">
+            <h2>align-self: stretch;</h2>
+            <img src="./assets/imagens/grid/align-self-stretch.JPG" alt="exemplo align-self-stretch">
+        </section> 
+    </main>
     
 
 </body>
