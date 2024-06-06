@@ -2,8 +2,8 @@
 
 body{
     padding: 3%;
-    background-color: black;
-    color: bisque;
+    background-image: linear-gradient(darkred, black);
+    color: gold;
 
     display: grid;
     grid-template-columns: 1fr 4fr;
@@ -14,8 +14,8 @@ img{
     border-radius: 10px;
 }
 section{
-    background-color: darkred;
-    color: bisque;
+    background-color: rgba(139, 0, 0, 0.5);
+    color: gold;
     border-radius: 10px 20px;
     border: 1px solid gold;
 
@@ -24,10 +24,11 @@ section{
 }
 #navegacao{
     position: fixed;
+    margin: 1%;
 
-    color: rgb(239, 136, 0);
-    border:  rgb(239, 136, 0) solid 1px;
-    border-radius: 10px 0 0 10px;
+    color: gold;
+    border:  gold solid 1px;
+    border-radius: 20px 10px 10px 20px;
 
     font-size: large;
 
